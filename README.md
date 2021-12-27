@@ -2,6 +2,8 @@
 
  leetcode solution
 
+[TOC]
+
 
 ## 54. Spiral Matrix
 
@@ -74,7 +76,7 @@ public static boolean isSameTree(TreeNode p, TreeNode q) {
 
 ```
 
-#### Iteration
+Iteration
 
 ```java
  public static boolean isSameTree(TreeNode p, TreeNode q) {
@@ -127,7 +129,105 @@ public static boolean isSameTree(TreeNode p, TreeNode q) {
     }
 ```
 
-#### 2109. Adding Spaces to a String
+## 101.Symmetric Tree
+
+Recursion
+
+```java
+public static boolean isSymmetric(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        return isSame(root.left, root.right);
+    }
+
+private static boolean isSame(TreeNode leftNode, TreeNode rightNode) {
+  if (leftNode == null && rightNode == null) {
+    return true;
+  }
+  if (leftNode == null || rightNode == null) {
+    return false;
+  }
+  if (leftNode.val != rightNode.val) {
+    return false;
+  }
+  return isSame(leftNode.left, rightNode.right) && isSame(leftNode.right, rightNode.left);
+}
+```
+
+Iteration
+
+```java
+public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        q.add(root);
+        while (!q.isEmpty()) {
+            TreeNode t1 = q.poll();
+            TreeNode t2 = q.poll();
+            if (t1 == null && t2 == null) {
+                continue;
+            }
+            if (t1 == null || t2 == null || t1.val != t2.val) {
+                return false;
+            }
+            q.add(t1.left);
+            q.add(t2.right);
+            q.add(t1.right);
+            q.add(t2.left);
+        }
+        return true;
+    }
+```
+
+
+
+```java
+public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        q.add(root);
+        while (!q.isEmpty()) {
+            TreeNode t1 = q.poll();
+            TreeNode t2 = q.poll();
+            if (t1 == null && t2 == null) {
+                continue;
+            }
+            if (t1 == null || t2 == null || t1.val != t2.val) {
+                return false;
+            }
+            q.add(t1.left);
+            q.add(t2.right);
+            q.add(t1.right);
+            q.add(t2.left);
+        }
+        return true;
+    }
+```
+
+
+
+## 476. Number Complement
+
+The **complement** of an integer is the integer you get when you flip all the `0`'s to `1`'s and all the `1`'s to `0`'s in its binary representation.
+
+- For example, The integer `5` is `"101"` in binary and its **complement** is `"010"` which is the integer `2`.
+
+Given an integer `num`, return *its complement*.
+
+```java
+class Solution {
+    public int findComplement(int num) {
+    int n = (int)( Math.log(num) / Math.log(2) ) + 1;
+    int c = (1 << n) - 1;
+        return num ^ c;
+    }
+}
+```
+
+
+
+## 2109. Adding Spaces to a String
 
 You are given a 0-indexed string s and a 0-indexed integer array spaces that describes the indices in the original string where spaces will be added. Each space should be inserted before the character at the given index.
 

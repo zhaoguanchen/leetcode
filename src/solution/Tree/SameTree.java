@@ -57,7 +57,7 @@ public class SameTree {
             TreeNode curP = pDeque.removeFirst();
             TreeNode curQ = qDeque.removeFirst();
 
-            if (p.val != q.val) {
+            if (curP.val != curQ.val) {
                 return false;
             }
 
