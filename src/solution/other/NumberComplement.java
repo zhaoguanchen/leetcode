@@ -21,5 +21,4 @@ public class NumberComplement {
         int c = (1 << n) - 1;
         return num ^ c;
     }
-
 }

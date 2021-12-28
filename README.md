@@ -182,30 +182,66 @@ public boolean isSymmetric(TreeNode root) {
 
 
 
+## 104. Maximum Depth of Binary Tree 
+
+Given the root of a binary tree, return its maximum depth.
+
+
+
+- Recursion
+
 ```java
-public boolean isSymmetric(TreeNode root) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
-        q.add(root);
-        while (!q.isEmpty()) {
-            TreeNode t1 = q.poll();
-            TreeNode t2 = q.poll();
-            if (t1 == null && t2 == null) {
-                continue;
-            }
-            if (t1 == null || t2 == null || t1.val != t2.val) {
-                return false;
-            }
-            q.add(t1.left);
-            q.add(t2.right);
-            q.add(t1.right);
-            q.add(t2.left);
-        }
-        return true;
+public static int maxDepth(TreeNode root) {
+    if (root == null) {
+        return 0;
+    } else {
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+        return Math.max(leftDepth, rightDepth) + 1;
     }
+
+}
 ```
 
+- Iteration
 
+```java
+public static int maxDepthIterator(TreeNode root) {
+    if (root == null) {
+        return 0;
+    }
+
+    Queue<TreeNode> nodeQueue = new LinkedList<>();
+    Queue<Integer> depthQueue = new LinkedList<>();
+
+    nodeQueue.add(root);
+    depthQueue.add(1);
+
+    int max = 0;
+
+    while (!nodeQueue.isEmpty()) {
+        TreeNode currentNode = nodeQueue.poll();
+        Integer currentDepth = depthQueue.poll();
+        if (currentDepth == null) {
+            continue;
+        }
+
+        max = Math.max(currentDepth, max);
+
+        if (currentNode.left != null) {
+            nodeQueue.add(currentNode.left);
+            depthQueue.add(currentDepth + 1);
+        }
+
+        if (currentNode.right != null) {
+            nodeQueue.add(currentNode.right);
+            depthQueue.add(currentDepth + 1);
+        }
+    }
+
+    return max;
+}
+```
 
 ## 476. Number Complement
 
@@ -221,6 +257,68 @@ class Solution {
     int n = (int)( Math.log(num) / Math.log(2) ) + 1;
     int c = (1 << n) - 1;
         return num ^ c;
+    }
+}
+```
+
+
+
+
+
+## 572. Subtree of Another Tree
+
+Given the roots of two binary trees `root` and `subRoot`, return `true` if there is a subtree of `root` with the same structure and node values of` subRoot` and `false` otherwise.
+
+A subtree of a binary tree `tree` is a tree that consists of a node in `tree` and all of this node's descendants. The tree `tree` could also be considered as a subtree of itself.
+
+```java
+class Solution {
+    public boolean isSubtree(TreeNode root, TreeNode subRoot) {
+        if (root == null) {
+            return false;
+        }
+        if (isSame(root, subRoot)) {
+            return true;
+        }
+        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+    }
+
+    private Boolean isSame(TreeNode root, TreeNode subRoot) {
+        if (root == null && subRoot == null) {
+            return true;
+        }
+        if (root == null || subRoot == null) {
+            return false;
+        }
+        if (root.val != subRoot.val) {
+            return false;
+        }
+
+        return isSame(root.left, subRoot.left) && isSame(root.right, subRoot.right);
+    }
+}
+```
+## 876. Middle of the Linked List
+
+Given the `head` of a singly linked list, return *the middle node of the linked list*.
+
+If there are two middle nodes, return **the second middle** node.
+
+**Fast and Slow Pointer**
+
+```java
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        
+        ListNode pro = head;
+        ListNode pre = head;
+        
+        while(pro != null && pro.next != null){
+            pro = pro.next.next;
+            pre= pre.next;
+        }
+        
+        return pre;
     }
 }
 ```
