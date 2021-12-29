@@ -243,6 +243,126 @@ public static int maxDepthIterator(TreeNode root) {
 }
 ```
 
+
+
+## 116. Populating Next Right Pointers in Each Node
+
+You are given a **perfect binary tree** where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
+
+```
+struct Node {
+  int val;
+  Node *left;
+  Node *right;
+  Node *next;
+}
+```
+
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to `NULL`.
+
+Initially, all next pointers are set to `NULL`.
+
+Solution 1:
+
+```java
+class Solution {
+    public Node connect(Node root) {
+  			if (root == null) {
+            return null;
+        }
+
+        Node rootLeft = root;
+        Node current = rootLeft;
+
+        while (true) {
+            if (current.left == null) {
+                break;
+            }
+
+            current.left.next = current.right;
+
+            if (current.next != null) {
+                current.right.next = current.next.left;
+            }
+            if (current.next != null) {
+                current = current.next;
+            } else {
+                rootLeft = rootLeft.left;
+                current = rootLeft;
+            }
+        }
+        return root;
+    }
+}
+
+
+```
+
+Solution 2:
+
+```java
+public Node connect(Node root) {
+        if (root == null) {
+            return null;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                Node current = queue.poll();
+                if (current == null) {
+                    continue;
+                }
+                if (i < size - 1) {
+                    current.next = queue.peek();
+                } else {
+                    current.next = null;
+                }
+
+                if (current.left != null) {
+                    queue.add(current.left);
+                }
+                if (current.right != null) {
+                    queue.add(current.right);
+                }
+            }
+        }
+
+        return root;
+    }
+```
+
+
+Solution 3:
+
+```java
+public Node connect(Node root) {
+    if (root == null) {
+        return null;
+    }
+    Queue<Node> queue = new LinkedList<>();
+    queue.add(root);
+
+    while (!queue.isEmpty()) {
+        Node current = queue.poll();
+        if (current.left == null || current.right == null) {
+            continue;
+        }
+        current.left.next = current.right;
+        if (current.next != null) {
+            current.right.next = current.next.left;
+        }
+
+        queue.add(current.left);
+        queue.add(current.right);
+    }
+
+    return root;
+}
+```
+
 ## 476. Number Complement
 
 The **complement** of an integer is the integer you get when you flip all the `0`'s to `1`'s and all the `1`'s to `0`'s in its binary representation.
