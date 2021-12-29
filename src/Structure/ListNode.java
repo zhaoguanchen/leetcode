@@ -1,5 +1,9 @@
 package Structure;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Definition for a list node.
  */
@@ -46,5 +50,22 @@ public class ListNode {
         return root;
     }
 
+    /**
+     * generate by array
+     *
+     * @param array
+     * @return
+     */
+    public static void print(ListNode listNode) {
 
+        List<Integer> list = new ArrayList<>();
+        list.add(listNode.val);
+        while (listNode.next != null){
+
+            list.add(listNode.next.val);
+            listNode = listNode.next;
+        }
+
+        System.out.println(Collections.singletonList(list));
+    }
 }
