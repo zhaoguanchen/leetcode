@@ -4,6 +4,32 @@
 
 [TOC]
 
+## 1. Two Sum
+
+Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
+
+You may assume that each input would have ***exactly one solution***, and you may not use the *same* element twice.
+
+You can return the answer in any order.
+
+
+
+```java
+public static int[] twoSum(int[] nums, int target) {
+    Map<Integer, Integer> map = new HashMap<>();
+    for (int i = 0; i < nums.length; i++) {
+        int x = nums[i];
+        int diff = target - x;
+        if (map.containsKey(diff)) {
+            int index = map.get(diff);
+            return new int[]{index, i};
+        }
+        map.put(x, i);
+    }
+    return null;
+}
+```
+
 ## 2. Add Two Numbers
 
 
@@ -86,6 +112,46 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 ```
 
 
+
+
+
+## 88. Merge Sorted Array
+
+You are given two integer arrays `nums1` and `nums2`, sorted in **non-decreasing order**, and two integers `m` and `n`, representing the number of elements in `nums1` and `nums2` respectively.
+
+**Merge** `nums1` and `nums2` into a single array sorted in **non-decreasing order**.
+
+The final sorted array should not be returned by the function, but instead be *stored inside the array* `nums1`. To accommodate this, `nums1` has a length of `m + n`, where the first `m` elements denote the elements that should be merged, and the last `n` elements are set to `0` and should be ignored. `nums2` has a length of `n`.
+
+
+
+```java
+public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    int p1 = m - 1;
+    int p2 = n - 1;
+    int total = m + n - 1;
+
+    for (int i = total; i >= 0; i--) {
+        if (p1 < 0) {
+            nums1[i] = nums2[p2];
+            p2--;
+            continue;
+        }
+        if (p2 < 0) {
+            break;
+        }
+
+        if (nums1[p1] >= nums2[p2]) {
+            nums1[i] = nums1[p1];
+            p1--;
+        } else {
+            nums1[i] = nums2[p2];
+            p2--;
+
+        }
+
+    }
+```
 
 ## 100. Same Tree
 
@@ -359,6 +425,8 @@ public static int maxDepthIterator(TreeNode root) {
 
 
 
+
+
 ## 116. Populating Next Right Pointers in Each Node
 
 You are given a **perfect binary tree** where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:
@@ -477,6 +545,168 @@ public Node connect(Node root) {
 }
 ```
 
+
+
+
+
+
+
+## 118. Pascal's Triangle
+
+Given an integer `numRows`, return the first numRows of **Pascal's triangle**.
+
+**Example 1:**
+
+```
+Input: numRows = 5
+Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+```
+
+**Example 2:**
+
+```
+Input: numRows = 1
+Output: [[1]]
+```
+
+
+
+
+
+```java
+public List<List<Integer>> generate(int numRows) {
+       List<List<Integer>> res = new ArrayList<>();
+
+        List<Integer> fund = new ArrayList<>();
+        for (int i = 1; i <= numRows; i++) {
+            List<Integer> cur = new ArrayList<>();
+            cur.add(1);
+            if (i > 1) {
+                for (int j = 1; j < i - 1; j++) {
+                    int value = fund.get(j - 1) + fund.get(j);
+                    cur.add(value);
+                }
+
+                cur.add(1);
+            }
+            res.add(cur);
+            fund = cur;
+        }
+
+        return res;
+    }
+```
+
+
+
+## 121. Best Time to Buy and Sell Stock
+
+You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day.
+
+You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock.
+
+Return *the maximum profit you can achieve from this transaction*. If you cannot achieve any profit, return `0`.
+
+```java
+public static int maxProfit(int[] prices) {
+    int min = Integer.MAX_VALUE;
+    int max = 0;
+
+    for (int price : prices) {
+        if (price < min) {
+            min = price;
+        } else {
+            max = Math.max(price - min, max);
+        }
+    }
+    return max;
+}
+```
+
+
+
+## 217. Contains Duplicate
+
+Given an integer array nums, return true if any value appears at least twice in the array,
+and return false if every element is distinct.
+
+
+
+```java
+ public static boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+
+        for (int num : nums) {
+            if (set.contains(num)) {
+                return true;
+            } else {
+                set.add(num);
+            }
+        }
+
+        return false;
+    }
+```
+
+
+
+## 350. Intersection of Two Arrays II
+
+
+
+Given two integer arrays `nums1` and `nums2`, return *an array of their intersection*. Each element in the result must appear as many times as it shows in both arrays and you may return the result in **any order**.
+
+ **Example 1:**
+
+```java
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2,2]
+```
+
+
+
+```java
+class Solution {
+    public int[] intersect(int[] nums1, int[] nums2) {
+             Map<Integer, Integer> map = new HashMap<>();
+
+        for (int i : nums1) {
+            if (map.containsKey(i)) {
+                int quantity = map.get(i);
+
+                map.put(i, quantity + 1);
+            } else {
+                map.put(i, 1);
+            }
+        }
+        
+        List<Integer> res = new ArrayList<>();
+
+        for (int i : nums2) {
+            if (map.containsKey(i)) {
+                int quantity = map.get(i);
+                if (quantity > 0) {
+                    res.add(i);
+                }
+                map.put(i, quantity - 1);
+            }
+        }
+        
+        int[] resArray = new int[res.size()];
+
+        for (int i = 0; i < resArray.length; i++) {
+            resArray[i] = res.get(i);
+        }
+
+        return resArray;
+    }
+}
+```
+
+
+
+
+
 ## 476. Number Complement
 
 The **complement** of an integer is the integer you get when you flip all the `0`'s to `1`'s and all the `1`'s to `0`'s in its binary representation.
@@ -493,6 +723,41 @@ class Solution {
         return num ^ c;
     }
 }
+```
+
+
+
+## 566. Reshape the Matrix
+
+In MATLAB, there is a handy function called `reshape` which can reshape an `m x n` matrix into a new one with a different size `r x c` keeping its original data.
+
+You are given an `m x n` matrix `mat` and two integers `r` and `c` representing the number of rows and the number of columns of the wanted reshaped matrix.
+
+The reshaped matrix should be filled with all the elements of the original matrix in the same row-traversing order as they were.
+
+If the `reshape` operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.
+
+
+
+```java
+public int[][] matrixReshape(int[][] mat, int r, int c) {
+      int m = mat.length, n = mat[0].length;
+        if (m * n != r * c) {
+            return mat;
+        }
+        int total = m * n;
+        int[][] newMat = new int[r][c];
+
+        for (int i = 0; i < total; i++) {
+            int m1 = i / n;
+            int n1 = i % n;
+            int r1 = i / c;
+            int c1 = i % c;
+
+            newMat[r1][c1] = mat[m1][n1];
+        }
+        return newMat;
+    }
 ```
 
 
@@ -556,6 +821,101 @@ class Solution {
     }
 }
 ```
+
+
+
+## 997. Find the Town Judge
+
+In a town, there are `n` people labeled from `1` to `n`. There is a rumor that one of these people is secretly the town judge.
+
+If the town judge exists, then:
+
+1. The town judge trusts nobody.
+2. Everybody (except for the town judge) trusts the town judge.
+3. There is exactly one person that satisfies properties **1** and **2**.
+
+You are given an array `trust` where `trust[i] = [ai, bi]` representing that the person labeled `ai` trusts the person labeled `bi`.
+
+Return *the label of the town judge if the town judge exists and can be identified, or return* `-1` *otherwise*.
+
+ ```java
+ public int findJudge(int n, int[][] trust) {
+         if (trust.length < n - 1) {
+             return -1;
+         }
+         
+          if (n == 1 && trust.length == 0) {
+             return n;
+         }
+ 
+         Map<Integer, Integer> map = new HashMap<>();
+ 
+         for (int[] item : trust) {
+             int label = item[0];
+             int trustedLabel = item[1];
+ 
+             if (map.containsKey(label)) {
+                 int currentNum = map.get(label);
+                 map.put(label, currentNum - 1);
+             } else {
+                 map.put(label, -1);
+             }
+             
+             if (map.containsKey(trustedLabel)) {
+                 int currentNum = map.get(trustedLabel);
+                 map.put(trustedLabel, currentNum + 1);
+             } else {
+                 map.put(trustedLabel, 1);
+             }
+         }
+ 
+ 
+         for (Integer key : map.keySet()) {
+             int value = map.get(key);
+             if (n == value + 1) {
+                 return key;
+             }
+ 
+         }
+ 
+         return -1;
+         
+     }
+ ```
+
+
+
+```java
+ public int findJudge(int n, int[][] trust) {
+        if (trust.length < n - 1) {
+            return -1;
+        }
+
+        int[] flag = new int[n + 1];
+
+        for (int[] item : trust) {
+            int label = item[0];
+            int trustedLabel = item[1];
+            flag[label] = flag[label] - 1;
+            flag[trustedLabel] = flag[trustedLabel] + 1;
+        }
+
+        for (int i = 1; i < flag.length; i++) {
+            int value = flag[i];
+            if (n == value + 1) {
+                return i;
+            }
+
+        }
+
+        return -1;
+
+    }
+```
+
+
+
+
 
 
 
