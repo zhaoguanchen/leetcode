@@ -648,6 +648,40 @@ and return false if every element is distinct.
     }
 ```
 
+## 242. Valid Anagram
+
+Given two strings `s` and `t`, return `true` *if* `t` *is an anagram of* `s`*, and* `false` *otherwise*.
+
+```java
+public static boolean isAnagram(String s, String t) {
+        char[] cArray = new char[26];
+
+        if (s.length() != t.length()) {
+            return false;
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            int index = c - 'a';
+            cArray[index]++;
+        }
+
+        for (int i = 0; i < t.length(); i++) {
+            char c = t.charAt(i);
+            int index = c - 'a';
+            if (cArray[index] <= 0) {
+                return false;
+            }
+
+            cArray[index]--;
+        }
+
+        return true;
+    }
+```
+
+
+
 
 
 ## 350. Intersection of Two Arrays II
@@ -704,6 +738,90 @@ class Solution {
 ```
 
 
+
+
+
+## 383. Ransom Note
+
+Given two stings `ransomNote` and `magazine`, return `true` if `ransomNote` can be constructed from `magazine` and `false` otherwise.
+
+Each letter in `magazine` can only be used once in `ransomNote`.
+
+
+
+```java
+ public static boolean canConstruct(String ransomNote, String magazine) {
+        char[] c = new char[26];
+
+        for (int i = 0; i < magazine.length(); i++) {
+            char s = magazine.charAt(i);
+            int index = s - 'a';
+            c[index]++;
+        }
+
+        for (int i = 0; i < ransomNote.length(); i++) {
+            char s = ransomNote.charAt(i);
+            int index = s - 'a';
+            if (c[index] <= 0) {
+                return false;
+            }
+
+            c[index]--;
+        }
+
+        return true;
+    }
+```
+
+
+
+## 387. First Unique Character in a String
+
+Given a string `s`, *find the first non-repeating character in it and return its index*. If it does not exist, return `-1`.
+
+```java
+public int firstUniqChar(String s) {
+        int[] count = new int[26];
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            int index = s.charAt(i) - 'a';
+            count[index]++;
+        }
+
+        for (int i = 0; i < n; i++) {
+            int index = s.charAt(i) - 'a';
+            if (count[index] == 1) {
+                return i;
+            }
+
+        }
+        return -1;
+    }
+
+```
+
+
+
+```java
+public int firstUniqChar(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            Integer value = map.getOrDefault(c, 0);
+            map.put(c, value + 1);
+        }
+
+        for (int i = 0; i < s.length(); i++) {
+            if (map.get(s.charAt(i)) == 1) {
+                return i;
+            }
+
+        }
+        return -1;
+
+    }
+```
 
 
 
