@@ -62,6 +62,90 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 
 
+
+
+## 21. Merge Two Sorted Lists
+
+You are given the heads of two sorted linked lists `list1` and `list2`.
+
+Merge the two lists in a one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
+
+Return *the head of the merged linked list*.
+
+```java
+public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        if (list1 == null && list2 == null) {
+            return null;
+        }
+
+        ListNode p1 = list1;
+        ListNode p2 = list2;
+        ListNode res = new ListNode();
+        ListNode cur = res;
+        while (p1 != null && p2 != null) {
+            if (p1.val < p2.val) {
+                cur.next = p1;
+                p1 = p1.next;
+            } else {
+                cur.next = p2;
+                p2 = p2.next;
+            }
+
+            cur = cur.next;
+        }
+
+        if (p1 == null) {
+            cur.next = p2;
+
+        } else {
+            cur.next = p1;
+        }
+        return res.next;
+    }
+```
+
+```java
+public ListNode mergeTwoLists1(ListNode list1, ListNode list2) {
+        if (list1 == null && list2 == null) {
+            return null;
+        }
+
+        ListNode p1 = list1;
+        ListNode p2 = list2;
+        ListNode res = new ListNode();
+        ListNode cur = res;
+        while (p1 != null || p2 != null) {
+            if (p1 == null) {
+                cur.next = p2;
+                p2 = p2.next;
+            } else if (p2 == null) {
+                cur.next = p1;
+                p1 = p1.next;
+
+            } else {
+
+                if (p1.val < p2.val) {
+                    cur.next = p1;
+                    p1 = p1.next;
+                } else {
+                    cur.next = p2;
+                    p2 = p2.next;
+                }
+
+            }
+
+            cur = cur.next;
+        }
+
+        return res.next;
+
+    }
+```
+
+
+
+
+
 ## 54. Spiral Matrix
 
 ```java
@@ -621,6 +705,91 @@ public static int maxProfit(int[] prices) {
     }
     return max;
 }
+```
+
+
+
+
+
+## 141. Linked List Cycle
+
+Given `head`, the head of a linked list, determine if the linked list has a cycle in it.
+
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer. Internally, `pos` is used to denote the index of the node that tail's `next` pointer is connected to. **Note that `pos` is not passed as a parameter**.
+
+Return `true` *if there is a cycle in the linked list*. Otherwise, return `false`.
+
+```java
+public boolean hasCycle(ListNode head) {
+        if (head == null) {
+            return false;
+        }
+        ListNode pre = head;
+        ListNode pro = head.next;
+
+        while (pre != pro) {
+            if (pro == null || pro.next == null) {
+                return false;
+            }
+
+            pre = pre.next;
+            pro = pro.next.next;
+        }
+
+        return true;
+
+    }
+```
+
+
+
+```java
+public boolean hasCycle(ListNode head) {
+        Set<ListNode> set = new HashSet<>();
+
+        ListNode cur = head;
+
+        while (cur != null) {
+            if (set.contains(cur)) {
+                return true;
+            }
+            set.add(cur);
+            cur = cur.next;
+
+        }
+
+        return false;
+
+    }
+```
+
+
+
+## 203. Remove Linked List Elements
+
+Given the `head` of a linked list and an integer `val`, remove all the nodes of the linked list that has `Node.val == val`, and return *the new head*.
+
+```java
+public ListNode removeElements(ListNode head, int val) {
+        if (head == null) {
+            return null;
+        }
+        ListNode newNode = new ListNode(0);
+        newNode.next = head;
+        ListNode pre = newNode;
+
+        ListNode pro = newNode.next;
+        while (pro != null) {
+            if (pro.val == val) {
+                pre.next = pro.next;
+            } else {
+                pre = pro;
+            }
+            pro = pro.next;
+        }
+
+        return newNode.next;
+    }
 ```
 
 

@@ -50,6 +50,27 @@ public class ListNode {
         return root;
     }
 
+    public static void setCycle(ListNode head, Integer m) {
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        ListNode last = head;
+
+        while (last.next != null) {
+            last = last.next;
+        }
+        ListNode root = head;
+
+        for (int i = 0; i < m; i++) {
+            if (root == null) {
+                return;
+            }
+            root = root.next;
+        }
+        last.next = root;
+    }
+
     /**
      * generate by array
      *
@@ -60,7 +81,7 @@ public class ListNode {
 
         List<Integer> list = new ArrayList<>();
         list.add(listNode.val);
-        while (listNode.next != null){
+        while (listNode.next != null) {
 
             list.add(listNode.next.val);
             listNode = listNode.next;
