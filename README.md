@@ -62,6 +62,48 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 
 
+## 20. Valid Parentheses
+
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+
+An input string is valid if:
+
+1. Open brackets must be closed by the same type of brackets.
+2. Open brackets must be closed in the correct order.
+
+
+
+```java
+    public boolean isValid(String s) {
+      
+      Stack<Character> stack = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+                continue;
+            }
+
+            if (c == ')' || c == '}' || c == ']') {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                char e = stack.pop();
+                if (c == ')' && e != '(' || c == '}' && e != '{' || c == ']' && e != '[') {
+                    return false;
+                }
+
+            }
+
+
+        }
+
+        return stack.isEmpty();
+
+    }
+
+```
+
 
 
 ## 21. Merge Two Sorted Lists
@@ -236,6 +278,62 @@ public static void merge(int[] nums1, int m, int[] nums2, int n) {
 
     }
 ```
+
+## 94. Binary Tree Inorder Traversal
+
+**Recusion**
+
+```java
+ public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        helper(root, result);
+        return result;
+    }
+
+
+    private static void helper(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+
+        helper(root.left, result);
+        result.add(root.val);
+        helper(root.right, result);
+    }
+
+
+```
+
+**Iteration**
+
+```java
+    public static List<Integer> inorderIterator(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        TreeNode curr = root;
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            }
+            curr = stack.pop();
+            res.add(curr.val);
+            curr = curr.right;
+        }
+        return res;
+
+    }
+
+```
+
+
+
+
 
 ## 100. Same Tree
 
@@ -509,6 +607,63 @@ public static int maxDepthIterator(TreeNode root) {
 
 
 
+## 114. Binary Tree Preorder Traversal
+
+Recursion
+
+```java
+ public static List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        helper(root, result);
+
+        return result;
+    }
+
+    private static void helper(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+        result.add(root.val);
+        helper(root.left, result);
+        helper(root.right, result);
+    }
+
+```
+
+Iterator:
+
+```java
+ public static List<Integer> preorderIterator(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+
+        stack.add(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode current = stack.pop();
+            if (current == null) {
+                break;
+            }
+
+            res.add(current.val);
+
+            if (current.right != null) {
+                stack.add(current.right);
+            }
+            if (current.left != null) {
+                stack.add(current.left);
+            }
+
+        }
+        return res;
+
+    }
+```
+
 
 
 ## 116. Populating Next Right Pointers in Each Node
@@ -765,6 +920,61 @@ public boolean hasCycle(ListNode head) {
 
 
 
+
+
+## 145. Binary Tree Postorder Traversal
+
+
+
+**Recursion**
+
+```java
+public static List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> result = new ArrayList<>();
+        helper(root, result);
+        return result;
+    }
+
+    private static void helper(TreeNode root, List<Integer> result) {
+        if (root == null) {
+            return;
+        }
+
+        helper(root.left, result);
+        helper(root.right, result);
+        result.add(root.val);
+    }
+```
+
+**Iteration**
+
+```java
+    public static List<Integer> postorderIterator(TreeNode root) {
+        LinkedList<Integer> ans = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if (root == null) {
+            return ans;
+        }
+
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            ans.addFirst(cur.val);
+            if (cur.left != null) {
+                stack.push(cur.left);
+            }
+            if (cur.right != null) {
+                stack.push(cur.right);
+            }
+        }
+        return ans;
+    }
+```
+
+
+
+
+
 ## 203. Remove Linked List Elements
 
 Given the `head` of a linked list and an integer `val`, remove all the nodes of the linked list that has `Node.val == val`, and return *the new head*.
@@ -792,6 +1002,44 @@ public ListNode removeElements(ListNode head, int val) {
     }
 ```
 
+## 206. Reverse Linked List
+
+ Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+```java
+		public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+
+        ListNode pre = null;
+        ListNode cur = head;
+
+        while (cur != null) {
+            ListNode nextNode = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = nextNode;
+        }
+
+        return pre;
+    }
+```
+
+
+
+```java
+    public ListNode reverseList1(ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode p = reverseList1(head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
+```
+
 
 
 ## 217. Contains Duplicate
@@ -816,6 +1064,70 @@ and return false if every element is distinct.
         return false;
     }
 ```
+
+## 232. Implement Queue using Stacks
+
+Implement a first in first out (FIFO) queue using only two stacks. The implemented queue should support all the functions of a normal queue (`push`, `peek`, `pop`, and `empty`).
+
+Implement the `MyQueue` class:
+
+- `void push(int x)` Pushes element x to the back of the queue.
+- `int pop()` Removes the element from the front of the queue and returns it.
+- `int peek()` Returns the element at the front of the queue.
+- `boolean empty()` Returns `true` if the queue is empty, `false` otherwise.
+
+
+
+```java
+class MyQueue {
+
+    public MyQueue() {
+        
+    }
+    
+    Stack<Integer> s = new Stack<>();
+    Stack<Integer> temp = new Stack<>();
+
+
+    public void push(int x) {
+         if (!s.isEmpty()) {
+            while (!s.isEmpty()) {
+                temp.push(s.pop());
+            }
+
+        }
+        s.push(x);
+        while (!temp.isEmpty()) {
+            s.push(temp.pop());
+        }
+
+    }
+
+    public int pop() {
+        return s.pop();
+    }
+
+    public int peek() {
+        return s.peek();
+    }
+
+    public boolean empty() {
+        return s.isEmpty();
+    }
+
+}
+
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+```
+
+
 
 ## 242. Valid Anagram
 
@@ -1084,6 +1396,38 @@ class Solution {
     }
 }
 ```
+
+
+## 783. Minimum Distance Between BST Nodes
+
+Given the `root` of a Binary Search Tree (BST), return *the minimum difference between the values of any two different nodes in the tree*.
+
+```java
+ 		private static Integer prev, ans;
+
+    public static int minDiffInBST(TreeNode root) {
+        prev = null;
+        ans = Integer.MAX_VALUE;
+        dfs(root);
+        return ans;
+    }
+
+    public static void dfs(TreeNode node) {
+        if (node == null) {
+            return;
+        }
+
+        dfs(node.left);
+        if (prev != null) {
+            ans = Math.min(ans, Math.abs(node.val - prev));
+        }
+        prev = node.val;
+        dfs(node.right);
+    }
+```
+
+
+
 ## 876. Middle of the Linked List
 
 Given the `head` of a singly linked list, return *the middle node of the linked list*.
