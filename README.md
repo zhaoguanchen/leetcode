@@ -62,6 +62,97 @@ public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 
 
 
+## 13. Roman to Integer
+
+Roman numerals are represented by seven different symbols: `I`, `V`, `X`, `L`, `C`, `D` and `M`.
+
+```
+Symbol       Value
+I             1
+V             5
+X             10
+L             50
+C             100
+D             500
+M             1000
+```
+
+For example, `2` is written as `II` in Roman numeral, just two one's added together. `12` is written as `XII`, which is simply `X + II`. The number `27` is written as `XXVII`, which is `XX + V + II`.
+
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not `IIII`. Instead, the number four is written as `IV`. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as `IX`. There are six instances where subtraction is used:
+
+- `I` can be placed before `V` (5) and `X` (10) to make 4 and 9. 
+- `X` can be placed before `L` (50) and `C` (100) to make 40 and 90. 
+- `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
+
+Given a roman numeral, convert it to an integer.
+
+```java
+public int romanToInt(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        map.put('M', 1000);
+        map.put('D', 500);
+        map.put('C', 100);
+        map.put('L', 50);
+        map.put('X', 10);
+        map.put('V', 5);
+        map.put('I', 1);
+
+        int base = 0;
+
+        for (int i = 0; i < s.length() - 1; i++) {
+            char cur = s.charAt(i);
+            char pro = s.charAt(i + 1);
+            if (map.get(pro) > map.get(cur)) {
+                base = base - map.get(cur);
+
+            } else {
+                base = base + map.get(cur);
+            }
+        }
+        base = base + map.get(s.charAt(s.length() - 1));
+        return base;
+    }
+```
+
+
+
+## 14. Longest Common Prefix
+
+Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string `""`.
+
+**Example 1:**
+
+```
+Input: strs = ["flower","flow","flight"]
+Output: "fl"
+```
+
+```java
+    public String longestCommonPrefix(String[] strs) {
+        String com = strs[0];
+        for (String s : strs) {
+            com = commonPrefix(s, com);
+            System.out.println(com);
+        }
+        return com;
+
+    }
+
+    private String commonPrefix(String left, String right) {
+        int min = Math.min(left.length(), right.length());
+        for (int i = 0; i < min; i++) {
+            if (left.charAt(i) != right.charAt(i))
+                return left.substring(0, i);
+        }
+        return left.substring(0, min);
+    }
+```
+
+
+
 ## 20. Valid Parentheses
 
 Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
@@ -1546,7 +1637,62 @@ Return *the label of the town judge if the town judge exists and can be identifi
 
 
 
+## 1022. Sum of Root To Leaf Binary Numbers
 
+Recursion
+
+```java
+    private static int rootToLeaf = 0;
+
+    public static void preorder(TreeNode r, int currNumber) {
+        if (r != null) {
+            currNumber = (currNumber << 1) | r.val;
+            // if it's a leaf, update root-to-leaf sum
+            if (r.left == null && r.right == null) {
+                rootToLeaf += currNumber;
+            }
+            preorder(r.left, currNumber);
+            preorder(r.right, currNumber);
+        }
+    }
+
+    public static int sumRootToLeaf(TreeNode root) {
+        preorder(root, 0);
+        return rootToLeaf;
+    }
+
+```
+
+Iteration
+
+```java
+    public static int sumRootToLeafIterator(TreeNode root) {
+        Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
+        queue.add(new Pair<>(root, 0));
+
+        int sum = 0;
+
+        while (!queue.isEmpty()) {
+            Pair<TreeNode, Integer> curPair = queue.poll();
+            TreeNode curNode = curPair.getKey();
+            Integer currNumber = curPair.getValue();
+            currNumber = (currNumber << 1) | curNode.val;
+            // if it's a leaf, update root-to-leaf sum
+            if (curNode.left == null && curNode.right == null) {
+                sum += currNumber;
+            }
+
+            if (curNode.left != null) {
+                queue.add(new Pair<>(curNode.left, currNumber));
+            }
+            if (curNode.right != null) {
+                queue.add(new Pair<>(curNode.right, currNumber));
+            }
+        }
+        return sum;
+    }
+
+```
 
 
 
