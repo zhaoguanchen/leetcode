@@ -1787,6 +1787,73 @@ Iteration
 
 
 
+## 1137. N-th Tribonacci Number
+
+The Tribonacci sequence Tn is defined as follows: 
+
+T0 = 0, T1 = 1, T2 = 1, and Tn+3 = Tn + Tn+1 + Tn+2 for n >= 0.
+
+Given `n`, return the value of Tn.
+
+ ```java
+     public static int tribonacci(int n) {
+         if (n == 0) {
+             return 0;
+         } else if ((n == 1 || n == 2)) {
+             return 1;
+         }
+ 
+         return tribonacci(n - 3) + tribonacci(n - 2) +
+                 tribonacci(n - 1);
+ 
+     }
+ ```
+
+
+
+```java
+    private static final Map<Integer, Integer> map = new HashMap<>();
+
+    public static int tribonacci1(int n) {
+        map.put(0, 0);
+        map.put(1, 1);
+        map.put(2, 1);
+        if (!map.containsKey(n)) {
+            map.put(n, tribonacci1(n - 3) + tribonacci1(n - 2) +
+                    tribonacci1(n - 1));
+        }
+        return map.get(n);
+    }
+
+```
+
+```java
+    public static int tribonacci2(int n) {
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1 || n == 2) {
+            return 1;
+        }
+
+        int pre = 0;
+        int sec = 1;
+        int thr = 1;
+        int res = 0;
+
+        for (int i = 3; i <= n; i++) {
+            res = pre + sec + thr;
+            pre = sec;
+            sec = thr;
+            thr = res;
+        }
+
+        return res;
+    }
+```
+
+
+
 ## 2109. Adding Spaces to a String
 
 You are given a 0-indexed string s and a 0-indexed integer array spaces that describes the indices in the original string where spaces will be added. Each space should be inserted before the character at the given index.
