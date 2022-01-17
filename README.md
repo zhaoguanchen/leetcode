@@ -1530,6 +1530,69 @@ public static boolean isAnagram(String s, String t) {
 
 
 
+## 290. Word Pattern
+
+Given a `pattern` and a string `s`, find if `s` follows the same pattern.
+
+Here **follow** means a full match, such that there is a bijection between a letter in `pattern` and a **non-empty** word in `s`.
+
+ 
+
+**Example 1:**
+
+```
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true
+```
+
+**Example 2:**
+
+```
+Input: pattern = "abba", s = "dog cat cat fish"
+Output: false
+```
+
+**Example 3:**
+
+```
+Input: pattern = "aaaa", s = "dog cat cat dog"
+Output: false
+```
+
+
+
+```java
+    public boolean wordPattern(String pattern, String s) {
+
+        Map<Character, String> map = new HashMap<>();
+
+        Set<String> set = new HashSet<>();
+
+        String[] str = s.split(" ");
+        if (str.length != pattern.length()) {
+            return false;
+        }
+
+        for (int i = 0; i < str.length; i++) {
+            char c = pattern.charAt(i);
+            String target = str[i];
+            if (map.containsKey(c)) {
+                String saved = map.get(c);
+                if (!target.equals(saved)) {
+                    return false;
+                }
+            } else {
+                if (set.contains(target)) {
+                    return false;
+                }
+                set.add(target);
+                map.put(c, target);
+            }
+        }
+        return true;
+    }
+```
+
 
 
 ## 350. Intersection of Two Arrays II
