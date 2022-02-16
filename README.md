@@ -1,6 +1,6 @@
 # leetcode
 
- leetcode solution
+ leetcode leetcode.solution
 
 [TOC]
 
@@ -8,7 +8,7 @@
 
 Given an array of integers `nums` and an integer `target`, return *indices of the two numbers such that they add up to `target`*.
 
-You may assume that each input would have ***exactly one solution***, and you may not use the *same* element twice.
+You may assume that each input would have ***exactly one leetcode.solution***, and you may not use the *same* element twice.
 
 You can return the answer in any order.
 
@@ -1141,7 +1141,7 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 
  
 
-There is some frustration when people publish their perfect fine-grained algorithms without sharing any information abut how they were derived. This is an attempt to change the situation. There is not much more explanation but it's rather an example of higher level improvements. Converting a solution to the next step shouldn't be as hard as attempting to come up with perfect algorithm at first attempt.
+There is some frustration when people publish their perfect fine-grained algorithms without sharing any information abut how they were derived. This is an attempt to change the situation. There is not much more explanation but it's rather an example of higher level improvements. Converting a leetcode.solution to the next step shouldn't be as hard as attempting to come up with perfect algorithm at first attempt.
 
 
 
@@ -1917,6 +1917,63 @@ class Solution {
     }
 }
 ```
+
+## 605. Can Place Flowers
+
+You have a long flowerbed in which some of the plots are planted, and some are not. However, flowers cannot be planted in **adjacent** plots.
+
+Given an integer array `flowerbed` containing `0`'s and `1`'s, where `0` means empty and `1` means not empty, and an integer `n`, return *if* `n` new flowers can be planted in the `flowerbed` without violating the no-adjacent-flowers rule.
+
+ 
+
+**Example 1:**
+
+```
+Input: flowerbed = [1,0,0,0,1], n = 1
+Output: true
+```
+
+**Example 2:**
+
+```
+Input: flowerbed = [1,0,0,0,1], n = 2
+Output: false
+```
+
+
+
+```java
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
+        if (flowerbed.length < 2 * n - 1) {
+            return false;
+        }
+        if (n == 1 && flowerbed.length == 1) {
+            if (flowerbed[0] == 0) {
+                return true;
+            }
+        }
+        int count = 0;
+        for (int i = 0; i < flowerbed.length && count < n; i++) {
+            if (flowerbed[i] == 0) {
+                int next = (i == flowerbed.length - 1) ? 0 : flowerbed[i + 1];
+                int prev = (i == 0) ? 0 : flowerbed[i - 1];
+                if (next == 0 && prev == 0) {
+                    flowerbed[i] = 1;
+                    count++;
+                }
+            }
+        }
+
+        return count == n;
+
+
+    }
+
+```
+
+
+
+
 
 ## 746. Min Cost Climbing Stairs
 
