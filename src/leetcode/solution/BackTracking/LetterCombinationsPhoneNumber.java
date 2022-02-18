@@ -15,11 +15,13 @@ public class LetterCombinationsPhoneNumber {
 
     public static void main(String[] args) {
         String digit = "23";
-        System.out.println(letterCombinations(digit));
+//        System.out.println(letterCombinations(digit));
 
+        System.out.println(letterCombinationBackTrack(digit));
     }
 
-    private static Map<Character, String> map = new HashMap<>();
+
+    private static final Map<Character, String> map = new HashMap<>();
 
     static {
         map.put('2', "abc");
@@ -34,6 +36,9 @@ public class LetterCombinationsPhoneNumber {
     }
 
 
+    /**
+     * for loop
+     */
     public static List<String> letterCombinations(String digits) {
         LinkedList<String> ans = new LinkedList<>();
         if (digits.isEmpty()) return ans;
@@ -48,4 +53,39 @@ public class LetterCombinationsPhoneNumber {
         return ans;
     }
 
+    /**
+     * back track
+     *
+     * @param digits
+     * @return
+     */
+    static LinkedList<String> result = new LinkedList<>();
+    static String select;
+
+    public static List<String> letterCombinationBackTrack(String digits) {
+        if (digits.isEmpty()) {
+            return result;
+        }
+        StringBuilder path = new StringBuilder();
+        Integer start = 0;
+        select = digits;
+        backtrack(path, start);
+        return result;
+    }
+
+    private static void backtrack(StringBuilder path, Integer start) {
+        if (path.length() == select.length()) {
+            result.add(path.toString());
+            return;
+        }
+
+        char c = select.charAt(start);
+        String values = map.get(c);
+        for (char value : values.toCharArray()) {
+            path.append(value);
+            backtrack(path, start + 1);
+            path.deleteCharAt(path.length() - 1);
+        }
+
+    }
 }
