@@ -1,4 +1,4 @@
-package leetcode.solution.Tree;
+package leetcode.solution.BFS;
 
 import leetcode.Structure.TreeNode;
 
