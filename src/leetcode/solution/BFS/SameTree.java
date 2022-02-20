@@ -3,6 +3,7 @@ package leetcode.solution.BFS;
 import leetcode.Structure.TreeNode;
 
 import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * 100. Same Tree
@@ -36,14 +37,12 @@ public class SameTree {
 
 
     public static boolean isSameTreeIterator(TreeNode p, TreeNode q) {
-
-        ArrayDeque<TreeNode> pDeque = new ArrayDeque<>();
-        ArrayDeque<TreeNode> qDeque = new ArrayDeque<>();
+        Deque<TreeNode> pDeque = new ArrayDeque<>();
+        Deque<TreeNode> qDeque = new ArrayDeque<>();
 
         if (p == null && q == null) {
             return true;
         }
-
 
         if (p == null || q == null || p.val != q.val) {
             return false;
@@ -53,7 +52,6 @@ public class SameTree {
         qDeque.add(q);
 
         while (!pDeque.isEmpty() && !qDeque.isEmpty()) {
-
             TreeNode curP = pDeque.removeFirst();
             TreeNode curQ = qDeque.removeFirst();
 
@@ -77,7 +75,6 @@ public class SameTree {
             } else {
                 pDeque.add(curP.right);
                 qDeque.add(curQ.right);
-
             }
 
         }
