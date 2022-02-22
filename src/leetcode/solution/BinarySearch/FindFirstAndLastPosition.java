@@ -31,6 +31,7 @@ public class FindFirstAndLastPosition {
             // 防止相加和溢出
             int mid = left + (right - left) / 2;
             int midValue = nums[mid];
+            // 向左移动右边界 试图找到第一个小于target的数值
             if (midValue == target) {
                 right = mid - 1;
             } else if (midValue < target) {
@@ -60,6 +61,7 @@ public class FindFirstAndLastPosition {
             // 防止相加和溢出
             int mid = left + (right - left) / 2;
             int midValue = nums[mid];
+            // 向右移动左边界 试图找到第一个大于target的数值
             if (midValue == target) {
                 left = mid + 1;
             } else if (midValue < target) {
