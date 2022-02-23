@@ -1,4 +1,4 @@
-package leetcode.solution.dynamicProgramming;
+package leetcode.solution.DP;
 
 /**
  * 53. Maximum Subarray
