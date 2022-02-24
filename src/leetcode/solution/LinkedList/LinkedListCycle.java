@@ -24,16 +24,21 @@ public class LinkedListCycle {
         if (head == null) {
             return false;
         }
-        ListNode pre = head;
-        ListNode pro = head.next;
+        ListNode slow = head;
+        ListNode fast = head;
 
-        while (pre != pro) {
-            if (pro == null || pro.next == null) {
-                return false;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            // 指针相遇
+            if (fast == slow) {
+                break;
             }
 
-            pre = pre.next;
-            pro = pro.next.next;
+        }
+        // 非指针相遇，而是走到了尽头
+        if (fast == null || fast.next == null) {
+            return false;
         }
 
         return true;
@@ -42,7 +47,6 @@ public class LinkedListCycle {
 
     public static boolean hasCycle1(ListNode head) {
         Set<ListNode> set = new HashSet<>();
-
         ListNode cur = head;
 
         while (cur != null) {
