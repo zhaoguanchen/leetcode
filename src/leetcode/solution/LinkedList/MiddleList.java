@@ -1,4 +1,4 @@
-package leetcode.solution.List;
+package leetcode.solution.LinkedList;
 
 import leetcode.Structure.ListNode;
 
