@@ -78,7 +78,10 @@ public class ListNode {
      * @return
      */
     public static void print(ListNode listNode) {
-
+        if (listNode == null) {
+            System.out.println("node is null");
+            return;
+        }
         List<Integer> list = new ArrayList<>();
         list.add(listNode.val);
         while (listNode.next != null) {
