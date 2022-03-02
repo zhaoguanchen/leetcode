@@ -30,9 +30,9 @@ public class DiameterOfBinaryTree {
         int right = helper(root.right);
 
         int current = left + right;
-
+        // 记录最长直径
         max = Math.max(max, current);
-
+        // 返回当前节点左子和右子中较长的路径长度，提供给上一节点
         return Math.max(left, right) + 1;
 
     }
