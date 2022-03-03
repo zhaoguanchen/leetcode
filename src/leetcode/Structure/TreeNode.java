@@ -1,7 +1,6 @@
 package leetcode.Structure;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * Definition for a binary tree node.
@@ -73,5 +72,41 @@ public class TreeNode {
         return root;
     }
 
+
+    public static List<Integer> print(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            TreeNode current = queue.poll();
+
+            if (current != null) {
+                res.add(current.val);
+            } else {
+                res.add(null);
+                continue;
+            }
+
+            if (current.left != null) {
+                queue.add(current.left);
+            } else {
+                queue.add(null);
+            }
+            if (current.right != null) {
+                queue.add(current.right);
+            } else {
+                queue.add(null);
+            }
+
+        }
+        return res;
+
+    }
 
 }
