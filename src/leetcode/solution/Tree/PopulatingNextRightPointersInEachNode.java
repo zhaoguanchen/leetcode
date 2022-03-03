@@ -74,33 +74,64 @@ public class PopulatingNextRightPointersInEachNode {
         return root;
     }
 
+    /**
+     * 在树中遍历
+     *
+     * @param root
+     * @return
+     */
     public static Node connect3(Node root) {
         if (root == null) {
             return null;
         }
 
+        // 每一层的最左侧节点
         Node rootLeft = root;
-
+        // 当前层游标
         Node current = rootLeft;
 
-        while (true) {
-            if (current.left == null) {
-                break;
-            }
-
+        // 层序遍历
+        while (current.left != null) {
+            // 连接左右子节点
             current.left.next = current.right;
-
+            // 连接右子节点与后继节点的左子节点
             if (current.next != null) {
                 current.right.next = current.next.left;
             }
+
+            // 本层还有节点，后移
             if (current.next != null) {
                 current = current.next;
-
             } else {
+                // 移到下一层
                 rootLeft = rootLeft.left;
                 current = rootLeft;
             }
         }
         return root;
     }
+
+
+    // 主函数
+    public static Node connect4(Node root) {
+        if (root == null) return null;
+        connectTwoNode(root.left, root.right);
+        return root;
+    }
+
+    // 辅助函数
+    private static void connectTwoNode(Node node1, Node node2) {
+        if (node1 == null || node2 == null) {
+            return;
+        }
+        // 将传入的两个节点连接
+        node1.next = node2;
+
+        // 连接相同父节点的两个子节点
+        connectTwoNode(node1.left, node1.right);
+        connectTwoNode(node2.left, node2.right);
+        // 连接跨越父节点的两个子节点
+        connectTwoNode(node1.right, node2.left);
+    }
+
 }
