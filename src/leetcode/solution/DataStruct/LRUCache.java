@@ -12,17 +12,17 @@ public class LRUCache {
     /**
      * 哈希表，可以O(1)复杂度找到节点
      */
-    private static Map<Integer, Node> hashMap;
+    private Map<Integer, Node> hashMap;
 
     /**
      * 双向链表
      */
-    private static VList vList;
+    private VList vList;
 
     /**
      * 容量
      */
-    private static int cap;
+    private int cap;
 
     /**
      * 私有方法
@@ -31,7 +31,7 @@ public class LRUCache {
      * @param key
      * @return
      */
-    private static Node getNode(int key) {
+    private Node getNode(int key) {
         if (hashMap.containsKey(key)) {
             return hashMap.get(key);
         }
@@ -45,7 +45,7 @@ public class LRUCache {
      *
      * @param node
      */
-    private static void makeNew(Node node) {
+    private void makeNew(Node node) {
         vList.delete(node);
         vList.add(node);
     }
@@ -53,7 +53,7 @@ public class LRUCache {
     /**
      * 删除最老未使用元素
      */
-    private static void deleteOldest() {
+    private void deleteOldest() {
         int key = vList.deleteLeft();
         hashMap.remove(key);
     }
@@ -61,7 +61,7 @@ public class LRUCache {
     /**
      * 添加新元素
      */
-    private static void add(int key, int val) {
+    private void add(int key, int val) {
         int size = vList.getSize();
         // 容量已达上限
         if (size == cap) {
@@ -80,7 +80,7 @@ public class LRUCache {
      * @param key
      * @param val
      */
-    private static void update(int key, int val) {
+    private void update(int key, int val) {
         Node node = hashMap.get(key);
         node.val = val;
         makeNew(node);
