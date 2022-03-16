@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  * 快速排序
@@ -11,7 +12,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr1 = new int[]{128, 294, 133, 295, 175, 8, 232, 248, 241, 164, 11, 60, 238, 133, 291, 116, 6, 67, 98, 67, 196, 260, 181, 160, 83, 160, 90, 153, 233, 216};
         QuickSort quickSort = new QuickSort();
-        quickSort.quickSort(arr1, 0, arr1.length - 1);
+        quickSort.sort(arr1);
         System.out.println(Arrays.toString(arr1));
     }
 
@@ -67,6 +68,14 @@ public class QuickSort {
         return i;
     }
 
+
+    public void sort(int[] nums) {
+        // 为了避免出现耗时的极端情况，先随机打乱
+        shuffle(nums);
+        // 排序整个数组（原地修改）
+        quickSort(nums, 0, nums.length - 1);
+    }
+
     /**
      * 快速排序调用层
      * 找到分隔点pivot，使左侧小于base，右侧大于base。
@@ -80,6 +89,8 @@ public class QuickSort {
         if (left >= right) {
             return;
         }
+
+
         // find pivot element such that
         // elements smaller than pivot are on the left
         // elements greater than pivot are on the right
@@ -139,4 +150,18 @@ public class QuickSort {
     }
 
 
+    /**
+     * 洗牌
+     *
+     * @param nums
+     */
+    private void shuffle(int[] nums) {
+        Random rand = new Random();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            // 生成 [i, n - 1] 的随机数
+            int r = i + rand.nextInt(n - i);
+            swap(nums, i, r);
+        }
+    }
 }
