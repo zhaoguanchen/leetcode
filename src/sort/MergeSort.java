@@ -72,7 +72,7 @@ public class MergeSort {
                 arr[cur] = temp[p];
                 p++;
             }
-            
+
         }
 
     }
