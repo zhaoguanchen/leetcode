@@ -189,15 +189,13 @@ class BFS {
             return null;
         }
         String[] strings = data.split(splitStr);
-
-//        System.out.println(Arrays.toString(strings));
         int rootVal = Integer.parseInt(strings[0]);
         TreeNode root = new TreeNode(rootVal);
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         for (int i = 1; i < strings.length; ) {
             TreeNode node = queue.poll();
-
+            // 左子节点
             String leftStr = strings[i];
             if (leftStr.equals(nullStr)) {
                 node.left = null;
@@ -209,6 +207,7 @@ class BFS {
             }
 
             i++;
+            // 右子节点
             String rightStr = strings[i];
             if (rightStr.equals(nullStr)) {
                 node.right = null;
