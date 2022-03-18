@@ -70,14 +70,23 @@ class CourseScheduleDFS {
             return;
         }
 
-
         visited[courseNumber] = true;
         path[courseNumber] = true;
+        // 当前课已完成，继续遍历依赖它的课程（条件已满足）
         for (Integer nextCourseNum : graph[courseNumber]) {
             traverse(nextCourseNum);
         }
         path[courseNumber] = false;
     }
+
+    /**
+     * 构建临接表
+     * graph[i]中是依赖i的所有课程
+     *
+     * @param numCourses
+     * @param prerequisites
+     * @return
+     */
 
     private List<Integer>[] buildGraph(int numCourses, int[][] prerequisites) {
         List<Integer>[] graph = new ArrayList[numCourses];
@@ -85,9 +94,11 @@ class CourseScheduleDFS {
             graph[i] = new ArrayList<>();
         }
 
+        // graph[i]中是依赖i的所有课程
         for (int[] current : prerequisites) {
-            int from = current[0];
-            int to = current[1];
+            // from为被依赖的点
+            int from = current[1];
+            int to = current[0];
             graph[from].add(to);
         }
         return graph;
@@ -106,9 +117,9 @@ class CourseScheduleBFS {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         int[] inDegree = new int[numCourses];
         List<Integer>[] graph = buildGraph(numCourses, prerequisites);
-        // 入度表示被依赖  题中前者依赖后者，因此取edge[1]
+        // 入度表示依赖  记录该节点依赖的节点数量
         for (int[] edge : prerequisites) {
-            int to = edge[1];
+            int to = edge[0];
             inDegree[to]++;
         }
 
@@ -145,9 +156,11 @@ class CourseScheduleBFS {
             graph[i] = new ArrayList<>();
         }
 
+        // graph[i]中是依赖i的所有课程
         for (int[] current : prerequisites) {
-            int from = current[0];
-            int to = current[1];
+            // from为被依赖的点
+            int from = current[1];
+            int to = current[0];
             graph[from].add(to);
         }
         return graph;
