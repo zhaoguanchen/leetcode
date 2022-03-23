@@ -17,7 +17,9 @@ public class MinimumWindowSubstring {
     }
 
     public String minWindow(String s, String t) {
+        // 目标串字符对应的哈希表
         Map<Character, Integer> targetMap = new HashMap<>();
+        // 遍历串字符对应的哈希表
         Map<Character, Integer> sourceMap = new HashMap<>();
 
         // target字符串存储到map
@@ -36,6 +38,8 @@ public class MinimumWindowSubstring {
         int right = 0;
 
 
+        // 右指针向右移动，出现满足条件时，记录结果。
+        // 然后左指针移动，直到不满足条件。右指针移动，进行下一循环。
         int count = 0;
         while (right < s.length()) {
             char c = s.charAt(right);
@@ -49,9 +53,11 @@ public class MinimumWindowSubstring {
 
             right++;
 
+            // 需要匹配的字符数
             int expectCount = targetMap.size();
-            // 所有字符及个数都匹配
+            // 当所有字符及个数都匹配，更新结果，左指针移动
             while (count == expectCount) {
+                // 当前符合条件的子串的长度
                 int currentLength = right - left;
 
                 // 存在更小字串，则更新结果
@@ -65,6 +71,7 @@ public class MinimumWindowSubstring {
                 left++;
 
                 if (targetMap.containsKey(removeChar)) {
+                    // 遇到包含字符时，匹配数减一；跳出循环
                     if (sourceMap.get(removeChar).equals(targetMap.get(removeChar))) {
                         count--;
                     }
@@ -74,9 +81,11 @@ public class MinimumWindowSubstring {
 
         }
 
+        // 没有结果，返回空
         if (ansLength == Integer.MAX_VALUE) {
             return "";
         }
+        
         return s.substring(startIndex, startIndex + ansLength);
 
     }
