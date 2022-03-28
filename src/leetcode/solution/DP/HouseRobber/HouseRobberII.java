@@ -1,4 +1,4 @@
-package leetcode.solution.DP;
+package leetcode.solution.DP.HouseRobber;
 
 /**
  * 213. House Robber II
