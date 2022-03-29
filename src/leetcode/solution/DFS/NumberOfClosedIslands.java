@@ -1,0 +1,69 @@
+package leetcode.solution.DFS;
+
+/**
+ * 1254. Number of Closed Islands
+ */
+public class NumberOfClosedIslands {
+
+    public static void main(String[] args) {
+        int[][] grid = {{1, 1, 1, 1, 1, 1, 1, 0}, {1, 0, 0, 0, 0, 1, 1, 0}, {1, 0, 1, 0, 1, 1, 1, 0}, {1, 0, 0, 0, 0, 1, 0, 1}, {1, 1, 1, 1, 1, 1, 1, 0}};
+        NumberOfClosedIslands numberOfIslands = new NumberOfClosedIslands();
+        System.out.println(numberOfIslands.closedIsland(grid));
+        // 2
+    }
+
+
+    private int[][] data;
+
+    public int closedIsland(int[][] grid) {
+        data = grid;
+        int m = grid.length;
+        int n = grid[0].length;
+
+        for (int i = 0; i < m; i++) {
+            if (data[i][0] == 0) {
+                helper(i, 0);
+            }
+            if (data[i][n - 1] == 0) {
+                helper(i, n - 1);
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (data[0][i] == 0) {
+                helper(0, i);
+            }
+            if (data[m - 1][i] == 0) {
+                helper(m - 1, i);
+            }
+        }
+
+
+        int ans = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (data[i][j] == 0) {
+                    ans++;
+                    helper(i, j);
+                }
+            }
+        }
+
+        return ans;
+    }
+
+    private void helper(int i, int j) {
+        if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
+            return;
+        }
+        if (data[i][j] == 1) {
+            return;
+        }
+        data[i][j] = 1;
+        helper(i, j - 1);
+        helper(i - 1, j);
+        helper(i, j + 1);
+        helper(i + 1, j);
+    }
+
+}
