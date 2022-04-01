@@ -13,17 +13,29 @@ public class LongestIncreasingPathInAMatrix {
         // 4
     }
 
+    /**
+     * 访问记录
+     */
     private boolean[][] visited;
 
+    /**
+     * 备忘录
+     */
     private int[][] memo;
 
-    private int[][] data;
-
+    /**
+     * 方向
+     */
     private int[][] direct;
 
+    /**
+     * 全局变量
+     */
     private int m;
 
     private int n;
+
+    private int[][] data;
 
 
     public int longestIncreasingPath(int[][] matrix) {
@@ -38,7 +50,6 @@ public class LongestIncreasingPathInAMatrix {
         int ans = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                int currentVal = Integer.MIN_VALUE;
                 visited[i][j] = true;
                 int cur = backtrack(i, j);
                 visited[i][j] = false;
@@ -50,12 +61,9 @@ public class LongestIncreasingPathInAMatrix {
     }
 
     private int backtrack(int i, int j) {
-
-
         if (memo[i][j] > 0) {
             return memo[i][j];
         }
-
 
         int max = 1;
         for (int[] cur : direct) {
@@ -70,12 +78,15 @@ public class LongestIncreasingPathInAMatrix {
             if (visited[nextI][nextJ] || data[nextI][nextJ] <= data[i][j]) {
                 continue;
             }
+            // 做选择
             visited[nextI][nextJ] = true;
             int subMax = backtrack(nextI, nextJ);
+            // 撤销选择
             visited[nextI][nextJ] = false;
             max = Math.max(max, subMax + 1);
-         }
+        }
 
+        // 记录备忘录
         memo[i][j] = max;
 
         return max;
