@@ -33,31 +33,47 @@ public class nSum {
 
     private List<List<Integer>> nSum(int[] nums, int start, int target, int k) {
         List<List<Integer>> ans = new ArrayList<>();
+
+
+        // If we have run out of numbers to add, return res.
+        if (start == nums.length) {
+            return ans;
+        }
+
+        // There are k remaining values to add to the sum. The
+        // average of these values is at least target / k.
+        int average_value = target / k;
+
+        // We cannot obtain a sum of target if the smallest value
+        // in nums is greater than target / k or if the largest
+        // value in nums is smaller than target / k.
+        if (nums[start] > average_value || average_value > nums[nums.length - 1]) {
+            return ans;
+        }
+
         // base 两数之和 双指针法
         if (k == 2) {
             int left = start;
             int right = nums.length - 1;
             while (left < right) {
-                int sum = nums[left] + nums[right];
+                int leftVal = nums[left];
+                int rightVal = nums[right];
+                int sum = leftVal + rightVal;
                 if (sum < target) {
-                    left++;
-                    while (left < right && nums[left] == nums[left - 1]) {
+                    while (left < right && nums[left] == leftVal) {
                         left++;
                     }
                 } else if (sum > target) {
-                    right--;
-                    while (left < right && nums[right] == nums[right + 1]) {
+                    while (left < right && nums[right] == rightVal) {
                         right--;
                     }
                 } else {
                     List<Integer> subRes = Arrays.asList(nums[left], nums[right]);
                     ans.add(subRes);
-                    left++;
-                    while (left < right && nums[left] == nums[left - 1]) {
+                    while (left < right && nums[left] == leftVal) {
                         left++;
                     }
-                    right--;
-                    while (left < right && nums[right] == nums[right + 1]) {
+                    while (left < right && nums[right] == rightVal) {
                         right--;
                     }
                 }
