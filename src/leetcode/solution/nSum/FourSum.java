@@ -26,6 +26,14 @@ public class FourSum {
 
     private int[] data;
 
+    /**
+     * 两数之和
+     *
+     * @param start
+     * @param end
+     * @param target
+     * @return
+     */
     private List<List<Integer>> twoSum(int start, int end, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         int left = start;
@@ -59,15 +67,24 @@ public class FourSum {
         return ans;
     }
 
+    /**
+     * 三数之和
+     *
+     * @param start
+     * @param end
+     * @param target
+     * @return
+     */
     private List<List<Integer>> threeSum(int start, int end, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         for (int i = start; i <= end; i++) {
+            // 去重
             if (i != start && data[i] == data[i - 1]) {
                 continue;
             }
             int cur = data[i];
             int subTarget = target - cur;
-
+            // 调用两数之和计算子结果
             List<List<Integer>> twoSum = twoSum(i + 1, end, subTarget);
 
             for (List<Integer> item : twoSum) {
@@ -80,20 +97,30 @@ public class FourSum {
         return ans;
     }
 
+
+    /**
+     * 四数之和
+     *
+     * @param nums
+     * @param target
+     * @return
+     */
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
         data = nums;
 
         for (int i = 0; i < data.length; i++) {
+            // 去重
             if (i != 0 && data[i] == data[i - 1]) {
                 continue;
             }
             int cur = data[i];
             int subTarget = target - cur;
-
+            // 调用三数之和计算子结果
             List<List<Integer>> threeSum = threeSum(i + 1, data.length - 1, subTarget);
 
+            // 加上nums[i]组合结果
             for (List<Integer> item : threeSum) {
                 List<Integer> subRes = new ArrayList<>(item);
                 subRes.add(cur);

@@ -1,8 +1,6 @@
 package leetcode.solution.nSum;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 1. Two Sum
@@ -32,4 +30,62 @@ public class TwoSum {
         return null;
 
     }
+
+
+    private int[] twoSum1(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int leftVal = nums[left];
+            int rightVal = nums[right];
+            int sum = leftVal + rightVal;
+            if (sum < target) {
+                while (left < right && nums[left] == leftVal) {
+                    left++;
+                }
+            } else if (sum > target) {
+                while (left < right && nums[right] == rightVal) {
+                    right--;
+                }
+            } else {
+                return new int[]{leftVal, rightVal};
+            }
+        }
+
+        return null;
+    }
+
+    private List<List<Integer>> twoSum2(int[] nums, int target) {
+        List<List<Integer>> ans = new ArrayList<>();
+
+        int left = 0;
+        int right = nums.length - 1;
+        while (left < right) {
+            int leftVal = nums[left];
+            int rightVal = nums[right];
+            int sum = leftVal + rightVal;
+            if (sum < target) {
+                while (left < right && nums[left] == leftVal) {
+                    left++;
+                }
+            } else if (sum > target) {
+                while (left < right && nums[right] == rightVal) {
+                    right--;
+                }
+            } else {
+                List<Integer> subRes = Arrays.asList(nums[left], nums[right]);
+                ans.add(subRes);
+                while (left < right && nums[left] == leftVal) {
+                    left++;
+                }
+                while (left < right && nums[right] == rightVal) {
+                    right--;
+                }
+            }
+        }
+        return ans;
+    }
+
+
+
 }
