@@ -9,14 +9,15 @@ package leetcode.solution.string;
 public class ImplementstrStr {
 
     public static void main(String[] args) {
-        String s = "hello";
-        String s1 = "ll";
-        System.out.println(strStr(s, s1));
-
-        System.out.println(kmpStrStr(s, s1));
+        String s = "mississippi";
+        String s1 = "issip";
+        ImplementstrStr implementstrStr = new ImplementstrStr();
+        int ans = implementstrStr.strStr(s, s1);
+        System.out.println(ans);
     }
 
-    public static int strStr(String haystack, String needle) {
+
+    public int strStr(String haystack, String needle) {
         if (0 == needle.length()) {
             return 0;
         }
@@ -40,7 +41,7 @@ public class ImplementstrStr {
     }
 
 
-    public static int kmpStrStr(String haystack, String needle) {
+    public int kmpStrStr(String haystack, String needle) {
         if (needle.isEmpty()) return 0;
         int[] lps = computeKMPTable(needle);
         int i = 0, j = 0, n = haystack.length(), m = needle.length();
@@ -57,7 +58,7 @@ public class ImplementstrStr {
         return -1;
     }
 
-    private static int[] computeKMPTable(String pattern) {
+    private int[] computeKMPTable(String pattern) {
         int i = 1, j = 0, n = pattern.length();
         int[] lps = new int[n];
         while (i < n) {
