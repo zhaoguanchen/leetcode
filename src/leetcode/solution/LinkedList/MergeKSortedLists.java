@@ -43,12 +43,14 @@ public class MergeKSortedLists {
         // 最小节点出队后，添加其下一节点
         while (!queue.isEmpty()) {
             ListNode node = queue.poll();
+            // 找到新节点，链接到新链表
             cur.next = node;
-            cur = cur.next;
+            // 添加下一个节点到队列
             if (node.next != null) {
                 queue.add(node.next);
             }
 
+            cur = cur.next;
         }
 
         return vHead.next;
