@@ -27,6 +27,14 @@ public class MaximumSubSequence {
         // 6
     }
 
+    /**
+     * 1. 采纳尽可能多的0和最前面的1
+     * 2. 以尽可能小的增量采纳1（从后往前）
+     *
+     * @param s
+     * @param x
+     * @return
+     */
 
     public int getLength(String s, int x) {
         char[] chars = s.toCharArray();
@@ -36,10 +44,16 @@ public class MaximumSubSequence {
         // 默认值填充为-1
         Arrays.fill(flag, -1);
 
+        int count = 0;
         // 采纳所有的0
         for (int i = chars.length - 1; i >= 0; i--) {
             if (chars[i] == '0') {
                 flag[i] = 0;
+                count++;
+            }
+            // 控制0的数量，保证初选base不得大于target
+            if (Math.pow(2, count + 1) > x) {
+                break;
             }
         }
 
