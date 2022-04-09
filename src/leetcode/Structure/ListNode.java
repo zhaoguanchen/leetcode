@@ -10,6 +10,7 @@ import java.util.List;
 public class ListNode {
 
     public int val;
+
     public ListNode next;
 
 
@@ -74,7 +75,7 @@ public class ListNode {
     /**
      * generate by array
      *
-     * @param array
+     * @param
      * @return
      */
     public static void print(ListNode listNode) {
