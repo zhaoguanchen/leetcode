@@ -4,27 +4,51 @@ import java.util.Arrays;
 
 /**
  * Google 某题
+ * 寻找对应的十进制数小于等于X的最长的二进制子序列
  */
 public class MaximumSubSequence {
 
     public static void main(String[] args) {
-        String s = "110110101";
-        int n = 40;
+        String s = "1101101010001110010101101";
+        int n = 4000000;
         MaximumSubSequence c = new MaximumSubSequence();
         int ans = c.getLength(s, n);
         System.out.println(ans);
+        // 22
+        ans = c.getLength("110110101", 40);
+        System.out.println(ans);
         // 6
+        ans = c.getLength("110110101", 0);
+        System.out.println(ans);
+        // 0
+        ans = c.getLength("110110101", 1);
+        System.out.println(ans);
+        // 1
 
-        String s1 = "111101";
-        int n1 = 13;
-        int ans1 = c.getLength(s1, n1);
-        System.out.println(ans1);
-        // 6
-        String s2 = "10010100";
-        int n2 = 147;
-        int ans2 = c.getLength(s2, n2);
-        System.out.println(ans2);
-        // 6
+        ans = c.getLength("110110101", 5);
+        System.out.println(ans);
+        // 3
+
+        ans = c.getLength("101101", 98);
+        System.out.println(ans);
+        // 7
+
+        ans = c.getLength("10110010", 2);
+        System.out.println(ans);
+        // 2
+
+        ans = c.getLength("10110010", 3);
+        System.out.println(ans);
+        // 2
+
+
+//        EXPECT_EQ(binaryMaxLength("110110101", 40), 6);
+//        EXPECT_EQ(binaryMaxLength("110110101", 0), 0);
+//        EXPECT_EQ(binaryMaxLength("110110101", 1), 1);
+//        EXPECT_EQ(binaryMaxLength("110110101", 5), 3);
+//        EXPECT_EQ(binaryMaxLength("101101", 198), 7);
+//        EXPECT_EQ(binaryMaxLength("10110010", 2), 2);
+//        EXPECT_EQ(binaryMaxLength("10010100", 3), 2);
     }
 
     /**
@@ -70,6 +94,7 @@ public class MaximumSubSequence {
         // 计算数值，如小于target，则从后往前补充1
         for (int i = chars.length - 1; i >= 0; i--) {
             if (getInteger(flag) > x) {
+                flag[i + 1] = -1;
                 break;
             }
             if (-1 == flag[i]) {
@@ -86,7 +111,7 @@ public class MaximumSubSequence {
         }
 
         // 为什么减一  上面break的时候多赋了一个值
-        return ans - 1;
+        return ans;
     }
 
 
