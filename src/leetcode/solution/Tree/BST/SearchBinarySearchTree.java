@@ -3,7 +3,7 @@ package leetcode.solution.Tree.BST;
 import leetcode.Structure.TreeNode;
 
 /**
- * 700. Search in a Binary Search Tree¬
+ * 700. Search in a Binary Search Tree
  */
 public class SearchBinarySearchTree {
 
