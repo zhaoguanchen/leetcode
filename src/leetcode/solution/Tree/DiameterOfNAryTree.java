@@ -1,6 +1,6 @@
 package leetcode.solution.Tree;
 
-import leetcode.Structure.NNode;
+import leetcode.structure.NNode;
 
 /**
  * 543. Diameter of Binary Tree

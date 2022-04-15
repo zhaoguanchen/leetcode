@@ -1,6 +1,6 @@
 package leetcode.solution.LinkedList;
 
-import leetcode.Structure.ListNode;
+import leetcode.structure.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

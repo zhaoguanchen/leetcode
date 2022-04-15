@@ -1,6 +1,6 @@
 package leetcode.solution.Tree;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 /**
  * 222. Count Complete Tree Nodes

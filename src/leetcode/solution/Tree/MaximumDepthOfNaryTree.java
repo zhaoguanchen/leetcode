@@ -1,6 +1,6 @@
 package leetcode.solution.Tree;
 
-import leetcode.Structure.NNode;
+import leetcode.structure.NNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

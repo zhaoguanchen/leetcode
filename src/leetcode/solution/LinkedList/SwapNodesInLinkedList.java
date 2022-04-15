@@ -1,6 +1,6 @@
 package leetcode.solution.LinkedList;
 
-import leetcode.Structure.ListNode;
+import leetcode.structure.ListNode;
 
 /**
  * 1721. Swapping Nodes in a Linked List

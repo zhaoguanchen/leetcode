@@ -1,6 +1,6 @@
 package leetcode.solution.BFS;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;

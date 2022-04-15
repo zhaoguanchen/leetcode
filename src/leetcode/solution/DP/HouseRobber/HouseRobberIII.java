@@ -1,6 +1,6 @@
 package leetcode.solution.DP.HouseRobber;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 import java.util.HashMap;
 import java.util.Map;

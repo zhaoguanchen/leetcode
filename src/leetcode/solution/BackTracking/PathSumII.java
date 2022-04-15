@@ -1,6 +1,6 @@
 package leetcode.solution.BackTracking;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,6 +1,6 @@
 package leetcode.solution.DFS;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

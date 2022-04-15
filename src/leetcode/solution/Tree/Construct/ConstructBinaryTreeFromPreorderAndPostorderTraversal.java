@@ -1,6 +1,6 @@
 package leetcode.solution.Tree.Construct;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 /**
  * 106. Construct Binary Tree from Inorder and Postorder Traversal

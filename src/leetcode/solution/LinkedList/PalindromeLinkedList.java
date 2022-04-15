@@ -1,6 +1,6 @@
 package leetcode.solution.LinkedList;
 
-import leetcode.Structure.ListNode;
+import leetcode.structure.ListNode;
 
 /**
  * 234. Palindrome Linked List

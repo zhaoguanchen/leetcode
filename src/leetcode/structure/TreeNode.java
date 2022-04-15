@@ -1,4 +1,4 @@
-package leetcode.Structure;
+package leetcode.structure;
 
 import java.util.*;
 

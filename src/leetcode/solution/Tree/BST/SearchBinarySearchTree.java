@@ -1,6 +1,6 @@
 package leetcode.solution.Tree.BST;
 
-import leetcode.Structure.TreeNode;
+import leetcode.structure.TreeNode;
 
 /**
  * 700. Search in a Binary Search Tree
