@@ -6,58 +6,63 @@ package leetcode.solution.BinarySearch;
 public class MedianOfTwoSortedArrays {
 
     public static void main(String[] args) {
-        int[] pArray = {};
-        int[] pArray1 = {1};
-        System.out.println(findMedianSortedArrays(pArray, pArray1));
+        int[] nums1 = {1, 2};
+        int[] nums2 = {3, 4};
+        MedianOfTwoSortedArrays medianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
+        double ans = medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2);
+        System.out.println(ans);
     }
 
 
-    /**
-     * 双指针法
-     * <p>
-     * 复杂度 O(m + n)
-     *
-     * @param nums1
-     * @param nums2
-     * @return
-     */
-    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int m = nums1.length;
-        int n = nums2.length;
-        // 从0开始，目标点所的值
-        int targetIndex = (m + n) / 2;
-        // 是否需要前数参与计算
-        boolean needLaterOne = (m + n) % 2 == 0;
-        int target = 0;
-        // 前数
-        int another = 0;
-        int cur1 = 0;
-        int cur2 = 0;
+    private int[] nums1;
 
-        for (int i = 0; i <= targetIndex; i++) {
-            // 遍历过程中，前数一直为target的前一位。这样可以记录前数，便于后面计算。
-            another = target;
-            if (cur1 == nums1.length) {
-                target = nums2[cur2];
-                cur2++;
-            } else if (cur2 == nums2.length) {
-                target = nums1[cur1];
-                cur1++;
-            } else if (nums1[cur1] < nums2[cur2]) {
-                target = nums1[cur1];
-                cur1++;
-            } else {
-                target = nums2[cur2];
-                cur2++;
-            }
+    private int[] nums2;
 
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        this.nums1 = nums1;
+        this.nums2 = nums2;
+        int total = nums1.length + nums2.length;
+        // 双数
+        if (total % 2 == 0) {
+            int left = helper(0, 0, total / 2);
+            int right = helper(0, 0, total / 2 + 1);
+            return (left + right) / 2.0;
+        } else {// 单数，取中间值
+            return helper(0, 0, total / 2 + 1);
         }
-        // 如果需要a+b /2
-        if (needLaterOne) {
-            return (float) (target + another) / 2;
+    }
+
+    private int helper(int start1, int start2, int k) {
+        // 其中一个区间已到达尽头，则结果为另一个区间的第k个值
+        if (start1 >= nums1.length) {
+            return nums2[start2 + k - 1];
+        }
+        if (start2 >= nums2.length) {
+            return nums1[start1 + k - 1];
+        }
+
+        // 只需要找第一个值，则在两区间的首位产生
+        if (k == 1) {
+            return Math.min(nums1[start1], nums2[start2]);
+        }
+
+        // 计算本区间第k/2个数的值，相当于分别在两个数组进行二分
+        int medianIndex1 = start1 + k / 2 - 1;
+        int medianIndex2 = start2 + k / 2 - 1;
+
+        int median1 = medianIndex1 >= nums1.length ? Integer.MAX_VALUE : nums1[medianIndex1];
+        int median2 = medianIndex2 >= nums2.length ? Integer.MAX_VALUE : nums2[medianIndex2];
+
+        // 数组1中的第k/2个值小于数组2中的第k/2个值
+        // 则可以排除数组1的前k/2的部分，结果可能在后半区间与数组2中产生。此时将数组1的起始索引后移到 medianIndex1 + 1
+        // 同时，需要求的k值减小k/2，为上面排除的区间长度。
+        if (median1 <= median2) {
+            return helper(medianIndex1 + 1, start2, k - k / 2);
         } else {
-            return (float) (target);
+            return helper(start1, medianIndex2 + 1, k - k / 2);
         }
 
     }
+
+
 }
