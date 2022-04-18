@@ -1,4 +1,4 @@
-package leetcode.solution.BackTracking;
+package leetcode.solution.backtrack;
 
 /**
  * 329. Longest Increasing Path in a Matrix

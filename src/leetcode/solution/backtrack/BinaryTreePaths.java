@@ -1,4 +1,4 @@
-package leetcode.solution.BackTracking;
+package leetcode.solution.backtrack;
 
 import leetcode.structure.TreeNode;
 

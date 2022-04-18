@@ -1,22 +1,22 @@
-package leetcode.solution.BackTracking;
+package leetcode.solution.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * 39. Combination Sum
- * Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+ * 40. Combination Sum 2
+ * Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
  * <p>
- * The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+ * Each number in candidates may only be used once in the combination.
  * <p>
- * It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+ * Note: The solution set must not contain duplicate combinations.
  */
-public class CombinationSum {
+public class CombinationSumII {
 
     public static void main(String[] args) {
-        int[] candidates = new int[]{2, 3, 6, 7};
-        int nums = 7;
+        int[] candidates = new int[]{4, 1, 1, 4, 4, 4, 4, 2, 3, 5};
+        int nums = 10;
         System.out.println(combinationSum(candidates, nums));
     }
 
@@ -31,7 +31,6 @@ public class CombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         targetValue = target;
         candidateValue = candidates;
-        // 给定数组不一定有序
         Arrays.sort(candidateValue);
         backtrack(new ArrayList<>(), 0, 0);
 
@@ -52,11 +51,15 @@ public class CombinationSum {
 
         for (int i = start; i < candidateValue.length; i++) {
             int currentValue = candidateValue[i];
+            if (i > start && currentValue == candidateValue[i - 1]) {
+                continue;
+            }
+
             // 选择
             path.add(currentValue);
             sum += currentValue;
             // 回溯，仅需要考虑当前位及以后位，若考虑之前位会造成重复。
-            backtrack(path, sum, i);
+            backtrack(path, sum, i + 1);
             // 撤销选择
             path.remove(path.size() - 1);
             sum -= currentValue;
