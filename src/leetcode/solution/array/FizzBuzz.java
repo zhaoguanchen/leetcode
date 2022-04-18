@@ -26,7 +26,6 @@ public class FizzBuzz {
                 ans.add("FizzBuzz");
             } else if (divisibleBy3) {
                 ans.add("Fizz");
-
             } else if (divisibleBy5) {
                 ans.add("Buzz");
             } else {

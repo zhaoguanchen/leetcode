@@ -5,64 +5,81 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * 40. Combination Sum 2
- * Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.
- * <p>
- * Each number in candidates may only be used once in the combination.
- * <p>
- * Note: The solution set must not contain duplicate combinations.
+ * 40. Combination Sum II
  */
 public class CombinationSumII {
 
     public static void main(String[] args) {
         int[] candidates = new int[]{4, 1, 1, 4, 4, 4, 4, 2, 3, 5};
-        int nums = 10;
-        System.out.println(combinationSum(candidates, nums));
+        int target = 10;
+        CombinationSumII combinationSumII = new CombinationSumII();
+        List<List<Integer>> ans = combinationSumII.combinationSum2(candidates, target);
+        System.out.println(ans);
     }
 
-    private static int targetValue;
+    /**
+     * global variable - candidates
+     */
+    private int[] nums;
 
-    // 结果集合
-    private static final List<List<Integer>> result = new ArrayList<>();
+    /**
+     * global variable - target
+     */
+    private int target;
 
-    private static int[] candidateValue;
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
 
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        // sort from smallest to largest
+        Arrays.sort(candidates);
+        this.nums = candidates;
+        this.target = target;
+        this.ans = new ArrayList<>();
+        // the path of choice
+        List<Integer> path = new ArrayList<>();
+        // do the backtracking
+        backtrack(0, 0, path);
 
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        targetValue = target;
-        candidateValue = candidates;
-        Arrays.sort(candidateValue);
-        backtrack(new ArrayList<>(), 0, 0);
-
-        return result;
-
+        return ans;
     }
 
-    private static void backtrack(List<Integer> path, int sum, int start) {
-        // 结束条件：找到和等于目标值的组合
-        if (sum == targetValue) {
-            result.add(new ArrayList<>(path));
-            return;
-        }
-        // 超出目标值
-        if (sum > targetValue) {
+    /**
+     * backtracking method
+     *
+     * @param start
+     * @param sum
+     * @param path
+     */
+    private void backtrack(int start, int sum, List<Integer> path) {
+        // get the answer
+        if (sum == target) {
+            ans.add(new ArrayList<>(path));
             return;
         }
 
-        for (int i = start; i < candidateValue.length; i++) {
-            int currentValue = candidateValue[i];
-            if (i > start && currentValue == candidateValue[i - 1]) {
+        // sum exceed, no need to continue backtracking
+        if (sum > target) {
+            return;
+        }
+
+        // start iteration from start index
+        for (int i = start; i < nums.length; i++) {
+            // ignore the same value, because the nums contains duplicate values.
+            if (i != start && nums[i] == nums[i - 1]) {
                 continue;
             }
 
-            // 选择
-            path.add(currentValue);
-            sum += currentValue;
-            // 回溯，仅需要考虑当前位及以后位，若考虑之前位会造成重复。
-            backtrack(path, sum, i + 1);
-            // 撤销选择
+            // do the choice
+            path.add(nums[i]);
+            sum += nums[i];
+            // backtracking
+            backtrack(i + 1, sum, path);
+            // revoke the choice
             path.remove(path.size() - 1);
-            sum -= currentValue;
+            sum -= nums[i];
         }
     }
 

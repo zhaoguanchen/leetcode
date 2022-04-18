@@ -6,60 +6,66 @@ import java.util.List;
 
 /**
  * 39. Combination Sum
- * Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
- * <p>
- * The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
- * <p>
- * It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
  */
 public class CombinationSum {
 
     public static void main(String[] args) {
         int[] candidates = new int[]{2, 3, 6, 7};
-        int nums = 7;
-        System.out.println(combinationSum(candidates, nums));
+        int target = 7;
+        CombinationSum combinationSum = new CombinationSum();
+        List<List<Integer>> ans = combinationSum.combinationSum(candidates, target);
+        System.out.println(ans);
     }
 
-    private static int targetValue;
+    /**
+     * global variable - candidates
+     */
+    private int[] nums;
 
-    // 结果集合
-    private static final List<List<Integer>> result = new ArrayList<>();
+    /**
+     * global variable - target
+     */
+    private int target;
 
-    private static int[] candidateValue;
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
 
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        Arrays.sort(candidates);
+        this.nums = candidates;
+        this.target = target;
+        this.ans = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        backtrack(0, 0, path);
 
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        targetValue = target;
-        candidateValue = candidates;
-        // 给定数组不一定有序
-        Arrays.sort(candidateValue);
-        backtrack(new ArrayList<>(), 0, 0);
-
-        return result;
-
+        return ans;
     }
 
-    private static void backtrack(List<Integer> path, int sum, int start) {
-        // 结束条件：找到和等于目标值的组合
-        if (sum == targetValue) {
-            result.add(new ArrayList<>(path));
-            return;
-        }
-        // 超出目标值
-        if (sum > targetValue) {
+
+    private void backtrack(int index, int sum, List<Integer> path) {
+        // get the answer
+        if (sum == target) {
+            ans.add(new ArrayList<>(path));
             return;
         }
 
-        for (int i = start; i < candidateValue.length; i++) {
-            int currentValue = candidateValue[i];
-            // 选择
-            path.add(currentValue);
-            sum += currentValue;
-            // 回溯，仅需要考虑当前位及以后位，若考虑之前位会造成重复。
-            backtrack(path, sum, i);
-            // 撤销选择
+        // sum exceed, no need to continue backtracking
+        if (sum > target) {
+            return;
+        }
+
+        // start iteration from start index, every value can be selected
+        for (int i = index; i < nums.length; i++) {
+            // do the choice
+            path.add(nums[i]);
+            sum += nums[i];
+            // backtracking. no need to do i+1, because the same number may be chosen from candidates an unlimited number of times.
+            backtrack(i, sum, path);
+            // revoke the choice
             path.remove(path.size() - 1);
-            sum -= currentValue;
+            sum -= nums[i];
         }
     }
 
