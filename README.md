@@ -17,11 +17,11 @@ The project is divided into two parts: `structure` and `solution`.
 
 ### Data Structure
 
-| No.  | Title                                             | Short Description |
-| ---- | ------------------------------------------------- | ----------------- |
-| 1    | [TreeNode](/src/leetcode/structure/ListNode.java) |                   |
-| 2    |                                                   |                   |
-| 3    |                                                   |                   |
+| No.  | Title                                            | Short Description |
+| ---- | ------------------------------------------------ | ----------------- |
+| 1    | [TreeNode](src/leetcode/structure/ListNode.java) |                   |
+| 2    |                                                  |                   |
+| 3    |                                                  |                   |
 
 
 
@@ -31,10 +31,20 @@ The project is divided into two parts: `structure` and `solution`.
 
 - [Backtrack](/src/leetcode/solution/ListNode.java)
 
-| No.  | Title   | Solution                                                    | Idea |
-| ---- | ------- | ----------------------------------------------------------- | ---- |
-| 78   | Subsets | [Subset.java](/src/leetcode/solution/backtrack/Subset.java) |      |
-|      |         |                                                             |      |
-|      |         |                                                             |      |
-|      |         |                                                             |      |
+| No.  | Title   | Difficulty | Solution                                                   | Idea |
+| ---- | ------- | ---------- | ---------------------------------------------------------- | ---- |
+| 78   | Subsets | Medium     | [Subset.java](src/leetcode/solution/backtrack/Subset.java) |      |
+|      |         |            |                                                            |      |
+|      |         |            |                                                            |      |
+|      |         |            |                                                            |      |
 
+- Array
+
+| No.  | Title                                                 | Difficulty | Solution                                                   | Idea |
+| ---- | ----------------------------------------------------- | ---------- | ---------------------------------------------------------- | ---- |
+| 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | Easy       | [FizzBuzz.java](src/leetcode/solution/array/FizzBuzz.java) |      |
+|      |                                                       |            |                                                            |      |
+|      |                                                       |            |                                                            |      |
+|      |                                                       |            |                                                            |      |
+
+- 
