@@ -5,51 +5,54 @@ import java.util.List;
 
 /**
  * 46. Permutations
- * Given an array nums of distinct integers, return all the possible permutations.
- * You can return the answer in any order.
  */
 public class Permutations {
 
     public static void main(String[] args) {
-        int[] candidates = new int[]{1, 2, 3};
+        int[] nums = {1, 2, 3};
+        Permutations permutations = new Permutations();
+        List<List<Integer>> ans = permutations.permute(nums);
+        System.out.println(ans);
+    }
 
-        System.out.println(permute(candidates));
+    /**
+     * global variable - candidates
+     */
+    private int[] nums;
+
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
+
+    public List<List<Integer>> permute(int[] nums) {
+        this.nums = nums;
+        this.ans = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        backtrack(path);
+
+        return ans;
     }
 
 
-    // 结果集合
-    private static final List<List<Integer>> result = new ArrayList<>();
-
-    private static int[] candidateValue;
-
-    public static List<List<Integer>> permute(int[] nums) {
-        candidateValue = nums;
-        backtrack(new ArrayList<>());
-
-        return result;
-
-
-    }
-
-    private static void backtrack(List<Integer> path) {
-        // 结束条件：长度相等
-        if (path.size() == candidateValue.length) {
-            result.add(new ArrayList<>(path));
+    private void backtrack(List<Integer> path) {
+        // all element are involved. we get the answer.
+        if (path.size() == nums.length) {
+            ans.add(new ArrayList<>(path));
             return;
         }
 
-        for (int i = 0; i < candidateValue.length; i++) {
-            int currentValue = candidateValue[i];
-            // 排除已存在的元素
-            if (path.contains(currentValue)) {
+        // iterate all the candidates
+        for (int num : nums) {
+            // this element is considered before
+            if (path.contains(num)) {
                 continue;
             }
-
-            // 选择
-            path.add(currentValue);
-            // 回溯，考虑所有候选项
+            // do the choice
+            path.add(num);
+            // do the backtracking
             backtrack(path);
-            // 撤销选择
+            // revoke the choice
             path.remove(path.size() - 1);
         }
     }
