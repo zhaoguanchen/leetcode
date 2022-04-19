@@ -17,12 +17,12 @@ The project is divided into two parts: `structure` and `solution`.
 
 ### Data Structure
 
-| No.  | Title                                            | Short Description |
-| ---- | ------------------------------------------------ | ----------------- |
-| 1    | [TreeNode](src/leetcode/structure/TreeNode.java) |                   |
-| 2    | [ListNode](src/leetcode/structure/ListNode.java) |                   |
-| 3    | [Node](src/leetcode/structure/Node.java)         |                   |
-| 4    | [NNode](src/leetcode/structure/NNode.java)       |                   |
+| No.  | Title                                            | Short Description                                            |
+| ---- | ------------------------------------------------ | ------------------------------------------------------------ |
+| 1    | [TreeNode](src/leetcode/structure/TreeNode.java) | Definition for the Binary Tree node. <br />- construct List by Integer Array.<br />- print the Binary Tree with level order. |
+| 2    | [ListNode](src/leetcode/structure/ListNode.java) | Definition for the LinkedList node. <br />- construct List by Integer Array.<br />- construct by value.<br />- set cycle(to solve the cycle problems).<br />- print the LinkedList. |
+| 3    | [Node](src/leetcode/structure/Node.java)         | Definition for the Tree node with next right pointers. <br />- construct List by Integer Array. |
+| 4    | [NNode](src/leetcode/structure/NNode.java)       | Definition for the N-ary Tree node. <br />- construct List by Integer Array.<br />- construct by value. |
 
 
 
