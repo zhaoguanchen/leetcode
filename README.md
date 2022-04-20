@@ -30,16 +30,17 @@ The project is divided into two parts: `structure` and `solution`.
 
 ### Classification
 
-- [Backtrack](/src/leetcode/solution/ListNode.java)
+- [Backtrack](src/leetcode/solution/backtrack)
 
 | No.  | Title   | Difficulty | Solution                                                   | Idea |
 | ---- | ------- | ---------- | ---------------------------------------------------------- | ---- |
-| 78   | [Subsets](https://leetcode.com/problems/subsets/) | Medium     | [Subset.java](src/leetcode/solution/backtrack/Subset.java) |      |
-| 39   | [CombinationSum](https://leetcode.com/problems/combination-sum/) | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) |      |
+| 78   | [Subsets](https://leetcode.com/problems/subsets/) 	                   | Medium    | [Subset.java](src/leetcode/solution/backtrack/Subset.java) |      |
+| 39   | [CombinationSum](https://leetcode.com/problems/combination-sum/)      | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) |      |
 | 40   | [CombinationSumII](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) |      |
-| 46 | [Permutations](https://leetcode.com/problems/permutations/) | Medium | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | |
+| 46   | [Permutations](https://leetcode.com/problems/permutations/)           | Medium | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | |
+| 47 | [PermutationsII](https://leetcode.com/problems/permutations-ii/) | Medium | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | |
 
-- Array
+- [Array](src/leetcode/solution/array)
 
 | No.  | Title                                                 | Difficulty | Solution                                                   | Idea |
 | ---- | ----------------------------------------------------- | ---------- | ---------------------------------------------------------- | ---- |
