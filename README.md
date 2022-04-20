@@ -49,4 +49,17 @@ The project is divided into two parts: `structure` and `solution`.
 |      |                                                       |            |                                                            |      |
 |      |                                                       |            |                                                            |      |
 
-- 
+- Tree
+
+  - Binary Tree
+  - [Binary Search Tree](src/leetcode/solution/tree/bst)
+
+  | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+  | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+
+  
