@@ -2,6 +2,7 @@ package leetcode.solution.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,48 +12,68 @@ import java.util.List;
 public class PermutationsII {
 
     public static void main(String[] args) {
-        int[] candidates = new int[]{1, 1, 2};
+        int[] nums = new int[]{1, 1, 2};
+        PermutationsII permutationsII = new PermutationsII();
+        List<List<Integer>> ans = permutationsII.permuteUnique(nums);
+        System.out.println(ans);
+    }
 
-        System.out.println(permuteUnique(candidates));
+    /**
+     * global variable - candidates
+     */
+    private int[] nums;
+
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
+
+    /**
+     * global variable - memo
+     */
+    private boolean[] used;
+
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        Arrays.sort(nums);
+        this.nums = nums;
+        this.used = new boolean[nums.length];
+        this.ans = new ArrayList<>();
+        // LinkedList is used because frequent add and delete operations are required
+        LinkedList<Integer> path = new LinkedList<>();
+        backtrack(path);
+
+        return ans;
     }
 
 
-    // 结果集合
-    private static final List<List<Integer>> result = new ArrayList<>();
-
-    private static int[] candidateValue;
-
-
-    public static List<List<Integer>> permuteUnique(int[] nums) {
-        candidateValue = nums;
-        Arrays.sort(candidateValue);
-        boolean[] used = new boolean[nums.length];
-        backtrack(new ArrayList<>(), used);
-        return result;
-    }
-
-    private static void backtrack(List<Integer> path, boolean[] used) {
-        if (path.size() == candidateValue.length) {
-            result.add(new ArrayList<>(path));
+    private void backtrack(LinkedList<Integer> path) {
+        // all element are involved. we get the answer.
+        if (path.size() == nums.length) {
+            ans.add(new ArrayList<>(path));
             return;
         }
 
-        for (int i = 0; i < candidateValue.length; i++) {
+        // iterate all the candidates
+        for (int i = 0; i < nums.length; i++) {
+            // this element is considered before
             if (used[i]) {
                 continue;
             }
-            // 从第二个元素开始，出现相同元素，且前一元素在本次递归过程中未被选中，则跳过。因为i=i-1时已完成选择。
-            if (i > 0 && candidateValue[i - 1] == candidateValue[i] && !used[i - 1]) {
+
+            // if the current value is as same as the previous value,
+            // only the next one of the selected value at last level can be considered
+            // this method could guarantee the relative order of same value
+            if (i != 0 && nums[i] == nums[i - 1] && !used[i - 1]) {
                 continue;
             }
-            int currentValue = candidateValue[i];
 
-            //  选择
+            // do the choice
+            path.add(nums[i]);
             used[i] = true;
-            path.add(currentValue);
-            backtrack(path, used);
-            // 撤销选择
-            path.remove(path.size() - 1);
+            // do the backtracking
+            backtrack(path);
+            // revoke the choice
+            path.removeLast();
             used[i] = false;
         }
     }
