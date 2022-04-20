@@ -2,6 +2,7 @@ package leetcode.solution.backtrack;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -24,28 +25,24 @@ public class SubSetII {
         Arrays.sort(nums);
         this.nums = nums;
         this.ans = new ArrayList<>();
-        ans.add(new ArrayList<>());
-        if (nums.length == 0) {
-            return ans;
-        }
-        List<Integer> path = new ArrayList<>();
+        LinkedList<Integer> path = new LinkedList<>();
         backtrack(0, path);
         return ans;
     }
 
-    private void backtrack(int index, List<Integer> path) {
-        if (index == nums.length) {
-            return;
-        }
+    private void backtrack(int index, LinkedList<Integer> path) {
+        ans.add(new ArrayList<>(path));
+
+        // no need to check index out of array, the for loop will do it
 
         for (int i = index; i < nums.length; i++) {
+            // ignore the same value, because this condition was considered before
             if (i != index && nums[i] == nums[i - 1]) {
                 continue;
             }
             path.add(nums[i]);
-            ans.add(new ArrayList<>(path));
             backtrack(i + 1, path);
-            path.remove(path.size() - 1);
+            path.removeLast();
         }
 
 

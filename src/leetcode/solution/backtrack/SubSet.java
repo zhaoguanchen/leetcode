@@ -1,20 +1,21 @@
 package leetcode.solution.backtrack;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
  * 78. Subsets
- * Given an integer array nums of unique elements, return all possible subsets (the power set).
- * <p>
- * The solution set must not contain duplicate subsets. Return the solution in any order.
  */
 public class SubSet {
 
     public static void main(String[] args) {
         int[] nums = new int[]{1, 2, 3};
-        System.out.println(subsets(nums));
-        System.out.println(subsetsBackTracking(nums));
+        SubSet subSet = new SubSet();
+        List<List<Integer>> ans = subSet.subsets(nums);
+        System.out.println(ans);
+        ans = subSet.subsetsForLoop(nums);
+        System.out.println(ans);
     }
 
 
@@ -24,7 +25,7 @@ public class SubSet {
      * @param nums
      * @return
      */
-    public static List<List<Integer>> subsets(int[] nums) {
+    public List<List<Integer>> subsetsForLoop(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         // 空集合
         result.add(new ArrayList<>());
@@ -46,29 +47,40 @@ public class SubSet {
 
 
     /**
-     * backtrack
-     *
-     * @param nums
-     * @return
+     * global variable - candidates
      */
-    public static List<List<Integer>> subsetsBackTracking(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
+    private int[] nums;
 
-        List<Integer> path = new ArrayList<>();
-        backtrack(result, path, nums, 0);
-        return result;
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
+
+
+    public List<List<Integer>> subsets(int[] nums) {
+        this.nums = nums;
+        this.ans = new ArrayList<>();
+        // LinkedList is used because frequent add and delete operations are required
+        LinkedList<Integer> path = new LinkedList<>();
+        backtrack(0, path);
+
+        return ans;
     }
 
-    private static void backtrack(List<List<Integer>> result, List<Integer> path, int[] nums, int startOfSelect) {
-        result.add(new ArrayList<>(path));
-        // 选择范围
-        for (int i = startOfSelect; i < nums.length; i++) {
-            // 做选择，将当前节点添加至path
+    private void backtrack(int index, LinkedList<Integer> path) {
+        // answers are generated every time, including the black List
+        ans.add(new ArrayList<>(path));
+
+        // no need to check index out of array, the for loop will do it
+
+        // start iteration from start index, every value after the value at 'index' can be selected
+        for (int i = index; i < nums.length; i++) {
+            // do the choice
             path.add(nums[i]);
-            // 递归，对子节点做选择
-            backtrack(result, path, nums, i + 1);
-            // 删除之前的选择，进行下一次
-            path.remove(path.size() - 1);
+            // backtracking. we cannot select the same value, so do 'i + 1'
+            backtrack(i + 1, path);
+            // revoke the choice
+            path.removeLast();
         }
     }
 
