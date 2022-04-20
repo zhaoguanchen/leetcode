@@ -39,6 +39,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 40   | [CombinationSumII](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) |      |
 | 46   | [Permutations](https://leetcode.com/problems/permutations/)           | Medium | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | |
 | 47 | [PermutationsII](https://leetcode.com/problems/permutations-ii/) | Medium | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | |
+| 77 | [Combinations](https://leetcode.com/problems/combinations/) | Medium | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | |
 
 - [Array](src/leetcode/solution/array)
 
