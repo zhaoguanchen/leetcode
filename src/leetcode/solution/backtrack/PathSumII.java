@@ -21,45 +21,57 @@ public class PathSumII {
         // [[5,4,11,2],[5,8,4,5]]
     }
 
-    private List<List<Integer>> ans;
+    /**
+     * global variable - result list
+     */
+    List<List<Integer>> ans;
+
+    /**
+     * global variable - targetSum
+     */
+    int target;
 
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         ans = new ArrayList<>();
         if (root == null) {
-            return new ArrayList<>();
+            return ans;
         }
-
-        List<Integer> path = new LinkedList<>();
+        target = targetSum;
+        LinkedList<Integer> path = new LinkedList<>();
+        // root value will always be chosen
         path.add(root.val);
-        targetSum -= root.val;
-        backtrack(root, targetSum, path);
+        int sum = root.val;
+        backtrack(root, sum, path);
+
         return ans;
     }
 
-    private void backtrack(TreeNode root, int targetSum, List<Integer> path) {
+
+    private void backtrack(TreeNode root, int sum, LinkedList<Integer> path) {
+        // arrive the leaf node
         if (root.left == null && root.right == null) {
-            if (targetSum == 0) {
+            if (sum == target) {
                 ans.add(new ArrayList<>(path));
             }
-
             return;
         }
 
+        // search left child
         if (root.left != null) {
             path.add(root.left.val);
-            targetSum -= root.left.val;
-            backtrack(root.left, targetSum, path);
-            targetSum += root.left.val;
-            path.remove(path.size() - 1);
+            sum += root.left.val;
+            backtrack(root.left, sum, path);
+            path.removeLast();
+            sum -= root.left.val;
         }
 
+        // search right child
         if (root.right != null) {
             path.add(root.right.val);
-            targetSum -= root.right.val;
-            backtrack(root.right, targetSum, path);
-            targetSum += root.right.val;
-            path.remove(path.size() - 1);
+            sum += root.right.val;
+            backtrack(root.right, sum, path);
+            path.removeLast();
+            sum -= root.right.val;
         }
-
     }
 }
