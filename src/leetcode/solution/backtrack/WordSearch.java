@@ -13,77 +13,82 @@ public class WordSearch {
         System.out.println(ans);
     }
 
-    private char[][] board;
 
-    private String word;
+    int m;
 
-    private int[][] direct;
+    int n;
 
-    private int[][] visited;
+    char[][] board;
 
+    String word;
+
+    /**
+     * ans
+     */
+    boolean isExist;
+
+    /**
+     * move direction
+     */
+    int[][] direct;
 
     public boolean exist(char[][] board, String word) {
-        this.board = board;
+        isExist = false;
         this.word = word;
-        this.visited = new int[board.length][board[0].length];
-        this.direct = new int[][]{{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
-        char firstLetter = word.charAt(0);
-        boolean ans = false;
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] != firstLetter) {
-                    continue;
+        this.board = board;
+        this.m = board.length;
+        this.n = board[0].length;
+        this.direct = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                backtrack(i, j, 0);
+                // is already exist, break the loop
+                if (isExist) {
+                    break;
                 }
-                visited[i][j] = 1;
-                ans = backtrack(1, i, j);
-                if (ans) {
-                    return true;
-                }
-                visited[i][j] = 0;
             }
         }
-        return ans;
 
-
+        return isExist;
     }
 
-    private boolean backtrack(int index, int i, int j) {
-        if (index == word.length()) {
-            return true;
+
+    private void backtrack(int i, int j, int index) {
+        // already get the right path
+        if (isExist) {
+            return;
         }
 
-        char firstLetter = word.charAt(index);
-        boolean ans = false;
-        for (int[] item : direct) {
-            int nextI = item[0] + i;
-            int nextJ = item[1] + j;
-
-            if (outOfBoard(nextI, nextJ)) {
-                continue;
-            }
-
-            if (visited[nextI][nextJ] == 1) {
-                continue;
-            }
-
-            char nextLetter = board[nextI][nextJ];
-            if (nextLetter != firstLetter) {
-                continue;
-            }
-
-            visited[nextI][nextJ] = 1;
-            ans = backtrack(index + 1, nextI, nextJ);
-            if (ans) {
-                return true;
-            }
-            visited[nextI][nextJ] = 0;
+        // out of bound
+        if (i < 0 || j < 0 || i >= m || j >= n) {
+            return;
         }
 
-        return false;
-    }
+        // visited before, return
+        if ('#' == board[i][j]) {
+            return;
+        }
 
-    private boolean outOfBoard(int i, int j) {
-        return i < 0 || j < 0 || i >= board.length || j >= board[0].length;
-    }
+        // wrong choice
+        if (board[i][j] != word.charAt(index)) {
+            return;
+        }
 
+        // this is the last character
+        if (index == word.length() - 1) {
+            isExist = true;
+            return;
+        }
+
+        // mark as visited
+        board[i][j] = '#';
+        // backtrack each direction
+        for (int[] d : direct) {
+            backtrack(i + d[0], j + d[1], index + 1);
+        }
+
+        // revoke the mark
+        board[i][j] = word.charAt(index);
+    }
 }
