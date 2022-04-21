@@ -17,86 +17,92 @@ public class RestoreIPAddresses {
 
     }
 
-    private String str;
 
-    List<String> ans;
+    private List<String> ans;
+
+    private String s;
 
     public List<String> restoreIpAddresses(String s) {
-        ans = new ArrayList<>();
-        str = s;
-        LinkedList<String> path = new LinkedList<>();
-        backtrack(0, path);
+        this.ans = new ArrayList<>();
+        this.s = s;
+        LinkedList<Integer> path = new LinkedList<>();
+        backtrack(0, 0, path);
 
         return ans;
     }
 
 
-    private void backtrack(int index, LinkedList<String> path) {
-        if (index > str.length() - 1) {
+    /**
+     * @param stage 0,1,2 or 3. represent the number of part that split by '.'
+     * @param index current index in the String s
+     * @param path  the choices collection
+     */
+    private void backtrack(int stage, int index, LinkedList<Integer> path) {
+        // at stage 3, all characters remain should be considered
+        if (stage == 3) {
+            String str = s.substring(index);
+            if (check(str)) {
+                String res = generate(path);
+                ans.add(res);
+            }
             return;
         }
 
-        // 已经添加了3段，处理最后一段
-        if (path.size() == 3) {
-            String s = str.substring(index);
-            if (!isAvailable(s)) {
-                return;
-            }
-            path.add(s);
-            String res = String.join(".", path);
-            ans.add(res);
-            path.removeLast();
-        }
-
-
-        for (int i = 0; i < 3; i++) {
-            int endIndex = index + i;
-            if (endIndex > str.length() - 1) {
+        // for each part, at least 1 character, at most 3 character
+        for (int i = 1; i <= 3; i++) {
+            int end = index + i;
+            if (end > s.length()) {
                 continue;
             }
-            String s = str.substring(index, endIndex + 1);
-            if (!isAvailable(s)) {
+
+            // check the substring
+            String sub = s.substring(index, end);
+            if (!check(sub)) {
                 continue;
             }
-            // 做选择
-            path.add(s);
-            // 回溯
-            backtrack(endIndex + 1, path);
-            // 撤销选择
+            // do choice
+            path.add(end);
+            // backtrack
+            backtrack(stage + 1, end, path);
+            // revoke the choice
             path.removeLast();
-
         }
 
 
     }
 
 
-    private boolean isAvailable(String s) {
-        // 超长
-        if (s.length() > 3) {
-            return false;
-        }
-        // 数字不合法
-        int value = getInt(s);
-        if (value > 255) {
+    private boolean check(String str) {
+        if (str.length() == 0 || str.length() > 3) {
             return false;
         }
 
-        if (s.length() > 1 && '0' == s.charAt(0)) {
+        // if str start with '0', it should not contains more characters.
+        if (str.charAt(0) == '0' && str.length() > 1) {
             return false;
         }
 
-        return true;
+        // val should in the range [0,255]
+        int val = Integer.parseInt(str);
+        return val >= 0 && val <= 255;
     }
 
-    private int getInt(String s) {
-        int ans = 0;
-        int x = 1;
-        for (int i = s.length() - 1; i >= 0; i--) {
-            ans = ans + x * (s.charAt(i) - '0');
-            x = x * 10;
+    /**
+     * generate the result string joined with '.'
+     *
+     * @param path the index collection that represent the locations of '.'
+     * @return
+     */
+    private String generate(List<Integer> path) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (path.contains(i)) {
+                sb.append(".");
+            }
+            sb.append(s.charAt(i));
         }
-        return ans;
+
+        return sb.toString();
     }
 
 }
