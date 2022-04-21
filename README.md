@@ -42,6 +42,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 78   | [Subsets](https://leetcode.com/problems/subsets/) 	                   | Medium    | [Subset.java](src/leetcode/solution/backtrack/Subset.java) |      |
 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | |
 | 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Medium | [SubsetII.java](src/leetcode/solution/backtrack/SubsetII.java) | |
+| 93 | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | |
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | |
 | 113 | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | Medium | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | |
 |  |  |  |  | |
