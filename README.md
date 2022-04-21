@@ -78,3 +78,12 @@ The project is divided into two parts: `structure` and `solution`.
       |      |                                                              |            |                                                              |      |
       |      |                                                              |            |                                                              |      |
   
+
+- [DataStruct](src/leetcode/solution/DataStruct)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea               |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------ |
+| 705  | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy       | [DesignHashSet.java](src/leetcode/solution/DataStruct/DesignHashSet.java) | Array + LinkedList |
+| 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList |
+|      |                                                              |            |                                                              |                    |
+|      |                                                              |            |                                                              |                    |
