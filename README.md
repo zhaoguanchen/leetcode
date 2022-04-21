@@ -56,17 +56,25 @@ The project is divided into two parts: `structure` and `solution`.
 |      |                                                       |            |                                                            |      |
 |      |                                                       |            |                                                            |      |
 
-- Tree
+- [Tree](src/leetcode/solution/tree)
 
-  - Binary Tree
+  - [Binary Tree](src/leetcode/solution/tree/bst)
+  
+    - | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+      | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+      | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
+  
   - [Binary Search Tree](src/leetcode/solution/tree/bst)
-
-  | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-  | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-
+  
+    - | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+      | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+      | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
+      |      |                                                              |            |                                                              |      |
   
