@@ -7,31 +7,43 @@ import java.util.List;
 
 /**
  * 199. Binary Tree Right Side View
- * Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
  */
 public class BinaryTreeRightSideView {
 
     public static void main(String[] args) {
-
-
         Integer[] array = {1, 2, 3, null, 5, null, 4};
         TreeNode r = TreeNode.constructTree(array);
-        System.out.println(rightSideView(r));
+        BinaryTreeRightSideView view = new BinaryTreeRightSideView();
+        List<Integer> ans = view.rightSideView(r);
+        System.out.println(ans);
     }
 
-    public static List<Integer> rightSideView(TreeNode root) {
+
+    private List<Integer> ans;
+
+    public List<Integer> rightSideView(TreeNode root) {
+        ans = new ArrayList<>();
+        helper(root, 0);
+        return ans;
+    }
+
+
+    private void helper(TreeNode root, Integer level) {
+        // base case
         if (root == null) {
-            return new ArrayList<>();
+            return;
         }
 
-        List<Integer> result = new ArrayList<>();
-
-        int dept = 0;
-        TreeNode cur = root;
-        while (cur != null) {
-            result.add(cur.val);
-            cur = cur.right;
+        // new level appears, it should be the path
+        if (level == ans.size()) {
+            ans.add(root.val);
         }
-        return new ArrayList<>();
+
+        // right child first
+        helper(root.right, level + 1);
+        helper(root.left, level + 1);
+
     }
+
+
 }
