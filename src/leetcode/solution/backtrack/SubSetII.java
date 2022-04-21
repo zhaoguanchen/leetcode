@@ -17,8 +17,14 @@ public class SubSetII {
         System.out.println(ans);
     }
 
+    /**
+     * global variable - candidates
+     */
     private int[] nums;
 
+    /**
+     * global variable - result list
+     */
     private List<List<Integer>> ans;
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
