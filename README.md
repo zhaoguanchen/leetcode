@@ -34,10 +34,10 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title   | Difficulty | Solution                                                   | Idea |
 | ---- | ------- | ---------- | ---------------------------------------------------------- | ---- |
-| 39   | [CombinationSum](https://leetcode.com/problems/combination-sum/)      | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack |
-| 40   | [CombinationSumII](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) | Backtrack |
+| 39   | [Combination Sum](https://leetcode.com/problems/combination-sum/)     | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack |
+| 40   | [Combination Sum II](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) | Backtrack |
 | 46   | [Permutations](https://leetcode.com/problems/permutations/)           | Medium | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | Backtrack |
-| 47 | [PermutationsII](https://leetcode.com/problems/permutations-ii/) | Medium | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack |
+| 47 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Medium | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack |
 | 77 | [Combinations](https://leetcode.com/problems/combinations/) | Medium | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | Backtrack |
 | 78   | [Subsets](https://leetcode.com/problems/subsets/) 	                   | Medium    | [Subset.java](src/leetcode/solution/backtrack/Subset.java) | Backtrack |
 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | Backtrack |
@@ -46,6 +46,17 @@ The project is divided into two parts: `structure` and `solution`.
 | 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack |
 | 113 | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | Medium | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
 |  |  |  |  | |
+
+- [DFS]()
+- [BFS]()
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
+| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/DataStruct/OpenTheLock.java) | BFS with Queue |
+|      |                                                              |            |                                                              |                |
+|      |                                                              |            |                                                              |                |
+
+
 
 - [Array](src/leetcode/solution/array)
 
