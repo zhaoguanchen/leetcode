@@ -87,3 +87,12 @@ The project is divided into two parts: `structure` and `solution`.
 | 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList |
 |      |                                                              |            |                                                              |                    |
 |      |                                                              |            |                                                              |                    |
+
+- [String](src/leetcode/solution/string)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea              |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------- |
+| 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count |
+|      |                                                              |            |                                                              |                   |
+|      |                                                              |            |                                                              |                   |
+|      |                                                              |            |                                                              |                   |
