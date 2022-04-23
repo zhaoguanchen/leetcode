@@ -104,6 +104,6 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea              |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------- |
 | 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count |
-|      |                                                              |            |                                                              |                   |
+| 535  | [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) | Medium     | [EncodeAndDecodeTinyURL.java](src/leetcode/solution/string/EncodeAndDecodeTinyURL.java) | HashMap           |
 |      |                                                              |            |                                                              |                   |
 |      |                                                              |            |                                                              |                   |
