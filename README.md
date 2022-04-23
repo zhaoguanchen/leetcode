@@ -30,7 +30,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 ### Classification
 
-- [Backtrack](src/leetcode/solution/backtrack)
+#### [Backtrack](src/leetcode/solution/backtrack)
 
 | No.  | Title   | Difficulty | Solution                                                   | Idea |
 | ---- | ------- | ---------- | ---------------------------------------------------------- | ---- |
@@ -47,8 +47,9 @@ The project is divided into two parts: `structure` and `solution`.
 | 113 | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | Medium | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
 |  |  |  |  | |
 
-- [DFS]()
-- [BFS]()
+#### [DFS]()
+
+#### [BFS]()
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
@@ -58,7 +59,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 
 
-- [Array](src/leetcode/solution/array)
+#### [Array](src/leetcode/solution/array)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -67,30 +68,31 @@ The project is divided into two parts: `structure` and `solution`.
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     | [MaxChunksToMakeSorted.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array,  each time the maximum value of all elements to the left equals the index, there is a new chunk. |
 |      |                                                              |            |                                                              |                                                              |
 
-- [Tree](src/leetcode/solution/tree)
+#### [Tree](src/leetcode/solution/tree)
 
-  - [Binary Tree](src/leetcode/solution/tree/bst)
-  
-    - | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-      | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-      | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-  
-  - [Binary Search Tree](src/leetcode/solution/tree/bst)
-  
-    - | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-      | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-      | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-      |      |                                                              |            |                                                              |      |
-  
+##### [Binary Tree](src/leetcode/solution/tree/bst)
 
-- [DataStruct](src/leetcode/solution/DataStruct)
+ | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+  | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+
+
+##### [Binary Search Tree](src/leetcode/solution/tree/bst)
+
+ | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+  | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+  |      |                                                              |            |                                                              |      |
+
+
+#### [DataStruct](src/leetcode/solution/DataStruct)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea               |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------ |
@@ -99,7 +101,7 @@ The project is divided into two parts: `structure` and `solution`.
 |      |                                                              |            |                                                              |                    |
 |      |                                                              |            |                                                              |                    |
 
-- [String](src/leetcode/solution/string)
+#### [String](src/leetcode/solution/string)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea              |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------- |
