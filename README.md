@@ -49,11 +49,18 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [DFS](src/leetcode/solution/DFS)
 
+**Island**
+
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium     | [NumberOfIslands.java](src/leetcode/solution/DFS/NumberOfIslands.java) | DFS \| Remove the island and count                           |
 | 1254 | [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) | Medium     | [NumberOfClosedIslands.java](src/leetcode/solution/DFS/NumberOfClosedIslands.java) | DFS \| Remove the island close to the border, then Remove other islands and count. |
-| 694  | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/) | Medium     | [NumberOfDistinctIslands.java](src/leetcode/solution/DFS/NumberOfDistinctIslands.java) | DFS \| remove the island and record the path, which could reflect the shape of the island |
+| 695  | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | Medium     | [MaxAreaOfIsland.java](src/leetcode/solution/DFS/MaxAreaOfIsland.java) | DFS \| Remove the island and count the area of each island. Return the max value. |
+| 694  | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/) | Medium     | [NumberOfDistinctIslands.java](src/leetcode/solution/DFS/NumberOfDistinctIslands.java) | DFS \| remove the island and record the path, which could reflect the shape of the island, use HashSet to save the distinct path. |
+| 1905 | [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) | Medium     | [CountSubIslands.java](src/leetcode/solution/DFS/CountSubIslands.java) | DFS \| At first, remove the island that is not sub island. Then, remove the island and count. |
+| 1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) | Medium     | [NumberOfEnclaves.java](src/leetcode/solution/DFS/NumberOfEnclaves.java) | DFS \| Remove the island close to the border, then Remove other islands and count. Same as problem '1254'. |
+
+
 
 
 

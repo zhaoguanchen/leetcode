@@ -9,17 +9,26 @@ public class CountSubIslands {
         int[][] grid1 = {{1, 1, 1, 0, 0}, {0, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 1, 1}};
         int[][] grid2 = {{1, 1, 1, 0, 0}, {0, 0, 1, 1, 1}, {0, 1, 0, 0, 0}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}};
         CountSubIslands numberOfIslands = new CountSubIslands();
-        System.out.println(numberOfIslands.countSubIslands(grid1, grid2));
-        // e
+        int ans = numberOfIslands.countSubIslands(grid1, grid2);
+        System.out.println(ans);
+        // 3
     }
 
     private int[][] data2;
+
+    /**
+     * four directions
+     */
+    private int[][] direct;
 
     public int countSubIslands(int[][] grid1, int[][] grid2) {
         data2 = grid2;
         int m = grid1.length;
         int n = grid1[0].length;
+        this.direct = new int[][]{{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
+        // exclude islands that are not sub-island,
+        // which means that for some i、j, grid2 == land but grid1 is water
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (data2[i][j] == 1 && grid1[i][j] == 0) {
@@ -28,29 +37,36 @@ public class CountSubIslands {
             }
         }
 
-        int ans = 0;
+        // count and remove island, same as '200'
+        int count = 0;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (data2[i][j] == 1) {
-                    ans++;
+                    count++;
                     helper(i, j);
                 }
             }
         }
 
-        return ans;
+        return count;
     }
 
-    private int helper(int i, int j) {
+    private void helper(int i, int j) {
         if (i < 0 || j < 0 || i >= data2.length || j >= data2[0].length) {
-            return 0;
+            return;
         }
         if (data2[i][j] == 0) {
-            return 0;
+            return;
         }
+
         data2[i][j] = 0;
-        return 1 + helper(i, j - 1) + helper(i - 1, j) + helper(i, j + 1) + helper(i + 1, j);
+
+        for (int[] item : direct) {
+            int nextI = item[0] + i;
+            int nextJ = item[1] + j;
+            helper(nextI, nextJ);
+        }
     }
 
 }

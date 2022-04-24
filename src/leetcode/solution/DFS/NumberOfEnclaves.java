@@ -13,52 +13,54 @@ public class NumberOfEnclaves {
     }
 
 
-    private int[][] data;
+    private int[][] grid;
 
     public int numEnclaves(int[][] grid) {
-        data = grid;
+        this.grid = grid;
         int m = grid.length;
         int n = grid[0].length;
 
+        // remove islands near border
         for (int i = 0; i < m; i++) {
-            if (data[i][0] == 1) {
+            if (grid[i][0] == 1) {
                 helper(i, 0);
             }
-            if (data[i][n - 1] == 1) {
+            if (grid[i][n - 1] == 1) {
                 helper(i, n - 1);
             }
         }
 
+        // remove islands near border
         for (int i = 0; i < n; i++) {
-            if (data[0][i] == 1) {
+            if (grid[0][i] == 1) {
                 helper(0, i);
             }
-            if (data[m - 1][i] == 1) {
+            if (grid[m - 1][i] == 1) {
                 helper(m - 1, i);
             }
         }
 
-
-        int ans = 0;
+        // count the grid.
+        int count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (data[i][j] == 1) {
-                    ans++;
+                if (grid[i][j] == 1) {
+                    count++;
                 }
             }
         }
 
-        return ans;
+        return count;
     }
 
     private void helper(int i, int j) {
-        if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
+        if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length) {
             return;
         }
-        if (data[i][j] == 0) {
+        if (grid[i][j] == 0) {
             return;
         }
-        data[i][j] = 0;
+        grid[i][j] = 0;
         helper(i, j - 1);
         helper(i - 1, j);
         helper(i, j + 1);

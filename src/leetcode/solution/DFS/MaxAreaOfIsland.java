@@ -8,7 +8,8 @@ public class MaxAreaOfIsland {
     public static void main(String[] args) {
         int[][] grid = {{0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 0, 0}, {0, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0}};
         MaxAreaOfIsland numberOfIslands = new MaxAreaOfIsland();
-        System.out.println(numberOfIslands.maxAreaOfIsland(grid));
+        int ans = numberOfIslands.maxAreaOfIsland(grid);
+        System.out.println(ans);
         // 6
     }
 
@@ -32,6 +33,13 @@ public class MaxAreaOfIsland {
         return ans;
     }
 
+    /**
+     * calculate area and remove islands
+     *
+     * @param i
+     * @param j
+     * @return
+     */
     private int helper(int i, int j) {
         if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
             return 0;
