@@ -12,58 +12,78 @@ public class NumberOfClosedIslands {
         // 2
     }
 
+    private int[][] grid;
 
-    private int[][] data;
+
+    private int m;
+
+    private int n;
+
+    /**
+     * four directions
+     */
+    private int[][] direct;
 
     public int closedIsland(int[][] grid) {
-        data = grid;
-        int m = grid.length;
-        int n = grid[0].length;
-
+        this.grid = grid;
+        this.m = grid.length;
+        this.n = grid[0].length;
+        this.direct = new int[][]{{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+        // remove the islands close to the border
+        // top and bottom
         for (int i = 0; i < m; i++) {
-            if (data[i][0] == 0) {
-                helper(i, 0);
+            if (grid[i][0] == 0) {
+                dfs(i, 0);
             }
-            if (data[i][n - 1] == 0) {
-                helper(i, n - 1);
+            if (grid[i][n - 1] == 0) {
+                dfs(i, n - 1);
             }
         }
-
+        // remove the islands close to the border
+        // left and right
         for (int i = 0; i < n; i++) {
-            if (data[0][i] == 0) {
-                helper(0, i);
+            if (grid[0][i] == 0) {
+                dfs(0, i);
             }
-            if (data[m - 1][i] == 0) {
-                helper(m - 1, i);
+            if (grid[m - 1][i] == 0) {
+                dfs(m - 1, i);
             }
         }
 
-
-        int ans = 0;
+        // count the island, same as problem '200. Number of Islands'
+        int count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (data[i][j] == 0) {
-                    ans++;
-                    helper(i, j);
+                if (grid[i][j] == 0) {
+                    count++;
+                    dfs(i, j);
                 }
             }
         }
 
-        return ans;
+        return count;
     }
 
-    private void helper(int i, int j) {
-        if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
+    /**
+     * remove islands
+     * @param i
+     * @param j
+     */
+    private void dfs(int i, int j) {
+        if (i < 0 || i >= m || j < 0 || j >= n) {
             return;
         }
-        if (data[i][j] == 1) {
+
+        if (grid[i][j] == 1) {
             return;
         }
-        data[i][j] = 1;
-        helper(i, j - 1);
-        helper(i - 1, j);
-        helper(i, j + 1);
-        helper(i + 1, j);
+        grid[i][j] = 1;
+        for (int[] item : direct) {
+            int nextI = item[0] + i;
+            int nextJ = item[1] + j;
+
+            dfs(nextI, nextJ);
+        }
     }
 
 }
