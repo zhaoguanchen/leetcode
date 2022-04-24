@@ -8,12 +8,12 @@ public class NumberOfClosedIslands {
     public static void main(String[] args) {
         int[][] grid = {{1, 1, 1, 1, 1, 1, 1, 0}, {1, 0, 0, 0, 0, 1, 1, 0}, {1, 0, 1, 0, 1, 1, 1, 0}, {1, 0, 0, 0, 0, 1, 0, 1}, {1, 1, 1, 1, 1, 1, 1, 0}};
         NumberOfClosedIslands numberOfIslands = new NumberOfClosedIslands();
-        System.out.println(numberOfIslands.closedIsland(grid));
+        int ans = numberOfIslands.closedIsland(grid);
+        System.out.println(ans);
         // 2
     }
 
     private int[][] grid;
-
 
     private int m;
 
@@ -66,6 +66,7 @@ public class NumberOfClosedIslands {
 
     /**
      * remove islands
+     *
      * @param i
      * @param j
      */
