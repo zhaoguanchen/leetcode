@@ -53,7 +53,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium     | [NumberOfIslands.java](src/leetcode/solution/DFS/NumberOfIslands.java) | DFS \| Remove the island and count                           |
 | 1254 | [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) | Medium     | [NumberOfClosedIslands.java](src/leetcode/solution/DFS/NumberOfClosedIslands.java) | DFS \| Remove the island close to the border, then Remove other islands and count. |
-|      |                                                              |            |                                                              |                                                              |
+| 694  | [Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/) | Medium     | [NumberOfDistinctIslands.java](src/leetcode/solution/DFS/NumberOfDistinctIslands.java) | DFS \| remove the island and record the path, which could reflect the shape of the island |
 
 
 
