@@ -49,11 +49,11 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [DFS](src/leetcode/solution/DFS)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                     |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------ |
-| 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium     | [NumberOfIslands.java](src/leetcode/solution/DFS/NumberOfIslands.java) | DFS \| Remove the island |
-|      |                                                              |            |                                                              |                          |
-|      |                                                              |            |                                                              |                          |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium     | [NumberOfIslands.java](src/leetcode/solution/DFS/NumberOfIslands.java) | DFS \| Remove the island and count                           |
+| 1254 | [Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/) | Medium     | [NumberOfClosedIslands.java](src/leetcode/solution/DFS/NumberOfClosedIslands.java) | DFS \| Remove the island close to the border, then Remove other islands and count. |
+|      |                                                              |            |                                                              |                                                              |
 
 
 
