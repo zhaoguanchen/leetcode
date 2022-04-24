@@ -32,28 +32,36 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Backtrack](src/leetcode/solution/backtrack)
 
-| No.  | Title   | Difficulty | Solution                                                   | Idea |
-| ---- | ------- | ---------- | ---------------------------------------------------------- | ---- |
-| 39   | [Combination Sum](https://leetcode.com/problems/combination-sum/)     | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------- |
+| 39   | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack |
 | 40   | [Combination Sum II](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) | Backtrack |
-| 46   | [Permutations](https://leetcode.com/problems/permutations/)           | Medium | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | Backtrack |
-| 47 | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Medium | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack |
-| 77 | [Combinations](https://leetcode.com/problems/combinations/) | Medium | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | Backtrack |
-| 78   | [Subsets](https://leetcode.com/problems/subsets/) 	                   | Medium    | [Subset.java](src/leetcode/solution/backtrack/Subset.java) | Backtrack |
-| 79 | [Word Search](https://leetcode.com/problems/word-search/) | Medium | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | Backtrack |
-| 90 | [Subsets II](https://leetcode.com/problems/subsets-ii/) | Medium | [SubsetII.java](src/leetcode/solution/backtrack/SubsetII.java) | Backtrack |
-| 93 | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | Backtrack |
-| 95 | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack |
-| 113 | [Path Sum II](https://leetcode.com/problems/path-sum-ii/) | Medium | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
-|  |  |  |  | |
+| 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | Backtrack |
+| 47   | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Medium     | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack |
+| 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | Backtrack |
+| 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     | [Subset.java](src/leetcode/solution/backtrack/Subset.java)   | Backtrack |
+| 79   | [Word Search](https://leetcode.com/problems/word-search/)    | Medium     | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | Backtrack |
+| 90   | [Subsets II](https://leetcode.com/problems/subsets-ii/)      | Medium     | [SubsetII.java](src/leetcode/solution/backtrack/SubsetII.java) | Backtrack |
+| 93   | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium     | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | Backtrack |
+| 95   | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium     | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack |
+| 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)    | Medium     | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
+|      |                                                              |            |                                                              |           |
 
-#### [DFS]()
+#### [DFS](src/leetcode/solution/DFS)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                     |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------ |
+| 200  | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | Medium     | [NumberOfIslands.java](src/leetcode/solution/DFS/NumberOfIslands.java) | DFS \| Remove the island |
+|      |                                                              |            |                                                              |                          |
+|      |                                                              |            |                                                              |                          |
+
+
 
 #### [BFS]()
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
-| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/DataStruct/OpenTheLock.java) | BFS with Queue |
+| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue |
 |      |                                                              |            |                                                              |                |
 |      |                                                              |            |                                                              |                |
 
