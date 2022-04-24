@@ -6,47 +6,64 @@ package leetcode.solution.DFS;
 public class NumberOfIslands {
 
     public static void main(String[] args) {
-        char[][] grid = {{'1', '1', '0', '0', '0'},
-                {'1', '1', '0', '0', '0'},
-                {'0', '0', '1', '0', '0'},
-                {'0', '0', '0', '1', '1'}};
+        char[][] grid = {{'1', '1', '0', '0', '0'}, {'1', '1', '0', '0', '0'}, {'0', '0', '1', '0', '0'}, {'0', '0', '0', '1', '1'}};
         NumberOfIslands numberOfIslands = new NumberOfIslands();
         System.out.println(numberOfIslands.numIslands(grid));
         // 3
     }
 
+    private char[][] grid;
 
-    private char[][] data;
+    private int m;
+
+    private int n;
+
+    /**
+     * four directions
+     */
+    private int[][] direct;
 
     public int numIslands(char[][] grid) {
-        data = grid;
-        int m = grid.length;
-        int n = grid[0].length;
-        int ans = 0;
+        this.grid = grid;
+        this.m = grid.length;
+        this.n = grid[0].length;
+        this.direct = new int[][]{{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+
+        int count = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (data[i][j] == '1') {
-                    ans++;
-                    helper(i, j);
+                if (grid[i][j] == '1') {
+                    count++;
+                    dfs(i, j);
                 }
             }
         }
 
-        return ans;
+        return count;
     }
 
-    private void helper(int i, int j) {
-        if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
+    /**
+     * remove adjacent 1, replace with 0
+     *
+     * @param i
+     * @param j
+     */
+    private void dfs(int i, int j) {
+        if (i < 0 || i >= m || j < 0 || j >= n) {
             return;
         }
-        if (data[i][j] == '0') {
-            return;
-        }
-        data[i][j] = '0';
-        helper(i, j - 1);
-        helper(i - 1, j);
-        helper(i, j + 1);
-        helper(i + 1, j);
-    }
 
+        if (grid[i][j] == '0') {
+            return;
+        }
+
+        grid[i][j] = '0';
+
+        for (int[] item : direct) {
+            int nextI = item[0] + i;
+            int nextJ = item[1] + j;
+
+            dfs(nextI, nextJ);
+        }
+    }
 }
