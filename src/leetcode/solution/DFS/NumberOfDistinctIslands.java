@@ -17,10 +17,16 @@ public class NumberOfDistinctIslands {
 
     private int[][] data;
 
+    /**
+     * four directions
+     */
+    private int[][] direct;
+
     public int numDistinctIslands(int[][] grid) {
         data = grid;
         int m = data.length;
         int n = data[0].length;
+        this.direct = new int[][]{{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
         Set<String> set = new HashSet<>();
         for (int i = 0; i < m; i++) {
@@ -33,11 +39,19 @@ public class NumberOfDistinctIslands {
                 }
             }
         }
-
+        System.out.println(set);
         return set.size();
 
     }
 
+    /**
+     *
+     *
+     * @param i
+     * @param j
+     * @param sb
+     * @param source
+     */
     private void helper(int i, int j, StringBuilder sb, String source) {
         if (i < 0 || j < 0 || i >= data.length || j >= data[0].length) {
             return;
@@ -46,13 +60,16 @@ public class NumberOfDistinctIslands {
             return;
         }
         data[i][j] = 0;
-        sb.append(source).append(",");
 
-        helper(i, j - 1, sb, "a");
-        helper(i - 1, j, sb, "b");
-        helper(i, j + 1, sb, "c");
-        helper(i + 1, j, sb, "d");
-        sb.append("-").append(source).append(",");
+        sb.append(source).append("<");
+        for (int k = 0; k < direct.length; k++) {
+            int[] item = direct[k];
+            int nextI = item[0] + i;
+            int nextJ = item[1] + j;
+            helper(nextI, nextJ, sb, String.valueOf(k));
+        }
+
+        sb.append(">").append(source).append(".");
 
     }
 
