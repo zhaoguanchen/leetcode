@@ -1,4 +1,4 @@
-package leetcode.solution.other;
+package leetcode.solution.array.twopointer;
 
 /**
  * 42. Trapping Rain Water

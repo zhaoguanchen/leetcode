@@ -1,4 +1,4 @@
-package leetcode.solution.other;
+package leetcode.solution.math;
 
 /**
  * 56. Merge Intervals

@@ -1,21 +1,21 @@
-package leetcode.solution.other;
+package leetcode.solution.math;
 
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Stack;
 
 /**
- * 772. Basic Calculator III
+ * 224. Basic Calculator
  */
-public class BasicCalculatorIII {
+public class BasicCalculator {
 
 
     public static void main(String[] args) {
-        String s = "2*(5+5*2)/3+(6/2+8)";
-        BasicCalculatorIII calculator = new BasicCalculatorIII();
+        String s = "123+3-10";
+        BasicCalculator calculator = new BasicCalculator();
         int ans = calculator.calculate(s);
         System.out.println(ans);
-        // 21
+        // 23
     }
 
     public int calculate(String s) {
@@ -46,6 +46,7 @@ public class BasicCalculatorIII {
             if (isDigit(c)) {
                 num = 10 * num + (c - '0');
             }
+
             if (c == '(') {
                 num = helper(deque);
             }
@@ -57,16 +58,6 @@ public class BasicCalculatorIII {
                 if (sign == '-') {
                     stack.add(-num);
                 }
-                if (sign == '*') {
-                    int pre = stack.pop();
-                    int res = pre * num;
-                    stack.add(res);
-                }
-                if (sign == '/') {
-                    int pre = stack.pop();
-                    int res = pre / num;
-                    stack.add(res);
-                }
                 sign = c;
                 num = 0;
             }
@@ -74,7 +65,6 @@ public class BasicCalculatorIII {
             if (c == ')') {
                 break;
             }
-
         }
 
         int ans = 0;
