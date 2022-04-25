@@ -32,10 +32,26 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [LinkedList](src/leetcode/solution/LinkedList)
 
+**Reverse**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       | [ReverseLinkedList.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedList.java) | Iteration \| Recursion                                       |
+| 92   | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | Medium     | [ReverseLinkedListII.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedListII.java) | Iteration \| Recursion<br />Reverse Linked List between a-th and b-th. At first, we can move to a-th, and the problem becomes  Reverse Top N nodes. |
+| 25   | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       | [ReverseNodesInkGroup.java](src/leetcode/solution/LinkedList/reverse/ReverseNodesInkGroup.java) | For each k group, reverse Linked List between head and k-th. Let head equal k+1th node, then do Recursion. |
+| 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       | [PalindromeLinkedList.java](src/leetcode/solution/LinkedList/reverse/PalindromeLinkedList.java) | 1. Using a pointer that points to the node from the start location. Recursion and move pointer forward. Compare.<br />2. Reverse the whole List.<br />3. Reverse the second-half List |
+
+
+
+**Two Pointer** 
+
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                   |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------- |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       | [ReverseLinkedList.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedList.java) | Iteration \| Recursion |
-|      |                                                              |            |                                                              |                        |
+
+
+
+
 
 #### [DataStruct](src/leetcode/solution/DataStruct)
 
