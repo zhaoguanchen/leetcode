@@ -30,6 +30,46 @@ The project is divided into two parts: `structure` and `solution`.
 
 ### Classification
 
+#### [LinkedList](src/leetcode/solution/LinkedList)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                   |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------- |
+| 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       | [ReverseLinkedList.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedList.java) | Iteration \| Recursion |
+|      |                                                              |            |                                                              |                        |
+
+#### [DataStruct](src/leetcode/solution/DataStruct)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 705  | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy       | [DesignHashSet.java](src/leetcode/solution/DataStruct/DesignHashSet.java) | Array + LinkedList                                           |
+| 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList                                           |
+| 706  | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium     | [DesignUndergroundSystem.java](src/leetcode/solution/DataStruct/DesignUndergroundSystem.java) | using two HashMap. One saves the check-in record, another saves the data of the current stage. |
+
+#### [Tree](src/leetcode/solution/tree)
+
+##### [Binary Tree](src/leetcode/solution/tree/bst)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+
+
+##### [Binary Search Tree](src/leetcode/solution/tree/bst)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+|      |                                                              |            |                                                              |      |
+
+#### 
+
 #### [Backtrack](src/leetcode/solution/backtrack)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
@@ -72,48 +112,14 @@ The project is divided into two parts: `structure` and `solution`.
 |      |                                                              |            |                                                              |                |
 |      |                                                              |            |                                                              |                |
 
-
-
 #### [Array](src/leetcode/solution/array)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)        | Easy       | [FizzBuzz.java](src/leetcode/solution/array/FizzBuzz.java)   |                                                              |
+| 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)        | Easy       | [FizzBuzz.java](src/leetcode/solution/array/FizzBuzz.java)   | For loop. Calculate i%5 and i%3 separately.                  |
 | 768  | [Max Chunks To Make Sorted II](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/) | Hard       | [MaxChunksToMakeSortedII.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array, each time all elements to the left are smaller (or equal) to all elements to the right, there is a new chunk. |
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     | [MaxChunksToMakeSorted.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array,  each time the maximum value of all elements to the left equals the index, there is a new chunk. |
 |      |                                                              |            |                                                              |                                                              |
-
-#### [Tree](src/leetcode/solution/tree)
-
-##### [Binary Tree](src/leetcode/solution/tree/bst)
-
- | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-  | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-
-
-##### [Binary Search Tree](src/leetcode/solution/tree/bst)
-
- | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-  | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-  | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-  |      |                                                              |            |                                                              |      |
-
-
-#### [DataStruct](src/leetcode/solution/DataStruct)
-
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 705  | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy       | [DesignHashSet.java](src/leetcode/solution/DataStruct/DesignHashSet.java) | Array + LinkedList                                           |
-| 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList                                           |
-| 706  | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium     | [DesignUndergroundSystem.java](src/leetcode/solution/DataStruct/DesignUndergroundSystem.java) | using two HashMap. One saves the check-in record, another saves the data of the current stage. |
 
 #### [String](src/leetcode/solution/string)
 

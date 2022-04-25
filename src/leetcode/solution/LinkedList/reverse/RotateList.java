@@ -1,4 +1,4 @@
-package leetcode.solution.LinkedList;
+package leetcode.solution.LinkedList.reverse;
 
 import leetcode.structure.ListNode;
 

@@ -1,4 +1,4 @@
-package leetcode.solution.LinkedList;
+package leetcode.solution.LinkedList.reverse;
 
 import leetcode.structure.ListNode;
 
@@ -80,7 +80,6 @@ public class ReverseLinkedListII {
             second.next = pre.next;
             pre.next = second;
             second = first.next;
-            ListNode.print(vHead);
         }
 
 

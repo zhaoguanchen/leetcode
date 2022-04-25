@@ -1,4 +1,4 @@
-package leetcode.solution.DFS;
+package leetcode.solution.tree;
 
 import leetcode.structure.TreeNode;
 
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * https://leetcode.com/problems/path-sum/
+ * 112. Path Sum
  */
 public class PathSum {
 
