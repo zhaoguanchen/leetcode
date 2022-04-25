@@ -3,8 +3,7 @@ package leetcode.solution.LinkedList.reverse;
 import leetcode.structure.ListNode;
 
 /**
- * 206. Reverse Linked List
- * Given the head of a singly linked list, reverse the list, and return the reversed list.
+ * 25. Reverse Nodes in k-Group
  */
 public class ReverseNodesInkGroup {
 
@@ -20,7 +19,6 @@ public class ReverseNodesInkGroup {
             return head;
         }
 
-        ListNode a = head;
         ListNode b = head;
 
         for (int i = 0; i < k; i++) {
@@ -32,9 +30,9 @@ public class ReverseNodesInkGroup {
 
         }
         // 翻转当前区间
-        ListNode newHead = reverseBetween1(a, b);
+        ListNode newHead = reverseBetween1(head, b);
         // 此时a为当前区间的尾节点，后续接下一区间头节点
-        a.next = reverseKGroup(b, k);
+        head.next = reverseKGroup(b, k);
         return newHead;
 
     }
