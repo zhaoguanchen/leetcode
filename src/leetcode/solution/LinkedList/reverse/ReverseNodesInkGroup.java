@@ -11,10 +11,12 @@ public class ReverseNodesInkGroup {
         Integer[] array1 = {1, 2, 3, 4, 5};
         ListNode list1 = ListNode.constructList(array1);
         int k = 3;
-        ListNode.print(reverseKGroup(list1, k));
+        ReverseNodesInkGroup reverseNodesInkGroup  = new ReverseNodesInkGroup();
+        ListNode ans = reverseNodesInkGroup.reverseKGroup(list1, k);
+        ListNode.print(ans);
     }
 
-    public static ListNode reverseKGroup(ListNode head, int k) {
+    public   ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return head;
         }
@@ -29,55 +31,34 @@ public class ReverseNodesInkGroup {
             b = b.next;
 
         }
-        // 翻转当前区间
-        ListNode newHead = reverseBetween1(head, b);
-        // 此时a为当前区间的尾节点，后续接下一区间头节点
+        // reverse this group, b is not involved.
+        ListNode newHead = reverseBetween(head, b);
+        // head became the last node in current group. so make head point to next group.
         head.next = reverseKGroup(b, k);
         return newHead;
-
     }
 
     /**
-     * 翻转链表的迭代写法
-     * 交换a节点到b节点，不包含b
-     * <p>
-     * 切记不是依次翻转。每个新节点都放在开头，而不是跟前一个节点交换位置
+     * reverse Linked List between head and last(last is not involved).
      *
-     * @param a
-     * @param b
+     * @param head
+     * @param last
      * @return
      */
-    private static ListNode reverseBetween(ListNode a, ListNode b) {
-        ListNode vHead = new ListNode(-1);
-        vHead.next = a;
-        ListNode second = a.next;
-        while (second != b) {
-            a.next = second.next;
-            second.next = vHead.next;
-            vHead.next = second;
-            second = a.next;
+    private   ListNode reverseBetween(ListNode head, ListNode last) {
+        ListNode vHead = new ListNode(0);
+        vHead.next = head;
+        ListNode cur = head.next;
+
+        while (cur != last) {
+            head.next = cur.next;
+            cur.next = vHead.next;
+            vHead.next = cur;
+            cur = head.next;
         }
+
         return vHead.next;
     }
 
 
-    /**
-     * 翻转链表的递归写法
-     *
-     * @param a
-     * @param b
-     * @return
-     */
-    private static ListNode reverseBetween1(ListNode a, ListNode b) {
-        // 只剩下最后一个节点自己，直接返回
-        if (a.next == b) {
-            return a;
-        }
-
-        ListNode last = reverseBetween1(a.next, b);
-        // 将a链接到末尾
-        a.next.next = a;
-        a.next = b;
-        return last;
-    }
 }
