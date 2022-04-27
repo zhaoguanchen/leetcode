@@ -139,7 +139,7 @@ class DFSNetworkDelayTime {
 
     private List<Pair<Integer, Integer>>[] generateTable(int[][] times) {
         List<Pair<Integer, Integer>>[] table = new ArrayList[n + 1];
-        for (int i = 1; i < table.length; i++) {
+        for (int i = 0; i < table.length; i++) {
             table[i] = new ArrayList<>();
         }
         for (int[] item : times) {
@@ -150,6 +150,11 @@ class DFSNetworkDelayTime {
             table[sourceNode].add(pair);
         }
 
+        // Sort the table by time, DFS will start with the smallest one.
+        // This method could reduce the repeat process.
+        for (List<Pair<Integer, Integer>> node : table) {
+            node.sort(Comparator.comparingInt(Pair::getValue));
+        }
         return table;
     }
 
