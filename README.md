@@ -127,11 +127,11 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [BFS]()
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
-| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue |
-|      |                                                              |            |                                                              |                |
-|      |                                                              |            |                                                              |                |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                            |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------- |
+| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue                  |
+| 752  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium     | [NetworkDelayTime.java](src/leetcode/solution/BFS/NetworkDelayTime.java) | directed graph<br />BFS  \| DFS |
+|      |                                                              |            |                                                              |                                 |
 
 #### [Array](src/leetcode/solution/array)
 
