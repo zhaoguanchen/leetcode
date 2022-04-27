@@ -10,13 +10,13 @@ public class ReverseNodesInkGroup {
     public static void main(String[] args) {
         Integer[] array1 = {1, 2, 3, 4, 5};
         ListNode list1 = ListNode.constructList(array1);
-        int k = 3;
-        ReverseNodesInkGroup reverseNodesInkGroup  = new ReverseNodesInkGroup();
+        int k = 2;
+        ReverseNodesInkGroup reverseNodesInkGroup = new ReverseNodesInkGroup();
         ListNode ans = reverseNodesInkGroup.reverseKGroup(list1, k);
         ListNode.print(ans);
     }
 
-    public   ListNode reverseKGroup(ListNode head, int k) {
+    public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null) {
             return head;
         }
@@ -45,7 +45,7 @@ public class ReverseNodesInkGroup {
      * @param last
      * @return
      */
-    private   ListNode reverseBetween(ListNode head, ListNode last) {
+    private ListNode reverseBetween(ListNode head, ListNode last) {
         ListNode vHead = new ListNode(0);
         vHead.next = head;
         ListNode cur = head.next;
