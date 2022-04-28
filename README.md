@@ -127,3 +127,9 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------ |
 | 567  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium     | [PermutationInString.java](src/leetcode/solution/SlideWindow/PermutationInString.java) | Slide Window |
+
+#### [Hash Table](src/leetcode/solution/Hash)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                     |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------------------------- |
+| 567  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     | [LongestConsecutiveSequence.java](src/leetcode/solution/Hash/LongestConsecutiveSequence.java) | Hash Table: using hashSet save the nums. |
