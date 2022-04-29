@@ -7,35 +7,53 @@ public class IsBipartite {
 
     public static void main(String[] args) {
         int[][] graph = {{1, 3}, {0, 2}, {1, 3}, {0, 2}};
-        IsBipartite isBipartite = new IsBipartite();
-        System.out.println(isBipartite.isBipartite(graph));
+        IsBipartiteSolutionWithVisitedMemo isBipartite = new IsBipartiteSolutionWithVisitedMemo();
+        boolean ans = isBipartite.isBipartite(graph);
+        System.out.println(ans);
+
+        IsBipartiteSolution isBipartite1 = new IsBipartiteSolution();
+        ans = isBipartite1.isBipartite(graph);
+        System.out.println(ans);
     }
 
+
+}
+
+/**
+ * Using Array as visit Memo
+ */
+class IsBipartiteSolutionWithVisitedMemo {
+
     /**
-     * 结果标记  是否是二分图
+     * the result, default true
      */
     private boolean ans;
 
-    private int[][] graphVar;
+    private int[][] graph;
 
     /**
-     * 访问标记
+     * visited
      */
     private boolean[] visited;
 
     /**
-     * true为红色，false为黑色
+     * true for red，false for black
      */
     private boolean[] color;
 
     public boolean isBipartite(int[][] graph) {
-        graphVar = graph;
+        this.graph = graph;
         visited = new boolean[graph.length];
         color = new boolean[graph.length];
+        // default result is true. We will try to break the result later.
         ans = true;
 
-        // 因为可能出现非联通图，所以每个顶点都遍历一遍
+        // check every node since there may have independent graph.
+        // just choose those nodes that not be visited.
         for (int i = 0; i < graph.length; i++) {
+            if (visited[i]) {
+                continue;
+            }
             traverse(i);
         }
 
@@ -44,25 +62,89 @@ public class IsBipartite {
 
 
     private void traverse(int s) {
-        // 已判断出结果，直接返回
+        // result is confirmed
+        // not a Bipartite Graph
         if (!ans) {
             return;
         }
 
+        // sign as visited
         visited[s] = true;
-        for (int t : graphVar[s]) {
-            // 未遍历过，涂不一样的颜色，DFS遍历
+
+        // traverse its neighbors
+        for (int t : graph[s]) {
+            // new node, paint different color and traverse
             if (!visited[t]) {
                 color[t] = !color[s];
                 traverse(t);
             } else {
-                // 遍历过，判断颜色是否一致，一致则冲突
+                // visited, assert if the color is conflict.
                 if (color[s] == color[t]) {
                     ans = false;
+                    return;
                 }
             }
         }
 
     }
+}
 
+
+/**
+ * Using specific color as visit signal
+ */
+class IsBipartiteSolution {
+
+    /**
+     * the result, default true
+     */
+    private boolean ans;
+
+    private int[][] graph;
+
+    /**
+     * default 0 which means not visited, -1 for red，1 for black
+     */
+    private int[] color;
+
+    public boolean isBipartite(int[][] graph) {
+        this.graph = graph;
+        color = new int[graph.length];
+        // default result is true. We will try to break the result later.
+        ans = true;
+        // check every node since there may have independent graph.
+        // just choose those nodes that not be visited.
+        for (int i = 0; i < graph.length; i++) {
+            if (color[i] != 0) {
+                continue;
+            }
+            // paint red(black is also ok)
+            color[i] = 1;
+            traverse(i);
+        }
+
+        return ans;
+    }
+
+
+    private void traverse(int s) {
+        // result is confirmed
+        // not a Bipartite Graph
+        if (!ans) {
+            return;
+        }
+        // traverse its neighbors
+        for (int i : graph[s]) {
+            // visited, assert if the color is conflict.
+            if (color[i] != 0) {
+                if (color[i] == color[s]) {
+                    ans = false;
+                    return;
+                }
+            } else { // new node, paint different color and traverse
+                color[i] = -color[s];
+                traverse(i);
+            }
+        }
+    }
 }

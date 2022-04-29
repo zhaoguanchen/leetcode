@@ -134,3 +134,12 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                     |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------------------------- |
 | 567  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     | [LongestConsecutiveSequence.java](src/leetcode/solution/Hash/LongestConsecutiveSequence.java) | Hash Table: using hashSet save the nums. |
+
+#### [Graph](src/leetcode/solution/Graph)
+
+**Bipartite Graph**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                               |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------------------------------------- |
+| 785  | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium     | [IsBipartite.java](src/leetcode/solution/Graph/IsBipartitet.java) | - Paint with different color<br />- DFS<br /> -BFS |
+
