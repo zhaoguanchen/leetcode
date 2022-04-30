@@ -86,6 +86,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 93   | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium     | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | Backtrack |
 | 95   | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium     | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack |
 | 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)    | Medium     | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
+|      |                                                              |            |                                                              |           |
 
 #### [DFS](src/leetcode/solution/DFS)
 
@@ -137,11 +138,17 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Graph](src/leetcode/solution/Graph)
 
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                            |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------------------------------- |
+| 261  | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | Medium     | [GraphValidTree.java](src/leetcode/solution/Graph/GraphValidTree.java) | - generate Adjacency List<br />- DFS<br />- BFS |
+| 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- DFS<br />- BFS |
+
+
+
 **Bipartite Graph**
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                               |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------------------------------------- |
 | 785  | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium     | [IsBipartite.java](src/leetcode/solution/Graph/IsBipartitet.java) | - Paint with different color<br />- DFS<br /> -BFS |
 | 886  | [Possible Bipartite](https://leetcode.com/problems/possible-bipartition/) | Medium     | [PossibleBipartition.java](src/leetcode/solution/Graph/PossibleBipartition.java) | - Paint with different color<br />- DFS<br /> -BFS |
-| 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- Backtrack         |
 
