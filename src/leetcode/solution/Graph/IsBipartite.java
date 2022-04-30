@@ -1,5 +1,8 @@
 package leetcode.solution.Graph;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * 785. Is Graph Bipartite?
  */
@@ -13,6 +16,10 @@ public class IsBipartite {
 
         IsBipartiteSolution isBipartite1 = new IsBipartiteSolution();
         ans = isBipartite1.isBipartite(graph);
+        System.out.println(ans);
+
+        IsBipartiteSolutionBFS bfs = new IsBipartiteSolutionBFS();
+        ans = bfs.isBipartite(graph);
         System.out.println(ans);
     }
 
@@ -92,6 +99,8 @@ class IsBipartiteSolutionWithVisitedMemo {
 
 /**
  * Using specific color as visit signal
+ * <p>
+ * DFS
  */
 class IsBipartiteSolution {
 
@@ -147,4 +156,52 @@ class IsBipartiteSolution {
             }
         }
     }
+}
+
+
+/**
+ * Using specific color as visit signal
+ * <p>
+ * BFS
+ */
+class IsBipartiteSolutionBFS {
+
+
+    public boolean isBipartite(int[][] graph) {
+        //default 0 which means not visited, -1 for red，1 for black
+        int[] color = new int[graph.length];
+        // check every node since there may have independent graph.
+        // just choose those nodes that not be visited.
+        for (int i = 0; i < graph.length; i++) {
+            if (color[i] != 0) {
+                continue;
+            }
+            // paint red(black is also ok)
+            color[i] = 1;
+            // BFS traverse
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(i);
+
+            while (!queue.isEmpty()) {
+                Integer current = queue.poll();
+                // traverse its neighbors
+                for (int next : graph[current]) {
+                    if (color[next] == 0) {
+                        color[next] = -color[current];
+                        queue.add(next);
+                    } else {
+                        if (color[next] == color[current]) {
+                            return false;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        return true;
+    }
+
+
 }
