@@ -138,11 +138,12 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Graph](src/leetcode/solution/Graph)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                            |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------------------------------- |
-| 261  | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | Medium     | [GraphValidTree.java](src/leetcode/solution/Graph/GraphValidTree.java) | - generate Adjacency List<br />- DFS<br />- BFS |
-| 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- DFS<br />- BFS |
-| 841  | [Keys and Rooms](https://leetcode.com/problems/evaluate-division/) | Medium     | [KeysAndRooms.java](src/leetcode/solution/Graph/KeysAndRooms.java) | - DFS<br />- BFS                                |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 261  | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | Medium     | [GraphValidTree.java](src/leetcode/solution/Graph/GraphValidTree.java) | This question is actually to determine whether there is a cycle in the graph.<br />- generate Adjacency List<br />- DFS<br />- BFS |
+| 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- DFS<br />- BFS              |
+| 841  | [Keys and Rooms](https://leetcode.com/problems/evaluate-division/) | Medium     | [KeysAndRooms.java](src/leetcode/solution/Graph/KeysAndRooms.java) | - DFS<br />- BFS                                             |
+| 133  | [Clone Graph](https://leetcode.com/problems/clone-graph/)    | Medium     | [CloneGraph.java](src/leetcode/solution/CloneGraph.java)     | - DFS<br />                                                  |
 
 
 
