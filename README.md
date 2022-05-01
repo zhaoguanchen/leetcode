@@ -145,6 +145,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- DFS<br />- BFS              |
 | 841  | [Keys and Rooms](https://leetcode.com/problems/evaluate-division/) | Medium     | [KeysAndRooms.java](src/leetcode/solution/Graph/KeysAndRooms.java) | - DFS<br />- BFS                                             |
 | 133  | [Clone Graph](https://leetcode.com/problems/clone-graph/)    | Medium     | [CloneGraph.java](src/leetcode/solution/CloneGraph.java)     | - DFS<br />                                                  |
+| 277  | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Medium     | [FindTheCelebrity.java](src/leetcode/solution/FindTheCelebrity.java) | - Logical Deduction<br />                                    |
 
 
 
