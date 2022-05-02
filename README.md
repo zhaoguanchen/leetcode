@@ -146,6 +146,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 841  | [Keys and Rooms](https://leetcode.com/problems/evaluate-division/) | Medium     | [KeysAndRooms.java](src/leetcode/solution/Graph/KeysAndRooms.java) | - DFS<br />- BFS                                             |
 | 133  | [Clone Graph](https://leetcode.com/problems/clone-graph/)    | Medium     | [CloneGraph.java](src/leetcode/solution/CloneGraph.java)     | - DFS<br />                                                  |
 | 277  | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Medium     | [FindTheCelebrity.java](src/leetcode/solution/FindTheCelebrity.java) | - Logical Deduction<br />                                    |
+| 310  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Medium     | [MinimumHeightTrees.java](src/leetcode/solution/MinimumHeightTrees.java) | - BFS: remove leaves<br />                                   |
 
 
 
