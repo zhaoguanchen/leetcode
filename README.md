@@ -117,6 +117,12 @@ The project is divided into two parts: `structure` and `solution`.
 | 768  | [Max Chunks To Make Sorted II](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/) | Hard       | [MaxChunksToMakeSortedII.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array, each time all elements to the left are smaller (or equal) to all elements to the right, there is a new chunk. |
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     | [MaxChunksToMakeSorted.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array,  each time the maximum value of all elements to the left equals the index, there is a new chunk. |
 
+**Two Pointer** 
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea        |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------- |
+| 905  | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | Easy       | [SortArrayByParity.java](src/leetcode/solution/array/SortArrayByParity.java) | Two Pointer |
+
 #### [String](src/leetcode/solution/string)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                 |
