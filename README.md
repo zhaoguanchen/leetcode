@@ -64,6 +64,7 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
 | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |      |
+| 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Medium     | [ConvertSortedArrayToBinarySearchTree.java](src/leetcode/solution/tree/ConvertSortedArrayToBinarySearchTree.java) | DFS  |
 
 ##### [Binary Search Tree](src/leetcode/solution/tree/bst)
 
@@ -107,7 +108,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------- |
 | 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue                  |
 | 752  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium     | [NetworkDelayTime.java](src/leetcode/solution/BFS/NetworkDelayTime.java) | directed graph<br />BFS  \| DFS |
-| 286  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Medium     | [WallAndGates.java](src/leetcode/solution/BFS/WallAndGates.java) | BFS: spread form the gate       |
+| 286  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Medium     | [WallAndGates.java](src/leetcode/solution/BFS/WallAndGates.java) | BFS: spread from the gate       |
 
 #### [Array](src/leetcode/solution/array)
 
