@@ -133,6 +133,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count    |
 | 535  | [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) | Medium     | [EncodeAndDecodeTinyURL.java](src/leetcode/solution/string/EncodeAndDecodeTinyURL.java) | HashMap              |
 | 844  | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Medium     | [BackspaceStringCompare.java](src/leetcode/solution/string/BackspaceStringCompare.java) | Stack \| Two Pointer |
+| 1209 | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Medium     | [RemoveAllAdjacentDuplicatesInStringII.java](src/leetcode/solution/string/RemoveAllAdjacentDuplicatesInStringII.java) | Stack \| Two Pointer |
 
 #### [Slide Window](src/leetcode/solution/SlideWindow)
 
