@@ -40,7 +40,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 92   | [Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/) | Medium     | [ReverseLinkedListII.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedListII.java) | Iteration \| Recursion<br />Reverse Linked List between a-th and b-th. At first, we can move to a-th, and the problem becomes  Reverse Top N nodes. |
 | 25   | [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/) | Hard       | [ReverseNodesInkGroup.java](src/leetcode/solution/LinkedList/reverse/ReverseNodesInkGroup.java) | For each k group, reverse Linked List between head and k-th. Let head equal k+1th node, then do Recursion. |
 | 234  | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | Easy       | [PalindromeLinkedList.java](src/leetcode/solution/LinkedList/reverse/PalindromeLinkedList.java) | 1. Using a pointer that points to the node from the start location. Recursion and move pointer forward. Compare.<br />2. Reverse the whole List.<br />3. Reverse the second-half List |
-| 147  | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/) | Easy       | [InsertionSortList.java](src/leetcode/solution/LinkedList/InsertionSortList.java) | Vertual Head Node                                            |
+| 147  | [Insertion Sort List](https://leetcode.com/problems/insertion-sort-list/) | Easy       | [InsertionSortList.java](src/leetcode/solution/LinkedList/InsertionSortList.java) | Virtual Head Node                                            |
 
 **Two Pointer** 
 
@@ -115,6 +115,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 281  | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Medium     | [ZigzagIterator.java](src/leetcode/solution/array/ZigzagIterator.java) | Two Pointer<br />Muti Pointer or Queue for the **Follow-Up** Question. |
 | 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)        | Easy       | [FizzBuzz.java](src/leetcode/solution/array/FizzBuzz.java)   | For loop. Calculate i%5 and i%3 separately.                  |
 | 456  | [132 Pattern](https://leetcode.com/problems/132-pattern/)    | Medium     | [OneThreeTwoPattern.java](src/leetcode/solution/array/OneThreeTwoPattern.java) | Using Array as a Stack                                       |
 | 768  | [Max Chunks To Make Sorted II](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/) | Hard       | [MaxChunksToMakeSortedII.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array, each time all elements to the left are smaller (or equal) to all elements to the right, there is a new chunk. |
