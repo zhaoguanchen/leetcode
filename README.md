@@ -91,6 +91,14 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [DFS](src/leetcode/solution/DFS)
 
+**Search Path**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard       | [CheckIfThereIsAValidParenthesesStringPath.java](src/leetcode/solution/DFS/CheckIfThereIsAValidParenthesesStringPath.java) | DFS  |
+
+
+
 **Island**
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
@@ -102,7 +110,13 @@ The project is divided into two parts: `structure` and `solution`.
 | 1905 | [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) | Medium     | [CountSubIslands.java](src/leetcode/solution/DFS/CountSubIslands.java) | DFS \| At first, remove the island that is not sub island. Then, remove the island and count. |
 | 1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) | Medium     | [NumberOfEnclaves.java](src/leetcode/solution/DFS/NumberOfEnclaves.java) | DFS \| Remove the island close to the border, then Remove other islands and count. Same as problem '1254'. |
 
-#### [BFS]()
+
+
+
+
+
+
+#### [BFS](src/leetcode/solution/BFS)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------------------- |
