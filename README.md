@@ -186,3 +186,11 @@ The project is divided into two parts: `structure` and `solution`.
 | 785  | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium     | [IsBipartite.java](src/leetcode/solution/Graph/IsBipartitet.java) | - Paint with different color<br />- DFS<br /> -BFS |
 | 886  | [Possible Bipartite](https://leetcode.com/problems/possible-bipartition/) | Medium     | [PossibleBipartition.java](src/leetcode/solution/Graph/PossibleBipartition.java) | - Paint with different color<br />- DFS<br /> -BFS |
 
+
+
+#### [Dynamic Programing](src/leetcode/solution/DP)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 2266 | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/) | Medium     | [CountNumberOfTexts.java](src/leetcode/solution/DP/CountNumberOfTexts.java) | DP   |
+
