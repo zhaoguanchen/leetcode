@@ -17,20 +17,19 @@ public class CountNodesEqualToAverageOfSubtree {
         System.out.println(ans);
     }
 
-
-    private int count;
+    private int ans;
 
     public int averageOfSubtree(TreeNode root) {
-        count = 0;
+        ans = 0;
         helper(root);
-        return count;
+        return ans;
     }
 
-     /**
-      * @Description: DFS | Postorder traverse
-      * @Author: Guanchen Zhao
-      * @Date: 2022/5/9  
-      */
+    /**
+     * @Description: DFS | Postorder traverse
+     * @Author: Guanchen Zhao
+     * @Date: 2022/5/9
+     */
     private Pair<Integer, Integer> helper(TreeNode root) {
         if (root == null) {
             return new Pair<>(0, 0);
@@ -50,7 +49,7 @@ public class CountNodesEqualToAverageOfSubtree {
         int count = leftCount + rightCount + 1;
         // get one of result
         if (sum / count == root.val) {
-            count++;
+            ans++;
         }
         return new Pair<>(sum, count);
     }
