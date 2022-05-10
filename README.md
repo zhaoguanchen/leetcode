@@ -26,6 +26,14 @@ The project is divided into two parts: `structure` and `solution`.
 
 
 
+### [Utils](src/leetcode/utils)
+
+ Tool class for handling issues such as format conversions.
+
+| No.  | Title                                                 | Short Description                                            |
+| ---- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| 1    | [InputUtils.java](src/leetcode/utils/InputUtils.java) | Handle Input Data Format<br />-`java int[][] generateGrid(int m, int n, String s) `: convert String like "[[0,1],[0,2]]" to grid. |
+
 
 
 ### Classification
@@ -195,4 +203,10 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
 | 2266 | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/) | Medium     | [CountNumberOfTexts.java](src/leetcode/solution/DP/CountNumberOfTexts.java) | DP   |
+
+#### [Heap (Priority Queue)](src/leetcode/solution/Heap)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
+| 778  | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Hard       | [SwimInRisingWater.java](src/leetcode/solution/Heap/SwimInRisingWater.java) | Priority Queue |
 
