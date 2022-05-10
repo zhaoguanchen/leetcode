@@ -1,6 +1,7 @@
 package leetcode.solution.backtrack;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -18,42 +19,46 @@ public class CombinationSumIII {
     }
 
 
-    private List<List<Integer>> ans;
-
-    private int k;
-
+    List<List<Integer>> ans;
+    int k;
+    int n;
 
     public List<List<Integer>> combinationSum3(int k, int n) {
-        ans = new ArrayList<>();
+        this.ans = new ArrayList<>();
         this.k = k;
-        List<Integer> path = new ArrayList<>();
-        backtrack(1, n, path);
+        this.n = n;
+
+        // Use LinkedList as the path.
+        // Provides convenience for deleting elements at the end of the list,
+        // while avoiding the expansion and contraction of the list.
+        LinkedList<Integer> path = new LinkedList<>();
+        backtrack(1, 0, path);
+
         return ans;
     }
 
-    private void backtrack(int startNum, int sum, List<Integer> path) {
+
+    private void backtrack(int start, int sum, LinkedList<Integer> path) {
+        // base case
         if (path.size() == k) {
-            if (sum == 0) {
+            if (sum == n) {
+                // remember to copy the list.
                 ans.add(new ArrayList<>(path));
             }
-
             return;
         }
 
-        if (startNum > sum) {
+        // corner case
+        if (sum > n) {
             return;
         }
 
-        if (sum < 0) {
-            return;
-        }
-        for (int i = startNum; i < 10; i++) {
+        for (int i = start; i <= 9; i++) {
             path.add(i);
-            sum -= i;
-            backtrack(i + 1, sum, path);
-            path.remove(path.size() - 1);
             sum += i;
+            backtrack(i + 1, sum, path);
+            sum -= i;
+            path.removeLast();
         }
     }
-
 }
