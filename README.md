@@ -121,12 +121,6 @@ The project is divided into two parts: `structure` and `solution`.
 | 1905 | [Count Sub Islands](https://leetcode.com/problems/count-sub-islands/) | Medium     | [CountSubIslands.java](src/leetcode/solution/DFS/CountSubIslands.java) | DFS \| At first, remove the island that is not sub island. Then, remove the island and count. |
 | 1020 | [Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/) | Medium     | [NumberOfEnclaves.java](src/leetcode/solution/DFS/NumberOfEnclaves.java) | DFS \| Remove the island close to the border, then Remove other islands and count. Same as problem '1254'. |
 
-
-
-
-
-
-
 #### [BFS](src/leetcode/solution/BFS)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                |
@@ -209,4 +203,10 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
 | 778  | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Hard       | [SwimInRisingWater.java](src/leetcode/solution/Heap/SwimInRisingWater.java) | Priority Queue |
+
+#### [Stack](src/leetcode/solution/stack)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
+| 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '(' |
 
