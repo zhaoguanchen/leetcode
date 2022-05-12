@@ -202,6 +202,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
+| 692  | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium     | [TopKFrequentWords.java](src/leetcode/solution/Heap/TopKFrequentWords.java) | Priority Queue |
 | 778  | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Hard       | [SwimInRisingWater.java](src/leetcode/solution/Heap/SwimInRisingWater.java) | Priority Queue |
 
 #### [Stack](src/leetcode/solution/stack)
