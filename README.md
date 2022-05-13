@@ -65,6 +65,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList                                           |
 | 706  | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium     | [DesignUndergroundSystem.java](src/leetcode/solution/DataStruct/DesignUndergroundSystem.java) | using two HashMap. One saves the check-in record, another saves the data of the current stage. |
 | 1166 | [Design File System](https://leetcode.com/problems/design-file-system/) | Medium     | [DesignFileSystem.java](src/leetcode/solution/DataStruct/DesignFileSystem.java) | - 1. **Trie**: using HashMap as the child list.              |
+| 380  | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium     | [InsertDeleteGetRandom.java](src/leetcode/solution/DataStruct/InsertDeleteGetRandom.java) | HashMap + ArrayList                                          |
 
 #### [Tree](src/leetcode/solution/tree)
 
