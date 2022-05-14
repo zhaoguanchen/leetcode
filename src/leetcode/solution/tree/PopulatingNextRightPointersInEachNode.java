@@ -1,6 +1,6 @@
 package leetcode.solution.tree;
 
-import leetcode.structure.Node;
+import leetcode.structure.TreeLinkNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -12,22 +12,22 @@ public class PopulatingNextRightPointersInEachNode {
 
     public static void main(String[] args) {
         Integer[] pArray = {1, 2, 3, 4, 5, 6, 7};
-        Node p = Node.constructTree(pArray);
+        TreeLinkNode p = TreeLinkNode.constructTree(pArray);
         System.out.println(connect(p));
 
     }
 
-    public static Node connect(Node root) {
+    public static TreeLinkNode connect(TreeLinkNode root) {
         if (root == null) {
             return null;
         }
-        Queue<Node> queue = new LinkedList<>();
+        Queue<TreeLinkNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                Node current = queue.poll();
+                TreeLinkNode current = queue.poll();
                 if (current == null) {
                     continue;
                 }
@@ -50,15 +50,15 @@ public class PopulatingNextRightPointersInEachNode {
     }
 
 
-    public static Node connect2(Node root) {
+    public static TreeLinkNode connect2(TreeLinkNode root) {
         if (root == null) {
             return null;
         }
-        Queue<Node> queue = new LinkedList<>();
+        Queue<TreeLinkNode> queue = new LinkedList<>();
         queue.add(root);
 
         while (!queue.isEmpty()) {
-            Node current = queue.poll();
+            TreeLinkNode current = queue.poll();
             if (current.left == null || current.right == null) {
                 continue;
             }
@@ -80,15 +80,15 @@ public class PopulatingNextRightPointersInEachNode {
      * @param root
      * @return
      */
-    public static Node connect3(Node root) {
+    public static TreeLinkNode connect3(TreeLinkNode root) {
         if (root == null) {
             return null;
         }
 
         // 每一层的最左侧节点
-        Node rootLeft = root;
+        TreeLinkNode rootLeft = root;
         // 当前层游标
-        Node current = rootLeft;
+        TreeLinkNode current = rootLeft;
 
         // 层序遍历
         while (current.left != null) {
@@ -113,14 +113,14 @@ public class PopulatingNextRightPointersInEachNode {
 
 
     // 主函数
-    public static Node connect4(Node root) {
+    public static TreeLinkNode connect4(TreeLinkNode root) {
         if (root == null) return null;
         connectTwoNode(root.left, root.right);
         return root;
     }
 
     // 辅助函数
-    private static void connectTwoNode(Node node1, Node node2) {
+    private static void connectTwoNode(TreeLinkNode node1, TreeLinkNode node2) {
         if (node1 == null || node2 == null) {
             return;
         }
