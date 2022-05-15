@@ -9,7 +9,6 @@ import leetcode.structure.TreeNode;
 public class BalancedBinaryTree {
 
     public static void main(String[] args) {
-        System.out.println(Math.pow(2, 1));
         Integer[] array = {3, 9, 20, null, null, 15, 7};
         TreeNode root = TreeNode.constructTree(array);
         System.out.println(isBalanced(root));

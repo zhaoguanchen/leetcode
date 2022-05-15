@@ -76,6 +76,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------- |
 | 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |                     |
 | 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Medium     | [ConvertSortedArrayToBinarySearchTree.java](src/leetcode/solution/tree/ConvertSortedArrayToBinarySearchTree.java) | DFS                 |
+| 1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | Medium     | [DeepestLeavesSum.java](src/leetcode/solution/tree/DeepestLeavesSum.java) | BFS \| DFS          |
 | 2265 | [Count Nodes Equal to Average of Subtree](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium     | [CountNodesEqualToAverageOfSubtree.java](src/leetcode/solution/tree/CountNodesEqualToAverageOfSubtree.java) | Postorder  traverse |
 
 ##### [Binary Search Tree](src/leetcode/solution/tree/bst)
@@ -141,6 +142,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 456  | [132 Pattern](https://leetcode.com/problems/132-pattern/)    | Medium     | [OneThreeTwoPattern.java](src/leetcode/solution/array/OneThreeTwoPattern.java) | Using Array as a Stack                                       |
 | 768  | [Max Chunks To Make Sorted II](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/) | Hard       | [MaxChunksToMakeSortedII.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array, each time all elements to the left are smaller (or equal) to all elements to the right, there is a new chunk. |
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     | [MaxChunksToMakeSorted.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array,  each time the maximum value of all elements to the left equals the index, there is a new chunk. |
+| 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Easy       | [FindClosestNumberToZero.java](src/leetcode/solution/array/FindClosestNumberToZero.java) | One Pass                                                     |
 
 **Two Pointer** 
 
