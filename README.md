@@ -126,12 +126,13 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [BFS](src/leetcode/solution/BFS)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------------------- |
-| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue                      |
-| 752  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium     | [NetworkDelayTime.java](src/leetcode/solution/BFS/NetworkDelayTime.java) | directed graph<br />BFS  \| DFS     |
-| 286  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Medium     | [WallAndGates.java](src/leetcode/solution/BFS/WallAndGates.java) | BFS: spread from the gate           |
-| 994  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium     | [RottingOranges.java](src/leetcode/solution/BFS/RottingOranges.java) | BFS: spread from the rotten oranges |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 752  | [Open the Lock](https://leetcode.com/problems/open-the-lock/) | Medium     | [OpenTheLock.java](src/leetcode/solution/BFS/OpenTheLock.java) | BFS with Queue                                               |
+| 752  | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | Medium     | [NetworkDelayTime.java](src/leetcode/solution/BFS/NetworkDelayTime.java) | directed graph<br />BFS  \| DFS                              |
+| 286  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Medium     | [WallAndGates.java](src/leetcode/solution/BFS/WallAndGates.java) | BFS: spread from the gate                                    |
+| 994  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium     | [RottingOranges.java](src/leetcode/solution/BFS/RottingOranges.java) | BFS: spread from the rotten oranges                          |
+| 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium     | [ShortestPathInBinaryMatrix.java](src/leetcode/solution/BFS/ShortestPathInBinaryMatrix.java) | BFS: spread from (0,0). The path that arrived earliest is the shortest. |
 
 #### [Array](src/leetcode/solution/array)
 
