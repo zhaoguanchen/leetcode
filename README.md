@@ -139,6 +139,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 31   | [Next Permutation](https://leetcode.com/problems/next-permutation/) | Medium     | [NextPermutation.java](src/leetcode/solution/array/NextPermutation.java) | Find the first element that is greater than the previous element, then replace it with the greater and smallest element on the right side. |
 | 281  | [Zigzag Iterator](https://leetcode.com/problems/zigzag-iterator/) | Medium     | [ZigzagIterator.java](src/leetcode/solution/array/ZigzagIterator.java) | Two Pointer<br />Muti Pointer or Queue for the **Follow-Up** Question. |
 | 412  | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/)        | Easy       | [FizzBuzz.java](src/leetcode/solution/array/FizzBuzz.java)   | For loop. Calculate i%5 and i%3 separately.                  |
 | 456  | [132 Pattern](https://leetcode.com/problems/132-pattern/)    | Medium     | [OneThreeTwoPattern.java](src/leetcode/solution/array/OneThreeTwoPattern.java) | Using Array as a Stack                                       |
