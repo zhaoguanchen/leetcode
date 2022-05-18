@@ -184,9 +184,10 @@ The project is divided into two parts: `structure` and `solution`.
 | 261  | [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/) | Medium     | [GraphValidTree.java](src/leetcode/solution/Graph/GraphValidTree.java) | This question is actually to determine whether there is a cycle in the graph.<br />- generate Adjacency List<br />- DFS<br />- BFS |
 | 399  | [Evaluate Division](https://leetcode.com/problems/evaluate-division/) | Medium     | [EvaluateDivision.java](src/leetcode/solution/Graph/EvaluateDivision.java) | - generate Adjacency List<br />- DFS<br />- BFS              |
 | 841  | [Keys and Rooms](https://leetcode.com/problems/evaluate-division/) | Medium     | [KeysAndRooms.java](src/leetcode/solution/Graph/KeysAndRooms.java) | - DFS<br />- BFS                                             |
-| 133  | [Clone Graph](https://leetcode.com/problems/clone-graph/)    | Medium     | [CloneGraph.java](src/leetcode/solution/CloneGraph.java)     | - DFS<br />                                                  |
-| 277  | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Medium     | [FindTheCelebrity.java](src/leetcode/solution/FindTheCelebrity.java) | - Logical Deduction<br />                                    |
-| 310  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Medium     | [MinimumHeightTrees.java](src/leetcode/solution/MinimumHeightTrees.java) | - BFS: remove leaves<br />                                   |
+| 133  | [Clone Graph](https://leetcode.com/problems/clone-graph/)    | Medium     | [CloneGraph.java](src/leetcode/solution/Graph/CloneGraph.java) | - DFS                                                        |
+| 277  | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Medium     | [FindTheCelebrity.java](src/leetcode/solution/Graph/FindTheCelebrity.java) | - Logical Deduction                                          |
+| 310  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Medium     | [MinimumHeightTrees.java](src/leetcode/solution/Graph/MinimumHeightTrees.java) | - BFS: remove leaves                                         |
+| 1192 | [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) | Hard       | [CriticalConnectionsInANetwork.java](src/leetcode/solution/Graph/CriticalConnectionsInANetwork.java) | - DFS: find cycle and remove the edge.                       |
 
 
 
