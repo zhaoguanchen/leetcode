@@ -72,14 +72,15 @@ The project is divided into two parts: `structure` and `solution`.
 
 ##### [Binary Tree](src/leetcode/solution/tree/bst)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                 |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------- |
-| 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |                      |
-| 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Medium     | [ConvertSortedArrayToBinarySearchTree.java](src/leetcode/solution/tree/ConvertSortedArrayToBinarySearchTree.java) | DFS                  |
-| 515  | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Medium     | [FindLargestValueInEachTreeRow.java](src/leetcode/solution/tree/FindLargestValueInEachTreeRow.java) | BFS \|DFS            |
-| 1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | Medium     | [DeepestLeavesSum.java](src/leetcode/solution/tree/DeepestLeavesSum.java) | BFS \| DFS           |
-| 1379 | [Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/) | Medium     | [FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java](src/leetcode/solution/tree/FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java) | inorder traversal    |
-| 2265 | [Count Nodes Equal to Average of Subtree](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium     | [CountNodesEqualToAverageOfSubtree.java](src/leetcode/solution/tree/CountNodesEqualToAverageOfSubtree.java) | Postorder  traversal |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Medium     | [ConvertSortedArrayToBinarySearchTree.java](src/leetcode/solution/tree/ConvertSortedArrayToBinarySearchTree.java) | DFS                                                          |
+| 199  | [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/) | Medium     | [BinaryTreeRightSideView.java](src/leetcode/solution/tree/BinaryTreeRightSideView.java) |                                                              |
+| 515  | [Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/) | Medium     | [FindLargestValueInEachTreeRow.java](src/leetcode/solution/tree/FindLargestValueInEachTreeRow.java) | BFS \|DFS                                                    |
+| 662  | [Maximum Width of Binary Tree](https://leetcode.com/problems/maximum-width-of-binary-tree/) | Medium     | [MaximumWidthOfBinaryTree.java](src/leetcode/solution/tree/MaximumWidthOfBinaryTree.java) | BFS \|DFS + The relationship of the index between the father node and the child node. |
+| 1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | Medium     | [DeepestLeavesSum.java](src/leetcode/solution/tree/DeepestLeavesSum.java) | BFS \| DFS                                                   |
+| 1379 | [Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/) | Medium     | [FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java](src/leetcode/solution/tree/FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java) | inorder traversal                                            |
+| 2265 | [Count Nodes Equal to Average of Subtree](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium     | [CountNodesEqualToAverageOfSubtree.java](src/leetcode/solution/tree/CountNodesEqualToAverageOfSubtree.java) | Postorder  traversal                                         |
 
 ##### [Binary Search Tree](src/leetcode/solution/tree/bst)
 
