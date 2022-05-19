@@ -1,4 +1,4 @@
-package leetcode.solution.backtrack;
+package leetcode.solution.DFS;
 
 /**
  * 329. Longest Increasing Path in a Matrix
@@ -14,83 +14,66 @@ public class LongestIncreasingPathInAMatrix {
     }
 
     /**
-     * 访问记录
-     */
-    private boolean[][] visited;
-
-    /**
-     * 备忘录
+     * memory
      */
     private int[][] memo;
 
     /**
-     * 方向
+     * direction
      */
     private int[][] direct;
 
-    /**
-     * 全局变量
-     */
+    private int[][] matrix;
     private int m;
-
     private int n;
 
-    private int[][] data;
-
-
     public int longestIncreasingPath(int[][] matrix) {
-        m = matrix.length;
-        n = matrix[0].length;
-        data = matrix;
+        this.m = matrix.length;
+        this.n = matrix[0].length;
+        this.matrix = matrix;
 
         memo = new int[m][n];
-        visited = new boolean[m][n];
+
         direct = new int[][]{{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
+        // every point may be the start point
         int ans = 0;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                visited[i][j] = true;
-                int cur = backtrack(i, j);
-                visited[i][j] = false;
-                ans = Math.max(ans, cur);
+                int length = backtrack(i, j);
+                ans = Math.max(ans, length);
             }
         }
 
         return ans;
     }
 
-    private int backtrack(int i, int j) {
-        if (memo[i][j] > 0) {
-            return memo[i][j];
+    private int backtrack(int row, int col) {
+        if (memo[row][col] > 0) {
+            return memo[row][col];
         }
 
-        int max = 1;
+        int maxLength = 1;
         for (int[] cur : direct) {
-            int nextI = cur[0] + i;
-            int nextJ = cur[1] + j;
-            // 越界，跳过
+            int nextI = cur[0] + row;
+            int nextJ = cur[1] + col;
+            // out of bound
             if (nextI < 0 || nextJ < 0 || nextI >= m || nextJ >= n) {
                 continue;
             }
 
-            // 已被访问过或非递增，跳过
-            if (visited[nextI][nextJ] || data[nextI][nextJ] <= data[i][j]) {
+            // not increasing
+            if (matrix[nextI][nextJ] <= matrix[row][col]) {
                 continue;
             }
-            // 做选择
-            visited[nextI][nextJ] = true;
+            // dfs next point
             int subMax = backtrack(nextI, nextJ);
-            // 撤销选择
-            visited[nextI][nextJ] = false;
-            max = Math.max(max, subMax + 1);
+            maxLength = Math.max(maxLength, subMax + 1);
         }
 
-        // 记录备忘录
-        memo[i][j] = max;
-
-        return max;
-
+        // memorize
+        memo[row][col] = maxLength;
+        return maxLength;
     }
 
 

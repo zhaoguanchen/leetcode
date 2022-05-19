@@ -108,9 +108,10 @@ The project is divided into two parts: `structure` and `solution`.
 
 **Search Path**
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-| 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard       | [CheckIfThereIsAValidParenthesesStringPath.java](src/leetcode/solution/DFS/CheckIfThereIsAValidParenthesesStringPath.java) | DFS  |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea       |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------- |
+| 329  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | Hard       | [LongestIncreasingPathInAMatrix.java](src/leetcode/solution/DFS/LongestIncreasingPathInAMatrix.java) | DFS + Memo |
+| 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard       | [CheckIfThereIsAValidParenthesesStringPath.java](src/leetcode/solution/DFS/CheckIfThereIsAValidParenthesesStringPath.java) | DFS        |
 
 
 
