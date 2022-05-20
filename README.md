@@ -207,6 +207,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium     | [UniquePathsII.java](src/leetcode/solution/DP/UniquePathsII.java) | DP   |
 | 2266 | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/) | Medium     | [CountNumberOfTexts.java](src/leetcode/solution/DP/CountNumberOfTexts.java) | DP   |
 
 #### [Heap (Priority Queue)](src/leetcode/solution/Heap)
