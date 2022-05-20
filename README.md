@@ -221,5 +221,6 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
+| 921  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium     | [MinimumAddToMakeParenthesesValid.java](src/leetcode/solution/stack/MinimumAddToMakeParenthesesValid.java) | Balance                 |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '(' |
 
