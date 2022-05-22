@@ -115,8 +115,6 @@ The project is divided into two parts: `structure` and `solution`.
 | 329  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | Hard       | [LongestIncreasingPathInAMatrix.java](src/leetcode/solution/DFS/LongestIncreasingPathInAMatrix.java) | DFS + Memo |
 | 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard       | [CheckIfThereIsAValidParenthesesStringPath.java](src/leetcode/solution/DFS/CheckIfThereIsAValidParenthesesStringPath.java) | DFS        |
 
-
-
 **Island**
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
@@ -160,13 +158,14 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [String](src/leetcode/solution/string)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                 |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------- |
-| 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count    |
-| 535  | [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) | Medium     | [EncodeAndDecodeTinyURL.java](src/leetcode/solution/string/EncodeAndDecodeTinyURL.java) | HashMap              |
-| 844  | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Medium     | [BackspaceStringCompare.java](src/leetcode/solution/string/BackspaceStringCompare.java) | Stack \| Two Pointer |
-| 1209 | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Medium     | [RemoveAllAdjacentDuplicatesInStringII.java](src/leetcode/solution/string/RemoveAllAdjacentDuplicatesInStringII.java) | Stack \| Two Pointer |
-| 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy       | [LargestThreeSameDigitNumberInString.java](src/leetcode/solution/string/LargestThreeSameDigitNumberInString.java) | Two Pointer          |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                        |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------- |
+| 535  | [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) | Medium     | [EncodeAndDecodeTinyURL.java](src/leetcode/solution/string/EncodeAndDecodeTinyURL.java) | HashMap                                     |
+| 647  | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium     | [PalindromicSubstrings.java](src/leetcode/solution/string/PalindromicSubstrings.java) | Two Pointer, Expand Around Possible Centers |
+| 844  | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Medium     | [BackspaceStringCompare.java](src/leetcode/solution/string/BackspaceStringCompare.java) | Stack \| Two Pointer                        |
+| 1209 | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Medium     | [RemoveAllAdjacentDuplicatesInStringII.java](src/leetcode/solution/string/RemoveAllAdjacentDuplicatesInStringII.java) | Stack \| Two Pointer                        |
+| 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count                           |
+| 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy       | [LargestThreeSameDigitNumberInString.java](src/leetcode/solution/string/LargestThreeSameDigitNumberInString.java) | Two Pointer                                 |
 
 #### [Slide Window](src/leetcode/solution/SlideWindow)
 
@@ -200,8 +199,6 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------------------------------------- |
 | 785  | [Is Graph Bipartite?](https://leetcode.com/problems/is-graph-bipartite/) | Medium     | [IsBipartite.java](src/leetcode/solution/Graph/IsBipartitet.java) | - Paint with different color<br />- DFS<br /> -BFS |
 | 886  | [Possible Bipartite](https://leetcode.com/problems/possible-bipartition/) | Medium     | [PossibleBipartition.java](src/leetcode/solution/Graph/PossibleBipartition.java) | - Paint with different color<br />- DFS<br /> -BFS |
-
-
 
 #### [Dynamic Programming](src/leetcode/solution/DP)
 
