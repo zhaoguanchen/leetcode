@@ -206,6 +206,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------ |
 | 63   | [Unique Paths II](https://leetcode.com/problems/unique-paths-ii/) | Medium     | [UniquePathsII.java](src/leetcode/solution/DP/UniquePathsII.java) | DP           |
 | 322  | [Coin Change](https://leetcode.com/problems/coin-change/)    | Medium     | [CoinChange.java](src/leetcode/solution/DP/CoinChange.java)  | DP Bottom-up |
+| 474  | [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | Medium     | [OnesAndZeroes.java](src/leetcode/solution/DP/OnesAndZeroes.java) | DP           |
 | 2266 | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/) | Medium     | [CountNumberOfTexts.java](src/leetcode/solution/DP/CountNumberOfTexts.java) | DP           |
 
 #### [Heap (Priority Queue)](src/leetcode/solution/Heap)
