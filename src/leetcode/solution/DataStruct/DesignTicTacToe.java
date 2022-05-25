@@ -45,7 +45,7 @@ class TicTacToe {
             antiDiagonal += add;
         }
 
-
+        // return who win the game
         if (Math.abs(rowArr[row]) == n || Math.abs(colArr[col]) == n || Math.abs(diagonal) == n || Math.abs(antiDiagonal) == n) {
             return player;
         }
