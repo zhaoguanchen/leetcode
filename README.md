@@ -57,16 +57,17 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------- |
 | 206  | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy       | [ReverseLinkedList.java](src/leetcode/solution/LinkedList/reverse/ReverseLinkedList.java) | Iteration \| Recursion |
 
-#### [DataStruct](src/leetcode/solution/DataStruct)
+#### [Design](src/leetcode/solution/DataStruct)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 341  | [Flatten Nested List Iterator](https://leetcode.com/problems/flatten-nested-list-iterator/) | Medium     | [FlattenNestedListIterator.java](src/leetcode/solution/DataStruct/FlattenNestedListIterator.java) | LinkedList, Deque, or Stack.                                 |
+| 348  | [Design Tic-Tac-Toe](https://leetcode.com/problems/design-tic-tac-toe/) | Medium     | [DesignTicTacToe.java](src/leetcode/solution/DataStruct/DesignTicTacToe.java) | using Array.                                                 |
+| 380  | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium     | [InsertDeleteGetRandom.java](src/leetcode/solution/DataStruct/InsertDeleteGetRandom.java) | HashMap + ArrayList                                          |
 | 705  | [Design HashSet](https://leetcode.com/problems/design-hashset/) | Easy       | [DesignHashSet.java](src/leetcode/solution/DataStruct/DesignHashSet.java) | Array + LinkedList                                           |
 | 706  | [Design HashMap](https://leetcode.com/problems/design-hashmap/) | Easy       | [DesignHashMap.java](src/leetcode/solution/DataStruct/DesignHashMap.java) | Array + LinkedList                                           |
-| 706  | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium     | [DesignUndergroundSystem.java](src/leetcode/solution/DataStruct/DesignUndergroundSystem.java) | using two HashMap. One saves the check-in record, another saves the data of the current stage. |
 | 1166 | [Design File System](https://leetcode.com/problems/design-file-system/) | Medium     | [DesignFileSystem.java](src/leetcode/solution/DataStruct/DesignFileSystem.java) | - 1. **Trie**: using HashMap as the child list.              |
-| 380  | [Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/) | Medium     | [InsertDeleteGetRandom.java](src/leetcode/solution/DataStruct/InsertDeleteGetRandom.java) | HashMap + ArrayList                                          |
+| 1396 | [Design Underground System](https://leetcode.com/problems/design-underground-system/) | Medium     | [DesignUndergroundSystem.java](src/leetcode/solution/DataStruct/DesignUndergroundSystem.java) | using two HashMap. One saves the check-in record, another saves the data of the current stage. |
 
 #### [Tree](src/leetcode/solution/tree)
 
