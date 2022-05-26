@@ -12,6 +12,11 @@ public class NumberOf1Bits {
 
     }
 
+    /**
+     * @Description: n & (n - 1) will eliminate the last 1.
+     * @Author: Guanchen Zhao
+     * @Date: 2022/5/25
+     */
     public int hammingWeight(int n) {
         int ans = 0;
         while (n != 0) {

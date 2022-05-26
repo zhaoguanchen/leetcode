@@ -226,3 +226,9 @@ The project is divided into two parts: `structure` and `solution`.
 | 921  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium     | [MinimumAddToMakeParenthesesValid.java](src/leetcode/solution/stack/MinimumAddToMakeParenthesesValid.java) | Balance                 |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '(' |
 
+#### [Math](src/leetcode/solution/math)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea        |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------- |
+| 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy       | [LongestValidParentheses.java](src/leetcode/solution/math/bit/NumberOf1Bits.java) | n & (n - 1) |
+
