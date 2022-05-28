@@ -1,4 +1,4 @@
-package leetcode.solution.BFS;
+package leetcode.solution.tree.traversal;
 
 import leetcode.structure.TreeNode;
 
