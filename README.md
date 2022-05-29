@@ -167,6 +167,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 1209 | [Remove All Adjacent Duplicates in String II](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/) | Medium     | [RemoveAllAdjacentDuplicatesInStringII.java](src/leetcode/solution/string/RemoveAllAdjacentDuplicatesInStringII.java) | Stack \| Two Pointer                        |
 | 2027 | [Minimum Moves to Convert String](https://leetcode.com/problems/minimum-moves-to-convert-string/) | Easy       | [MinimumMovesToConvertString.java](src/leetcode/solution/string/MinimumMovesToConvertString.java) | Pointer and Count                           |
 | 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy       | [LargestThreeSameDigitNumberInString.java](src/leetcode/solution/string/LargestThreeSameDigitNumberInString.java) | Two Pointer                                 |
+| 2288 | [Apply Discount to Prices](https://leetcode.com/problems/apply-discount-to-prices/) | Medium     | [ApplyDiscountToPrices.java](src/leetcode/solution/string/ApplyDiscountToPrices.java) | Split, Format,  StringBuilder               |
 
 #### [Slide Window](src/leetcode/solution/SlideWindow)
 
