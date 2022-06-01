@@ -225,6 +225,7 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
 | 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard       | [LongestValidParentheses.java](src/leetcode/solution/stack/LongestValidParentheses.java) | Stack                   |
+| 394  | [Decode String](https://leetcode.com/problems/decode-string/) | Medium     | [DecodeString.java](src/leetcode/solution/stack/DecodeString.java) | Two Stack               |
 | 921  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium     | [MinimumAddToMakeParenthesesValid.java](src/leetcode/solution/stack/MinimumAddToMakeParenthesesValid.java) | Balance                 |
 | 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '(' |
 
