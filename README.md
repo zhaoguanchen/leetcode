@@ -148,6 +148,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 768  | [Max Chunks To Make Sorted II](https://leetcode.com/problems/max-chunks-to-make-sorted-ii/) | Hard       | [MaxChunksToMakeSortedII.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array, each time all elements to the left are smaller (or equal) to all elements to the right, there is a new chunk. |
 | 769  | [Max Chunks To Make Sorted](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Medium     | [MaxChunksToMakeSorted.java](src/leetcode/solution/array/MaxChunksToMakeSortedII.java) | Iterate through the array,  each time the maximum value of all elements to the left equals the index, there is a new chunk. |
 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Easy       | [FindClosestNumberToZero.java](src/leetcode/solution/array/FindClosestNumberToZero.java) | One Pass                                                     |
+| 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy       | [RunningSumOf1dArray.java](src/leetcode/solution/array/RunningSumOf1dArray.java) | Prefix sum                                                   |
 
 **Two Pointer** 
 
