@@ -8,11 +8,7 @@ import java.util.List;
 import java.util.Queue;
 
 /**
- * 100. Same Tree
- * <p>
- * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
- * <p>
- * Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+ * 102. Binary Tree Level Order Traversal
  */
 public class BinaryTreeLevelOrderTraversal {
 
