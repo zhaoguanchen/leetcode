@@ -150,6 +150,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 953  | [Verifying an Alien Dictionary](https://leetcode.com/problems/verifying-an-alien-dictionary/) | Easy       | [VerifyingAnAlienDictionary.java](src/leetcode/solution/array/VerifyingAnAlienDictionary.java) | Compare adjacent elements                                    |
 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Easy       | [FindClosestNumberToZero.java](src/leetcode/solution/array/FindClosestNumberToZero.java) | One Pass                                                     |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy       | [RunningSumOf1dArray.java](src/leetcode/solution/array/RunningSumOf1dArray.java) | Prefix sum                                                   |
+| 2284 | [Sender With Largest Word Count](https://leetcode.com/problems/sender-with-largest-word-count/) | Medium     | [SenderWithLargestWordCount.java](src/leetcode/solution/Heap/SenderWithLargestWordCount.java) | Priority Queue                                               |
 
 **Two Pointer** 
 
