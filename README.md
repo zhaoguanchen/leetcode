@@ -161,6 +161,12 @@ The project is divided into two parts: `structure` and `solution`.
 | 905  | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | Easy       | [SortArrayByParity.java](src/leetcode/solution/array/SortArrayByParity.java) | Two Pointer         |
 | 1679 | [Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/) | Medium     | [MaxNumberOfKSumPairs.java](src/leetcode/solution/array/twopointer/MaxNumberOfKSumPairs.java) | Two Pointer         |
 
+#### [Matrix](src/leetcode/solution/matrix)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------- |
+| 867  | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy       | [TransposeMatrix.java](src/leetcode/solution/matrix/TransposeMatrix.java) | Traversal |
+
 #### [String](src/leetcode/solution/string)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                        |
@@ -183,7 +189,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                     |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------------------------- |
-| 567  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     | [LongestConsecutiveSequence.java](src/leetcode/solution/Hash/LongestConsecutiveSequence.java) | Hash Table: using hashSet save the nums. |
+| 567  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     | [LongestConsecutiveSequence.java](src/leetcode/solution/Hash/LongestConsecutiveSequence.java) | Hash Table: using HashSet save the nums. |
 
 #### [Graph](src/leetcode/solution/Graph)
 
