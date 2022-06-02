@@ -136,6 +136,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 286  | [Walls and Gates](https://leetcode.com/problems/walls-and-gates/) | Medium     | [WallAndGates.java](src/leetcode/solution/BFS/WallAndGates.java) | BFS: spread from the gate                                    |
 | 994  | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | Medium     | [RottingOranges.java](src/leetcode/solution/BFS/RottingOranges.java) | BFS: spread from the rotten oranges                          |
 | 1091 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | Medium     | [ShortestPathInBinaryMatrix.java](src/leetcode/solution/BFS/ShortestPathInBinaryMatrix.java) | BFS: spread from (0,0). The path that arrived earliest is the shortest. |
+| 1197 | [Minimum Knight Moves](https://leetcode.com/problems/minimum-knight-moves/) | Medium     | [MinimumKnightMoves.java](src/leetcode/solution/BFS/MinimumKnightMoves.java) | BFS: spread from (0,0). The path that arrived earliest is the shortest. |
 
 #### [Array](src/leetcode/solution/array)
 
