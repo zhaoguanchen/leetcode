@@ -171,6 +171,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                        |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------- |
+| 5    | [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium     | [LongestPalindromicSubstring.java](src/leetcode/solution/string/LongestPalindromicSubstring.java) | Two Pointer, Expand Around Possible Centers |
 | 535  | [Encode and Decode TinyURL](https://leetcode.com/problems/encode-and-decode-tinyurl/) | Medium     | [EncodeAndDecodeTinyURL.java](src/leetcode/solution/string/EncodeAndDecodeTinyURL.java) | HashMap                                     |
 | 647  | [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/) | Medium     | [PalindromicSubstrings.java](src/leetcode/solution/string/PalindromicSubstrings.java) | Two Pointer, Expand Around Possible Centers |
 | 844  | [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/) | Medium     | [BackspaceStringCompare.java](src/leetcode/solution/string/BackspaceStringCompare.java) | Stack \| Two Pointer                        |
