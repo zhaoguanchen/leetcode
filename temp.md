@@ -54,7 +54,7 @@ class Solution {
 }
 ```
 
-DP
+DP Up bottom
 
 ```java
 
@@ -97,10 +97,33 @@ class Solution {
 ```
 
 
-DP
+DP Bottom up
 
 ```java
 
+class Solution {
 
+    public boolean canJump(int[] nums) {
+    
+        int [] dp = new int [nums.length];
+        dp[nums.length - 1] = 1;
+        
+        for(int i = nums.length - 2; i >= 0; i--) {
+            int fastest = Math.min(nums.length - 1, nums[i] + i);
+            
+            for(int j = i + 1; j <= fastest; j++) {
+                if(dp[j] == 1) {
+                    dp[i] = 1;
+                    break;
+                }
+            }
+            
+        }
+        
+        return dp[0] == 1;
+    }
+    
+    
+}
 
 ```
