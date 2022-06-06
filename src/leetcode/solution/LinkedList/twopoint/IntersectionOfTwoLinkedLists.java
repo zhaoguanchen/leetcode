@@ -22,11 +22,11 @@ public class IntersectionOfTwoLinkedLists {
             p2 = p2.next;
         }
         p1.next = p2;
-
-        ListNode.print(getIntersectionNode(root, root1));
+        IntersectionOfTwoLinkedLists solution = new IntersectionOfTwoLinkedLists();
+        ListNode.print(solution.getIntersectionNode(root, root1));
     }
 
-    public static ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         ListNode p1 = headA;
         ListNode p2 = headB;
 
