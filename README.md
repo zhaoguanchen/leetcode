@@ -54,9 +54,9 @@ The project is divided into two parts: `structure` and `solution`.
 
 **Two Pointer** 
 
-| No.  | Title | Difficulty | Solution | Idea |
-| ---- | ----- | ---------- | -------- | ---- |
-|      |       |            |          |      |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea          |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------- |
+| 160  | [Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/) | Easy       | [IntersectionOfTwoLinkedLists.java](src/leetcode/solution/LinkedList/twopoint/IntersectionOfTwoLinkedLists.java) | Hash \| A + B |
 
 #### [Design](src/leetcode/solution/DataStruct)
 
@@ -92,21 +92,23 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Backtrack](src/leetcode/solution/backtrack)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------- |
-| 17   | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium     | [LetterCombinationsPhoneNumber.java](src/leetcode/solution/backtrack/LetterCombinationsPhoneNumber.java) | Backtrack |
-| 39   | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack |
-| 40   | [Combination Sum II](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) | Backtrack |
-| 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | Backtrack |
-| 47   | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Medium     | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack |
-| 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | Backtrack |
-| 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     | [Subset.java](src/leetcode/solution/backtrack/Subset.java)   | Backtrack |
-| 79   | [Word Search](https://leetcode.com/problems/word-search/)    | Medium     | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | Backtrack |
-| 90   | [Subsets II](https://leetcode.com/problems/subsets-ii/)      | Medium     | [SubsetII.java](src/leetcode/solution/backtrack/SubsetII.java) | Backtrack |
-| 93   | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium     | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | Backtrack |
-| 95   | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium     | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack |
-| 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)    | Medium     | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack |
-| 216  | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Medium     | [CombinationSumIII.java](src/leetcode/solution/backtrack/CombinationSumIII.java) | Backtrack |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea             |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------- |
+| 17   | [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium     | [LetterCombinationsPhoneNumber.java](src/leetcode/solution/backtrack/LetterCombinationsPhoneNumber.java) | Backtrack        |
+| 39   | [Combination Sum](https://leetcode.com/problems/combination-sum/) | Medium     | [CombinationSum.java](src/leetcode/solution/backtrack/CombinationSum.java) | Backtrack        |
+| 40   | [Combination Sum II](https://leetcode.com/problems/combination-sum-II/) | Medium     | [CombinationSumII.java](src/leetcode/solution/backtrack/CombinationSumII.java) | Backtrack        |
+| 46   | [Permutations](https://leetcode.com/problems/permutations/)  | Medium     | [Permutations.java](src/leetcode/solution/backtrack/Permutations.java) | Backtrack        |
+| 47   | [Permutations II](https://leetcode.com/problems/permutations-ii/) | Medium     | [PermutationsII.java](src/leetcode/solution/backtrack/PermutationsII.java) | Backtrack        |
+| 51   | [N-Queens](https://leetcode.com/problems/n-queens/)          | Hard       | [NQueens.java](src/leetcode/solution/backtrack/NQueens.java) | Backtrack + Memo |
+| 52   | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)    | Hard       | [NQueensII.java](src/leetcode/solution/backtrack/NQueensII.java) | Backtrack + Memo |
+| 77   | [Combinations](https://leetcode.com/problems/combinations/)  | Medium     | [Combinations.java](src/leetcode/solution/backtrack/Combinations.java) | Backtrack        |
+| 78   | [Subsets](https://leetcode.com/problems/subsets/)            | Medium     | [Subset.java](src/leetcode/solution/backtrack/Subset.java)   | Backtrack        |
+| 79   | [Word Search](https://leetcode.com/problems/word-search/)    | Medium     | [WordSearch.java](src/leetcode/solution/backtrack/WordSearch.java) | Backtrack        |
+| 90   | [Subsets II](https://leetcode.com/problems/subsets-ii/)      | Medium     | [SubsetII.java](src/leetcode/solution/backtrack/SubsetII.java) | Backtrack        |
+| 93   | [Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/) | Medium     | [RestoreIPAddresses.java](src/leetcode/solution/backtrack/RestoreIPAddresses.java) | Backtrack        |
+| 95   | [Unique Binary Search Trees II](https://leetcode.com/problems/unique-binary-search-trees-ii/) | Medium     | [UniqueBinarySearchTreesII.java](src/leetcode/solution/backtrack/UniqueBinarySearchTreesII.java) | Backtrack        |
+| 113  | [Path Sum II](https://leetcode.com/problems/path-sum-ii/)    | Medium     | [PathSumII.java](src/leetcode/solution/backtrack/PathSumII.java) | Backtrack        |
+| 216  | [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/) | Medium     | [CombinationSumIII.java](src/leetcode/solution/backtrack/CombinationSumIII.java) | Backtrack        |
 
 #### [DFS](src/leetcode/solution/DFS)
 
@@ -246,4 +248,10 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea        |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------- |
 | 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy       | [LongestValidParentheses.java](src/leetcode/solution/math/bit/NumberOf1Bits.java) | n & (n - 1) |
+
+#### [Greedy](src/leetcode/solution/greedy)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea            |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------- |
+| 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort |
 
