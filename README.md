@@ -168,9 +168,10 @@ The project is divided into two parts: `structure` and `solution`.
 
 **Intervals**
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-| 56   | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     | [MergeIntervals.java](src/leetcode/solution/array/interval/MergeIntervals.java) | Sort |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                              |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------- |
+| 56   | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     | [MergeIntervals.java](src/leetcode/solution/array/interval/MergeIntervals.java) | Sort and compare left border of the interval      |
+| 1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | Medium     | [RemoveCoveredIntervals.java](src/leetcode/solution/array/interval/RemoveCoveredIntervals.java) | Sort and compare the right border of the interval |
 
 
 
