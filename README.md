@@ -166,6 +166,16 @@ The project is divided into two parts: `structure` and `solution`.
 | 905  | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | Easy       | [SortArrayByParity.java](src/leetcode/solution/array/SortArrayByParity.java) | Two Pointer         |
 | 1679 | [Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/) | Medium     | [MaxNumberOfKSumPairs.java](src/leetcode/solution/array/twopointer/MaxNumberOfKSumPairs.java) | Two Pointer         |
 
+**Intervals**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
+| 56   | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     | [MergeIntervals.java](src/leetcode/solution/array/interval/MergeIntervals.java) | Sort |
+
+
+
+
+
 #### [Matrix](src/leetcode/solution/matrix)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
