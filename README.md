@@ -161,6 +161,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------- |
+| 88   | [Merge Sorted Array](https://leetcode.com/problems/sort-array-by-parity/) | Easy       | [MergeSortedArray.java](src/leetcode/solution/array/MergeSortedArray.java) | Two Pointer         |
 | 581  | [Shortest Unsorted Continuous Subarray](https://leetcode.com/problems/shortest-unsorted-continuous-subarray/) | Medium     | [ShortestUnsortedContinuousSubarray.java](src/leetcode/solution/array/twopointer/ShortestUnsortedContinuousSubarray.java) | Two Pointer \| Sort |
 | 905  | [Sort Array By Parity](https://leetcode.com/problems/sort-array-by-parity/) | Easy       | [SortArrayByParity.java](src/leetcode/solution/array/SortArrayByParity.java) | Two Pointer         |
 | 1679 | [Max Number of K-Sum Pairs](https://leetcode.com/problems/max-number-of-k-sum-pairs/) | Medium     | [MaxNumberOfKSumPairs.java](src/leetcode/solution/array/twopointer/MaxNumberOfKSumPairs.java) | Two Pointer         |
@@ -255,3 +256,5 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------- |
 | 134  | [Gas Station](https://leetcode.com/problems/gas-station/)    | Medium     | [GasStation.java](src/leetcode/solution/greedy/GasStation.java) | Greedy          |
 | 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort |
+
+ 
