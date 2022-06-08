@@ -196,6 +196,14 @@ The project is divided into two parts: `structure` and `solution`.
 | 2264 | [Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/) | Easy       | [LargestThreeSameDigitNumberInString.java](src/leetcode/solution/string/LargestThreeSameDigitNumberInString.java) | Two Pointer                                 |
 | 2288 | [Apply Discount to Prices](https://leetcode.com/problems/apply-discount-to-prices/) | Medium     | [ApplyDiscountToPrices.java](src/leetcode/solution/string/ApplyDiscountToPrices.java) | Split, Format,  StringBuilder               |
 
+**Two Pointer** 
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                             |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------ |
+| 1332 | [Remove Palindromic Subsequences](https://leetcode.com/problems/remove-palindromic-subsequences/) | Easy       | [RemovePalindromicSubsequences.java](src/leetcode/solution/string/twopoint/RemovePalindromicSubsequences.java) | Two Pointer, check if it is a Palindrome String. |
+
+
+
 #### [Slide Window](src/leetcode/solution/SlideWindow)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea         |
