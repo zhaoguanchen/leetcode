@@ -171,6 +171,8 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                              |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------- |
 | 56   | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Medium     | [MergeIntervals.java](src/leetcode/solution/array/interval/MergeIntervals.java) | Sort and compare left border of the interval      |
+| 57   | [Insert Interval](https://leetcode.com/problems/insert-interval/) | Medium     | [InsertInterval.java](src/leetcode/solution/array/interval/InsertInterval.java) | Add Before, Merge, Add After.                     |
+| 986  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Medium     | [IntervalListIntersections.java](src/leetcode/solution/array/interval/IntervalListIntersections.java) | Two pointer and Check intersect                   |
 | 1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | Medium     | [RemoveCoveredIntervals.java](src/leetcode/solution/array/interval/RemoveCoveredIntervals.java) | Sort and compare the right border of the interval |
 
 
