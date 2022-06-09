@@ -1,4 +1,4 @@
-package leetcode.solution.nSum;
+package leetcode.solution.array.nSum;
 
 import java.util.Arrays;
 

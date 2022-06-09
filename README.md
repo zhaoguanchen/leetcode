@@ -175,6 +175,12 @@ The project is divided into two parts: `structure` and `solution`.
 | 986  | [Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/) | Medium     | [IntervalListIntersections.java](src/leetcode/solution/array/interval/IntervalListIntersections.java) | Two pointer and Check intersect                   |
 | 1288 | [Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/) | Medium     | [RemoveCoveredIntervals.java](src/leetcode/solution/array/interval/RemoveCoveredIntervals.java) | Sort and compare the right border of the interval |
 
+**n Sum**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------ |
+| 167  | [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium     | [TwoSumIIInputArrayIsSorted.java](src/leetcode/solution/array/nSum/TwoSumIIInputArrayIsSorted.java) | Two Pointer. |
+
 
 
 
