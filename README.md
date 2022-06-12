@@ -155,6 +155,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/max-chunks-to-make-sorted/) | Easy       | [FindClosestNumberToZero.java](src/leetcode/solution/array/FindClosestNumberToZero.java) | One Pass                                                     |
 | 1480 | [Running Sum of 1d Array](https://leetcode.com/problems/running-sum-of-1d-array/) | Easy       | [RunningSumOf1dArray.java](src/leetcode/solution/array/RunningSumOf1dArray.java) | Prefix sum                                                   |
 | 2284 | [Sender With Largest Word Count](https://leetcode.com/problems/sender-with-largest-word-count/) | Medium     | [SenderWithLargestWordCount.java](src/leetcode/solution/Heap/SenderWithLargestWordCount.java) | Priority Queue                                               |
+| 2303 | [Calculate Amount Paid in Taxes](https://leetcode.com/problems/calculate-amount-paid-in-taxes/) | Easy       | [CalculateAmountPaidInTaxes.java](src/leetcode/solution/array/CalculateAmountPaidInTaxes.java) | One Pass                                                     |
 | x    | Rearrange Sorted Array In MaxMin Form                        | Medium     | [RearrangeSortedArrayInMaxMinForm.java](src/leetcode/solution/Arrays/RearrangeSortedArrayInMaxMinForm.java) | Using `%` and `/`                                            |
 
 **Two Pointer** 
