@@ -1,4 +1,4 @@
-package leetcode.solution.DataStruct;
+package leetcode.solution.SlideWindow;
 
 import java.util.*;
 

@@ -291,4 +291,11 @@ The project is divided into two parts: `structure` and `solution`.
 | 134  | [Gas Station](https://leetcode.com/problems/gas-station/)    | Medium     | [GasStation.java](src/leetcode/solution/greedy/GasStation.java) | Greedy          |
 | 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort |
 
+#### [Trie](src/leetcode/solution/trie)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                  |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------------- |
+| 1268 | [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/) | Medium     | [SearchSuggestionsSystem.java](src/leetcode/solution/trie/SearchSuggestionsSystem.java) | Trie \| Binary Search |
+
  
+

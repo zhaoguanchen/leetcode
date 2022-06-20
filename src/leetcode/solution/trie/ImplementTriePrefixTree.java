@@ -1,12 +1,12 @@
-package leetcode.solution.DataStruct;
+package leetcode.solution.trie;
 
 /**
  * 208. Implement Trie (Prefix Tree)
  */
-public class Trie {
+public class ImplementTriePrefixTree {
 
     public static void main(String[] args) {
-        Trie trie = new Trie();
+        PrefixTree trie = new PrefixTree();
         trie.insert("apple");
         System.out.println(trie.search("apple"));   // return True
         System.out.println(trie.search("app"));     // return False
@@ -15,6 +15,11 @@ public class Trie {
         System.out.println(trie.search("app"));     // return True
     }
 
+
+}
+
+
+class PrefixTree {
     /**
      * 全局遍历 虚拟根节点
      */
@@ -23,7 +28,7 @@ public class Trie {
     /**
      * Trie的构造函数
      */
-    public Trie() {
+    public PrefixTree() {
         root = new TrieNode();
     }
 
