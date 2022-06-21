@@ -20,7 +20,6 @@ public class SearchSuggestionsSystem {
         List<List<String>> ans1 = solution1.suggestedProducts(products, searchWord);
         System.out.println(ans1);
 
-
     }
 
 
