@@ -283,6 +283,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea        |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------- |
+| 171  | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Easy       | [ExcelSheetColumnNumber.java](src/leetcode/solution/math/ExcelSheetColumnNumber.java) | Iteration   |
 | 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy       | [LongestValidParentheses.java](src/leetcode/solution/math/bit/NumberOf1Bits.java) | n & (n - 1) |
 
 #### [Greedy](src/leetcode/solution/greedy)
