@@ -222,6 +222,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------ |
 | 3    | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium     | [LongestSubstringWithoutRepeatingCharacters.java](src/leetcode/solution/SlideWindow/LongestSubstringWithoutRepeatingCharacters.java) | Slide Window and HashMap |
 | 567  | [Permutation in String](https://leetcode.com/problems/permutation-in-string/) | Medium     | [PermutationInString.java](src/leetcode/solution/SlideWindow/PermutationInString.java) | Slide Window             |
+| 1423 | [Maximum Points You Can Obtain from Cards](https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/) | Medium     | [MaximumPointsYouCanObtainFromCards.java](src/leetcode/solution/SlideWindow/MaximumPointsYouCanObtainFromCards.java) | Slide Window             |
 | 1658 | [Minimum Operations to Reduce X to Zero](https://leetcode.com/problems/minimum-operations-to-reduce-x-to-zero/) | Medium     | [MinimumOperationsToReduceXToZero.java](src/leetcode/solution/SlideWindow/MinimumOperationsToReduceXToZero.java) | Slide Window             |
 
 #### [Hash Table](src/leetcode/solution/Hash)
