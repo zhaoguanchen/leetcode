@@ -84,6 +84,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 1302 | [Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/) | Medium     | [DeepestLeavesSum.java](src/leetcode/solution/tree/DeepestLeavesSum.java) | BFS \| DFS                                                   |
 | 1379 | [Find a Corresponding Node of a Binary Tree in a Clone of That Tree](https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/) | Medium     | [FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java](src/leetcode/solution/tree/FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree.java) | inorder traversal                                            |
 | 2265 | [Count Nodes Equal to Average of Subtree](https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/) | Medium     | [CountNodesEqualToAverageOfSubtree.java](src/leetcode/solution/tree/CountNodesEqualToAverageOfSubtree.java) | Postorder  traversal                                         |
+|      |                                                              |            |                                                              |                                                              |
 
 ##### [Binary Search Tree](src/leetcode/solution/tree/bst)
 
