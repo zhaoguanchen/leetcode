@@ -292,10 +292,11 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Greedy](src/leetcode/solution/greedy)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea            |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------- |
-| 134  | [Gas Station](https://leetcode.com/problems/gas-station/)    | Medium     | [GasStation.java](src/leetcode/solution/greedy/GasStation.java) | Greedy          |
-| 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                       |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------------------- |
+| 134  | [Gas Station](https://leetcode.com/problems/gas-station/)    | Medium     | [GasStation.java](src/leetcode/solution/greedy/GasStation.java) | Greedy                     |
+| 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort            |
+| 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/) | Medium     | [MinimumDeletionsToMakeCharacterFrequenciesUnique.java](src/leetcode/solution/greedy/MinimumDeletionsToMakeCharacterFrequenciesUnique.java) | Greedy  \| HashSet \| Sort |
 
 #### [Trie](src/leetcode/solution/trie)
 
