@@ -283,10 +283,11 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Math](src/leetcode/solution/math)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea        |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------- |
-| 171  | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Easy       | [ExcelSheetColumnNumber.java](src/leetcode/solution/math/ExcelSheetColumnNumber.java) | Iteration   |
-| 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy       | [LongestValidParentheses.java](src/leetcode/solution/math/bit/NumberOf1Bits.java) | n & (n - 1) |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                         |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------------- |
+| 171  | [Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | Easy       | [ExcelSheetColumnNumber.java](src/leetcode/solution/math/ExcelSheetColumnNumber.java) | Iteration                    |
+| 191  | [Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/) | Easy       | [LongestValidParentheses.java](src/leetcode/solution/math/bit/NumberOf1Bits.java) | n & (n - 1)                  |
+| 202  | [Happy Number](https://leetcode.com/problems/happy-number/)  | Easy       | [HappyNumber.java](src/leetcode/solution/math/HappyNumber.java) | HashSet \| fast-slow pointer |
 
 #### [Greedy](src/leetcode/solution/greedy)
 
