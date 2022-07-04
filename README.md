@@ -306,6 +306,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 179  | [Largest Number](https://leetcode.com/problems/largest-number/submissions/) | Medium     | [LargestNumber.java](src/leetcode/solution/greedy/LargestNumber.java) | Greedy and Sort                              |
 | 376  | [Wiggle Subsequence](https://leetcode.com/problems/wiggle-subsequence/) | Medium     | [WiggleSubsequence.java](src/leetcode/solution/greedy/WiggleSubsequence.java) | detect the change.                           |
 | 1647 | [Minimum Deletions to Make Character Frequencies Unique](https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/) | Medium     | [MinimumDeletionsToMakeCharacterFrequenciesUnique.java](src/leetcode/solution/greedy/MinimumDeletionsToMakeCharacterFrequenciesUnique.java) | Greedy  \| HashSet \| Sort                   |
+| 1710 | [Maximum Units on a Truck](https://leetcode.com/problems/maximum-units-on-a-truck/) | Easy       | [MaximumUnitsOnATruck.java](src/leetcode/solution/greedy/MaximumUnitsOnATruck.java) | select Greatest first.                       |
 
 #### [Trie](src/leetcode/solution/trie)
 
