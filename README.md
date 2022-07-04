@@ -93,6 +93,12 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
 | 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
 
+##### [Complete Tree](src/leetcode/solution/tree/bst)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                              |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------------------------- |
+| 222  | [Count Complete Tree Nodes](https://leetcode.com/problems/count-complete-tree-nodes/) | Medium     | [CountCompleteTreeNodes.java](src/leetcode/solution/tree/completeBinaryTree/CountCompleteTreeNodes.java) | Consider left and right separatly |
+
 #### [Backtrack](src/leetcode/solution/backtrack)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea             |

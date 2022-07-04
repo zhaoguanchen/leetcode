@@ -1,4 +1,4 @@
-package leetcode.solution.tree;
+package leetcode.solution.tree.completeBinaryTree;
 
 import leetcode.structure.TreeNode;
 
@@ -8,10 +8,10 @@ import leetcode.structure.TreeNode;
 public class CountCompleteTreeNodes {
 
     public static void main(String[] args) {
-        Integer[] pArray = {1, 2, 3, 4, 5, 6};
-        TreeNode root = TreeNode.constructTree(pArray);
-        CountCompleteTreeNodes l = new CountCompleteTreeNodes();
-        int ans = l.countNodes(root);
+        Integer[] array = {1, 2, 3, null, 5, null, 4};
+        TreeNode r = TreeNode.constructTree(array);
+        CountCompleteTreeNodes solution = new CountCompleteTreeNodes();
+        int ans = solution.countNodes(r);
         System.out.println(ans);
     }
 
@@ -33,14 +33,11 @@ public class CountCompleteTreeNodes {
             hRight++;
         }
 
-        // 如果左右等高，则是一个满二叉树，可直接通过公式算出，无需递归
         if (hLeft == hRight) {
             return (int) Math.pow(2, hLeft) - 1;
         } else {
-            // 递归计算左右子树
             return 1 + countNodes(root.left) + countNodes(root.right);
         }
     }
-
 
 }
