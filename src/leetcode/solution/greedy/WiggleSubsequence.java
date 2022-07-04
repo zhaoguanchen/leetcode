@@ -11,7 +11,7 @@ public class WiggleSubsequence {
         WiggleSubsequence solution = new WiggleSubsequence();
         int ans = solution.wiggleMaxLength(nums);
         System.out.println(ans);
-        // 3
+        // 6
     }
 
     public int wiggleMaxLength(int[] nums) {
