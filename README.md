@@ -195,7 +195,12 @@ The project is divided into two parts: `structure` and `solution`.
 
 
 
+**voting**
 
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                 |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------ |
+| 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       | [MajorityElement.java](src/leetcode/solution/array/MajorityElement.java) | Sort \| Boyer-Moore Voting Algorithm |
+| 229  | [Majority Element II](https://leetcode.com/problems/majority-element-ii/) | Medium     | [MajorityElementII.java](src/leetcode/solution/array/MajorityElementII.java) | Sort \| Boyer-Moore Voting Algorithm |
 
 #### [Matrix](src/leetcode/solution/matrix)
 
