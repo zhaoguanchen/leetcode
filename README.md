@@ -201,6 +201,7 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------ |
 | 169  | [Majority Element](https://leetcode.com/problems/majority-element/) | Easy       | [MajorityElement.java](src/leetcode/solution/array/MajorityElement.java) | Sort \| Boyer-Moore Voting Algorithm |
 | 229  | [Majority Element II](https://leetcode.com/problems/majority-element-ii/) | Medium     | [MajorityElementII.java](src/leetcode/solution/array/MajorityElementII.java) | Sort \| Boyer-Moore Voting Algorithm |
+| 1150 | [Check If a Number Is Majority Element in a Sorted Array](https://leetcode.com/problems/check-if-a-number-is-majority-element-in-a-sorted-array/) | Easy       | [CheckIfANumberIsMajorityElementInASortedArray.java](src/leetcode/solution/array/CheckIfANumberIsMajorityElementInASortedArray.java) | Voting                               |
 
 #### [Matrix](src/leetcode/solution/matrix)
 
