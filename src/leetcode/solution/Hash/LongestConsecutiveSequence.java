@@ -24,23 +24,34 @@ public class LongestConsecutiveSequence {
             set.add(num);
         }
 
-        int ans = 1;
-        for (int num : nums) {
-            // is the start point
-            if (!set.contains(num - 1)) {
-                int currentLongest = 1;
-                int currentNum = num;
-                // check if the next number is exist.
-                // if so, record the length of Consecutive Sequence
-                while (set.contains(currentNum + 1)) {
-                    currentLongest++;
-                    currentNum++;
-                }
+        int max = 0;
 
-                ans = Math.max(ans, currentLongest);
+        for (int num : nums) {
+            if (!set.contains(num)) {
+                continue;
             }
+
+            int currentLength = 1;
+            // search smaller element
+            int pre = num - 1;
+            while (set.contains(pre)) {
+                set.remove(pre);
+                currentLength++;
+                pre--;
+            }
+
+            // search greater element
+            int next = num + 1;
+            while (set.contains(next)) {
+                set.remove(next);
+                currentLength++;
+                next++;
+            }
+
+            max = Math.max(max, currentLength);
         }
 
-        return ans;
+
+        return max;
     }
 }
