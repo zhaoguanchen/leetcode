@@ -279,6 +279,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 474  | [Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/) | Medium     | [OnesAndZeroes.java](src/leetcode/solution/DP/OnesAndZeroes.java) | DP           |
 | 2266 | [Count Number of Texts](https://leetcode.com/problems/count-number-of-texts/) | Medium     | [CountNumberOfTexts.java](src/leetcode/solution/DP/CountNumberOfTexts.java) | DP           |
 | 120  | [Triangle](https://leetcode.com/problems/triangle/)          | Medium     | [Triangle.java](src/leetcode/solution/DP/Triangle.java)      | DP           |
+| 256  | [Paint House](https://leetcode.com/problems/paint-house/)    | Medium     | [PaintHouse.java](src/leetcode/solution/DP/PaintHouse.java)  | DP           |
 
 #### [Heap (Priority Queue)](src/leetcode/solution/Heap)
 
