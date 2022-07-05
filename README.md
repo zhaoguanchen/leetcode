@@ -89,9 +89,10 @@ The project is divided into two parts: `structure` and `solution`.
 
 ##### [Binary Search Tree](src/leetcode/solution/tree/bst)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---- |
-| 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |      |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea               |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------ |
+| 173  | [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/) | Medium     | [BinarySearchTreeIterator.java](src/leetcode/solution/tree/bst/BinarySearchTreeIterator.java) |                    |
+| 230  | [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) | Medium     | [KthSmallestElementInABST.java](src/leetcode/solution/tree/bst/KthSmallestElementInABST.java) | Preorder traversal |
 
 ##### [Complete Tree](src/leetcode/solution/tree/bst)
 
