@@ -129,7 +129,8 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea       |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------- |
 | 329  | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | Hard       | [LongestIncreasingPathInAMatrix.java](src/leetcode/solution/DFS/LongestIncreasingPathInAMatrix.java) | DFS + Memo |
-| 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Hard       | [CheckIfThereIsAValidParenthesesStringPath.java](src/leetcode/solution/DFS/CheckIfThereIsAValidParenthesesStringPath.java) | DFS        |
+| 802  | [Find Eventual Safe States](https://leetcode.com/problems/find-eventual-safe-states/) | Hard       | [LongestIncreasingPathInAMatrix.java](src/leetcode/solution/DFS/LongestIncreasingPathInAMatrix.java) | DFS + Memo |
+| 2267 | [Check if There Is a Valid Parentheses String Path](https://leetcode.com/problems/check-if-there-is-a-valid-parentheses-string-path/) | Medium     | [FindEventualSafeStates.java](src/leetcode/solution/DFS/FindEventualSafeStates.java) | DFS        |
 
 **Island**
 
