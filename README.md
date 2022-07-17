@@ -303,13 +303,14 @@ The project is divided into two parts: `structure` and `solution`.
 
 #### [Stack](src/leetcode/solution/stack)
 
-| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
-| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
-| 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard       | [LongestValidParentheses.java](src/leetcode/solution/stack/LongestValidParentheses.java) | Stack                   |
-| 316  | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Medium     | [RemoveDuplicateLetters.java](src/leetcode/solution/stack/RemoveDuplicateLetters.java) | Stack                   |
-| 394  | [Decode String](https://leetcode.com/problems/decode-string/) | Medium     | [DecodeString.java](src/leetcode/solution/stack/DecodeString.java) | Two Stack               |
-| 921  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium     | [MinimumAddToMakeParenthesesValid.java](src/leetcode/solution/stack/MinimumAddToMakeParenthesesValid.java) | Balance                 |
-| 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '(' |
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                        |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------------------------- |
+| 32   | [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard       | [LongestValidParentheses.java](src/leetcode/solution/stack/LongestValidParentheses.java) | Stack                       |
+| 316  | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | Medium     | [RemoveDuplicateLetters.java](src/leetcode/solution/stack/RemoveDuplicateLetters.java) | Stack                       |
+| 394  | [Decode String](https://leetcode.com/problems/decode-string/) | Medium     | [DecodeString.java](src/leetcode/solution/stack/DecodeString.java) | Two Stack                   |
+| 921  | [Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/) | Medium     | [MinimumAddToMakeParenthesesValid.java](src/leetcode/solution/stack/MinimumAddToMakeParenthesesValid.java) | Balance                     |
+| 1047 | [Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/) | Easy       | [RemoveAllAdjacentDuplicatesInString.java](src/leetcode/solution/stack/RemoveAllAdjacentDuplicatesInString.java) | Use Stack or StringBuilder. |
+| 1249 | [Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/) | Medium     | [MinimumRemoveToMakeValidParentheses.java](src/leetcode/solution/stack/MinimumRemoveToMakeValidParentheses.java) | Using Stack to save '('     |
 
 #### [Math](src/leetcode/solution/math)
 
