@@ -16,9 +16,7 @@ public class RemoveDuplicateLetters {
     }
 
     public String removeDuplicateLetters(String s) {
-
         int[] count = new int[26];
-
         char[] chars = s.toCharArray();
 
         for (char c : chars) {
@@ -42,14 +40,11 @@ public class RemoveDuplicateLetters {
                 }
 
                 char pop = stack.pop();
-
                 added[pop - 'a'] = false;
             }
 
             stack.push(c);
             added[index] = true;
-
-
         }
 
         StringBuilder stringBuilder = new StringBuilder();
