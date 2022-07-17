@@ -214,6 +214,12 @@ The project is divided into two parts: `structure` and `solution`.
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------- |
 | 867  | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy       | [TransposeMatrix.java](src/leetcode/solution/matrix/TransposeMatrix.java) | Traversal |
 
+#### [Binary Search](src/leetcode/solution/BinarySearch)
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea          |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------- |
+| 374  | [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) | Easy       | [GuessNumberHigherOrLower.java](src/leetcode/solution/BinarySearch/GuessNumberHigherOrLower.java) | Binary Search |
+
 #### [String](src/leetcode/solution/string)
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                        |
