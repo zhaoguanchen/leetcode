@@ -288,6 +288,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea           |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | -------------- |
+| 347  | [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) | Medium     | [TopKFrequentElements.java](src/leetcode/solution/Heap/TopKFrequentElements.java) | Priority Queue |
 | 692  | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | Medium     | [TopKFrequentWords.java](src/leetcode/solution/Heap/TopKFrequentWords.java) | Priority Queue |
 | 778  | [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/) | Hard       | [SwimInRisingWater.java](src/leetcode/solution/Heap/SwimInRisingWater.java) | Priority Queue |
 | 1642 | [Furthest Building You Can Reach](https://leetcode.com/problems/furthest-building-you-can-reach/) | Medium     | [FurthestBuildingYouCanReach.java](src/leetcode/solution/Heap/FurthestBuildingYouCanReach.java) | Priority Queue |
