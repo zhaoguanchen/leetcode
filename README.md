@@ -257,6 +257,7 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                     |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ---------------------------------------- |
+| 451  | [Sort Characters By Frequency](https://leetcode.com/problems/sort-characters-by-frequency/) | Medium     | [SortCharactersByFrequency.java](src/leetcode/solution/Hash/SortCharactersByFrequency.java) | Map and Sort. Or Bucket Sort.            |
 | 567  | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | Medium     | [LongestConsecutiveSequence.java](src/leetcode/solution/Hash/LongestConsecutiveSequence.java) | Hash Table: using HashSet save the nums. |
 
 #### [Graph](src/leetcode/solution/Graph)
