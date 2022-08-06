@@ -8,11 +8,12 @@ public class CanPlaceFlowers {
     public static void main(String[] args) {
         int n = 1;
         int[] mat = {0};
+        CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
 
-        System.out.println(canPlaceFlowers(mat, n));
+        System.out.println(canPlaceFlowers.canPlaceFlowers(mat, n));
     }
 
-    public static boolean canPlaceFlowers(int[] flowerbed, int n) {
+    public boolean canPlaceFlowers(int[] flowerbed, int n) {
         if (flowerbed.length < 2 * n - 1) {
             return false;
         }
