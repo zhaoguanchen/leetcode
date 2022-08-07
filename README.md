@@ -277,6 +277,7 @@ The project is divided into two parts: `structure` and `solution`.
 | 277  | [Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/) | Medium     | [FindTheCelebrity.java](src/leetcode/solution/Graph/FindTheCelebrity.java) | - Logical Deduction                                          |
 | 310  | [Minimum Height Trees](https://leetcode.com/problems/minimum-height-trees/) | Medium     | [MinimumHeightTrees.java](src/leetcode/solution/Graph/MinimumHeightTrees.java) | - BFS: remove leaves                                         |
 | 1192 | [Critical Connections in a Network](https://leetcode.com/problems/critical-connections-in-a-network/) | Hard       | [CriticalConnectionsInANetwork.java](src/leetcode/solution/Graph/CriticalConnectionsInANetwork.java) | - DFS: find cycle and remove the edge.                       |
+| 2368 | [Reachable Nodes With Restrictions](https://leetcode.com/problems/reachable-nodes-with-restrictions/) | Medium     | [ReachableNodesWithRestrictions.java](src/leetcode/solution/Graph/ReachableNodesWithRestrictions.java) | - DFS.                                                       |
 
 
 
