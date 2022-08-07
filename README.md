@@ -218,6 +218,8 @@ The project is divided into two parts: `structure` and `solution`.
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea      |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | --------- |
+| 54   | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | Medium     | [SpiralMatrix.java](src/leetcode/solution/matrix/SpiralMatrix.java) | 4 Bound   |
+| 59   | [Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) | Medium     | [SpiralMatrixII.java](src/leetcode/solution/matrix/SpiralMatrixII.java) | 4 Bound   |
 | 867  | [Transpose Matrix](https://leetcode.com/problems/transpose-matrix/) | Easy       | [TransposeMatrix.java](src/leetcode/solution/matrix/TransposeMatrix.java) | Traversal |
 
 #### [Binary Search](src/leetcode/solution/BinarySearch)
