@@ -76,6 +76,24 @@ The project is divided into two parts: `structure` and `solution`.
 
 ##### [Binary Tree](src/leetcode/solution/tree/bst)
 
+**Traversal**
+
+| No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
+| ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
+| 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy       | [BinaryTreeInorderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreeInorderTraversal.java) | Recursion and Iteration |
+| 314  | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | Medium     | [BinaryTreeVerticalOrderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreeVerticalOrderTraversal.java) | Recursion and Iteration |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+|      |                                                              |            |                                                              |                         |
+
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | 108  | [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | Medium     | [ConvertSortedArrayToBinarySearchTree.java](src/leetcode/solution/tree/ConvertSortedArrayToBinarySearchTree.java) | DFS                                                          |
