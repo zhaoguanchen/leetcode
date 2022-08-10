@@ -38,22 +38,24 @@ public class BinaryTreePostorderTraversal {
     public static List<Integer> postorderIterator(TreeNode root) {
         LinkedList<Integer> ans = new LinkedList<>();
         Stack<TreeNode> stack = new Stack<>();
-        if (root == null) {
-            return ans;
+        stack.add(root);
+
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            ans.addFirst(node.val);
+
+            if (node.left != null) {
+                stack.add(node.left);
+            }
+
+            if (node.right != null) {
+                stack.add(node.right);
+            }
         }
 
-        stack.push(root);
-        while (!stack.isEmpty()) {
-            TreeNode cur = stack.pop();
-            ans.addFirst(cur.val);
-            if (cur.left != null) {
-                stack.push(cur.left);
-            }
-            if (cur.right != null) {
-                stack.push(cur.right);
-            }
-        }
         return ans;
+
+
     }
 
 

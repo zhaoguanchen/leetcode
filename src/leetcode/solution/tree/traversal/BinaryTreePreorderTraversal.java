@@ -38,32 +38,27 @@ public class BinaryTreePreorderTraversal {
     }
 
     public static List<Integer> preorderIterator(TreeNode root) {
-        if (root == null) {
-            return new ArrayList<>();
-        }
-
-        List<Integer> res = new ArrayList<>();
+        List<Integer> ans = new ArrayList<>();
         Stack<TreeNode> stack = new Stack<>();
-
         stack.add(root);
 
         while (!stack.isEmpty()) {
-            TreeNode current = stack.pop();
-            if (current == null) {
-                break;
+            TreeNode node = stack.pop();
+            ans.add(node.val);
+
+            if (node.right != null) {
+                stack.add(node.right);
             }
 
-            res.add(current.val);
-
-            if (current.right != null) {
-                stack.add(current.right);
+            if (node.left != null) {
+                stack.add(node.left);
             }
-            if (current.left != null) {
-                stack.add(current.left);
-            }
-
         }
-        return res;
+
+        return ans;
+
 
     }
+
+
 }
