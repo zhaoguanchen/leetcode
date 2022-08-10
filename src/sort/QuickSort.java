@@ -17,58 +17,6 @@ public class QuickSort {
     }
 
 
-    /**
-     * 传统方法
-     * 选择left为基准点
-     *
-     * @param array
-     * @param left
-     * @param right
-     */
-    public void quickSortLeftBase(int[] array, int left, int right) {
-        // 元素个数小于等于1，无需排序，结束
-        if (left >= right) {
-            return;
-        }
-
-        int index = getPartition(array, left, right);
-        quickSortLeftBase(array, left, index - 1);
-        quickSortLeftBase(array, index + 1, right);
-    }
-
-
-    /**
-     * 传统方法
-     * 选择left为基准点，设为base
-     * 先从右边元素开始，找到第一个比base小的，将array[i]设为该值(array[j])。
-     * 再从左边开始，找到第一个比base大的，将array[j]设为该值(array[i])。
-     * 结束循环后，将array[i]的值设为base。
-     *
-     * @param array
-     * @param left
-     * @param right
-     */
-    private int getPartition(int[] array, int left, int right) {
-        int i = left, j = right;
-        int baseVal = array[left];
-
-        while (i < j) {
-            while (i < j && array[j] >= baseVal) {
-                j--;
-            }
-            array[i] = array[j];
-            while (i < j && array[i] <= baseVal) {
-                i++;
-            }
-            array[j] = array[i];
-        }
-
-        array[i] = baseVal;
-        // i 为基准点坐标
-        return i;
-    }
-
-
     public void sort(int[] nums) {
         // 为了避免出现耗时的极端情况，先随机打乱
         shuffle(nums);
