@@ -8,8 +8,6 @@ import java.util.Stack;
 
 /**
  * 144. Binary Tree Preorder Traversal
- * <p>
- * mid - left - right
  */
 public class BinaryTreePreorderTraversal {
 

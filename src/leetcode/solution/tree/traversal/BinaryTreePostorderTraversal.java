@@ -6,8 +6,6 @@ import java.util.*;
 
 /**
  * 145. Binary Tree Postorder Traversal
- * <p>
- * left - right - mid
  */
 public class BinaryTreePostorderTraversal {
 

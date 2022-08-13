@@ -1,4 +1,4 @@
-package leetcode.solution.BFS;
+package leetcode.solution.tree.traversal;
 
 import leetcode.structure.TreeNode;
 
@@ -6,13 +6,11 @@ import java.util.*;
 
 /**
  * 103. Binary Tree Zigzag Level Order Traversal
- * Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).
  */
 public class BinaryTreeZigzagLevelOrderTraversal {
 
     public static void main(String[] args) {
         Integer[] array = {3, 9, 20, null, null, 15, 7};
-//        Integer[] array = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 
         TreeNode root = TreeNode.constructTree(array);
         System.out.println(zigzagLevelOrder(root));

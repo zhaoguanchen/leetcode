@@ -81,18 +81,28 @@ The project is divided into two parts: `structure` and `solution`.
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                    |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ----------------------- |
 | 94   | [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy       | [BinaryTreeInorderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreeInorderTraversal.java) | Recursion and Iteration |
+| 144  | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | Easy       | [BinaryTreePreorderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreePreorderTraversal.java) | Recursion and Iteration |
+| 145  | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | Easy       | [BinaryTreePostorderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreePostorderTraversal.java) | Recursion and Iteration |
 | 314  | [Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/) | Medium     | [BinaryTreeVerticalOrderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreeVerticalOrderTraversal.java) | Recursion and Iteration |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
-|      |                                                              |            |                                                              |                         |
+| 102  | [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) | Medium     | [BinaryTreeLevelOrderTraversal.java](src/leetcode/solution/tree/traversal/BinaryTreeLevelOrderTraversal.java) | BFS                     |
+
+**Construct**
+
+| No.  | Title | Difficulty | Solution | Idea |
+| ---- | ----- | ---------- | -------- | ---- |
+|      |       |            |          |      |
+|      |       |            |          |      |
+
+
+
+**Serialize and Deserialize**
+
+| No.  | Title | Difficulty | Solution | Idea |
+| ---- | ----- | ---------- | -------- | ---- |
+|      |       |            |          |      |
+|      |       |            |          |      |
+
+
 
 | No.  | Title                                                        | Difficulty | Solution                                                     | Idea                                                         |
 | ---- | ------------------------------------------------------------ | ---------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
