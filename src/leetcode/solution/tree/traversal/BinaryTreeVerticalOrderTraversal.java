@@ -42,16 +42,16 @@ public class BinaryTreeVerticalOrderTraversal {
             queue.add(new Pair<>(node.right, col + 1));
 
         }
-        List<List<Integer>> ans = new ArrayList<>();
+        // sort by key
         List<Integer> list = new ArrayList<>(map.keySet());
         Collections.sort(list);
-
+        // generate result
+        List<List<Integer>> ans = new ArrayList<>();
         for (int i : list) {
             ans.add(map.get(i));
         }
 
         return ans;
-
     }
 
 }
