@@ -1,4 +1,4 @@
-package leetcode.solution.stack;
+package leetcode.solution.stack.parentheses;
 
 import java.util.HashSet;
 import java.util.Set;

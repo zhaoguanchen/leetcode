@@ -1,4 +1,4 @@
-package leetcode.solution.stack;
+package leetcode.solution.stack.parentheses;
 
 /**
  * 921. Minimum Add to Make Parentheses Valid
