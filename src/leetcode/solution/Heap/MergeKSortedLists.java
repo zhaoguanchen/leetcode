@@ -1,4 +1,4 @@
-package leetcode.solution.LinkedList.twopoint;
+package leetcode.solution.Heap;
 
 import leetcode.structure.ListNode;
 
@@ -26,10 +26,11 @@ public class MergeKSortedLists {
             return null;
         }
         // 优先队列
-        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, Comparator.comparingInt(value -> value.val));
-
+        PriorityQueue<ListNode> queue = new PriorityQueue<>((a, b) -> {
+            return a.val - b.val;
+        });
         // 虚拟头节点
-        ListNode vHead = new ListNode(0);
+        ListNode vHead = new ListNode();
         // 游标
         ListNode cur = vHead;
 
