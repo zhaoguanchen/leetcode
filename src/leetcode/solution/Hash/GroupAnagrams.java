@@ -20,33 +20,40 @@ public class GroupAnagrams {
     }
 
     public List<List<String>> groupAnagrams(String[] strs) {
-        if (strs == null || strs.length == 0) {
-            return new ArrayList<>();
-        }
-        Map<String, List<String>> memo = new HashMap<>();
+        List<List<String>> ans = new ArrayList<>();
+        Map<String, List<String>> map = new HashMap<>();
 
-        for (String str : strs) {
-            char[] ca = new char[26];
-            for (char c : str.toCharArray()) {
-                ca[c - 'a']++;
-
-                System.out.println(ca[c - 'a']);
+        for (String s : strs) {
+            String key = format(s);
+            if (!map.containsKey(key)) {
+                map.put(key, new ArrayList<>());
             }
 
-            System.out.println(ca);
-            String key = String.valueOf(ca);
-            System.out.println(key);
-            if (memo.containsKey(key)) {
-                List<String> values = memo.get(key);
-                values.add(str);
-            } else {
-                List<String> valueList = new ArrayList<>();
-                valueList.add(str);
-                memo.put(key, valueList);
-            }
-
+            map.get(key).add(s);
         }
 
-        return new ArrayList<>(memo.values());
+        for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+            ans.add(entry.getValue());
+        }
+
+        return ans;
+    }
+
+
+    private String format(String s) {
+        int[] bit = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            bit[c - 'a']++;
+        }
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < bit.length; i++) {
+            sb.append(bit[i]);
+        }
+
+        return sb.toString();
     }
 }
